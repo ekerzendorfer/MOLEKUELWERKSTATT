@@ -18,7 +18,7 @@
     explanation: false,
     done: false,
     freeSmiles: "CCO",
-    selectedExample: 0
+    selectedExample: 1
   };
   var state = readState();
 
@@ -355,6 +355,11 @@
   ]).then(function (result) {
     data = result[0]; toolData = result[1];
     if (!currentPath() || currentPath().id !== "MW-001" || !Array.isArray(data.free_examples)) throw new Error("Aufgabendaten sind unvollständig");
+    var formerlySelected = data.free_examples[state.selectedExample];
+    if (state.selectedExample >= 0 && (!formerlySelected || formerlySelected.smiles !== state.freeSmiles)) {
+      state.selectedExample = -1; // Bestehende lokale Zustände dürfen keinen falschen Stoff hervorheben.
+      persist();
+    }
     var fragmentView = (window.location.hash || "").slice(1);
     setView(allowedViews.includes(fragmentView) ? fragmentView : state.view, false);
     if (!saveAvailable) showNotice("Lokales Speichern ist in diesem Browser deaktiviert. Notizen vor dem Schließen kopieren.");
