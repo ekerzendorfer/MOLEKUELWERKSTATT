@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="MOLEKÜL-WERKSTATT – Moleküle erforschen, vergleichen und verstehen. Geführte Lernwege und freies 2D-/3D-Erkunden.">
   <title>MOLEKÜL-WERKSTATT | CHEMIE mit KI</title>
-  <link rel="stylesheet" href="./styles.css?v=0.1.1">
-  <script src="./app.js?v=0.1.1" defer></script>
+  <link rel="stylesheet" href="./styles.css?v=0.2.0">
+  <script src="./molecule-handoff.js?v=0.2.0" defer></script>
+  <script src="./app.js?v=0.2.0" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
@@ -99,8 +100,8 @@
           <div class="panel context-panel">
             <p class="eyebrow dark">Die untersuchten Moleküle</p>
             <div class="molecule-facts">
-              <div><strong>Ethanol</strong><small>Alkohol · C₂H₆O</small><code>CCO</code><button type="button" class="copy-mini" data-copy="CCO" aria-label="SMILES von Ethanol kopieren">SMILES kopieren</button></div>
-              <div><strong>Dimethylether</strong><small>Ether · C₂H₆O</small><code>COC</code><button type="button" class="copy-mini" data-copy="COC" aria-label="SMILES von Dimethylether kopieren">SMILES kopieren</button></div>
+              <div><strong>Ethanol</strong><small>Alkohol · C₂H₆O</small><code>CCO</code><button type="button" class="copy-mini" data-copy="CCO" aria-label="SMILES von Ethanol kopieren">SMILES kopieren</button><a id="case-handoff-0" class="case-handoff" href="https://ekerzendorfer.github.io/MOLLAB_PRO/" target="_blank" rel="noopener noreferrer">In 2D/3D betrachten ↗</a></div>
+              <div><strong>Dimethylether</strong><small>Ether · C₂H₆O</small><code>COC</code><button type="button" class="copy-mini" data-copy="COC" aria-label="SMILES von Dimethylether kopieren">SMILES kopieren</button><a id="case-handoff-1" class="case-handoff" href="https://ekerzendorfer.github.io/MOLLAB_PRO/" target="_blank" rel="noopener noreferrer">In 2D/3D betrachten ↗</a></div>
             </div>
           </div>
           <div class="panel context-panel">
@@ -125,18 +126,30 @@
         </div>
         <button type="button" class="btn btn-quiet" data-view="start">← Zur Übersicht</button>
       </div>
+      <div class="panel quick-examples">
+        <div class="panel-topline">
+          <div><h3>Beispielmolekül auswählen</h3><p>Wähle ein Beispiel oder gib einen eigenen SMILES ein. Die Struktur wird beim Öffnen direkt an den 2D-Editor von MOLLAB_PRO übergeben.</p></div>
+        </div>
+        <div id="example-chips" class="example-chips"></div>
+        <div class="smiles-box">
+          <label for="free-smiles"><strong>SMILES für dein Molekül</strong> <small>(auch selbst editierbar)</small></label>
+          <div class="smiles-entry"><input id="free-smiles" type="text" value="CCO" spellcheck="false" autocomplete="off" aria-describedby="smiles-hint"><button type="button" class="btn btn-secondary" data-action="copy-free-smiles">Kopieren</button></div>
+          <p id="smiles-hint" class="tool-note">SMILES ist eine Textdarstellung der Molekülverknüpfung. Das Feld ist eine Kopierhilfe, kein integrierter Moleküleditor; es prüft die Struktur nicht.</p>
+        </div>
+      </div>
       <div class="free-grid">
         <article class="panel free-tool hero-tool">
           <span class="tool-icon" aria-hidden="true">✎</span>
           <h3>2D zeichnen → 3D darstellen</h3>
           <p>Das vorhandene <strong>MOLLAB_PRO</strong> bietet einen 2D-Sketcher und einen 3D-Viewer mit unterschiedlichen Darstellungsformen.</p>
           <ol class="instruction-list">
-            <li>Molekül im 2D-Sketcher zeichnen.</li>
-            <li><strong>Start</strong> und danach <strong>Basis-3D</strong> wählen.</li>
+            <li>Oben ein Beispiel auswählen oder einen SMILES eingeben.</li>
+            <li><strong>Molekül in MOLLAB_PRO öffnen:</strong> Die 2D-Struktur wird übernommen.</li>
+            <li>Für 3D dort <strong>3D-Modell A erzeugen</strong> wählen.</li>
             <li>Modell drehen, Darstellungsform wählen oder ein Bild exportieren.</li>
           </ol>
-          <a id="free-mollab-link" class="btn btn-primary" href="https://ekerzendorfer.github.io/MOLLAB_PRO/" target="_blank" rel="noopener noreferrer">2D-/3D-Werkzeug öffnen ↗</a>
-          <p class="tool-note">Öffnet in einem neuen Tab. Der freie Zugang ist nicht an MW-001 gebunden.</p>
+          <a id="free-mollab-link" class="btn btn-primary" href="https://ekerzendorfer.github.io/MOLLAB_PRO/" target="_blank" rel="noopener noreferrer">Molekül in MOLLAB_PRO öffnen ↗</a>
+          <p id="free-transfer-status" class="tool-note" role="status" aria-live="polite">Öffnet in einem neuen Tab. Die Werkstatt bleibt zur Rückkehr erhalten.</p>
         </article>
         <article class="panel free-tool">
           <span class="tool-icon" aria-hidden="true">⬡</span>
@@ -146,21 +159,10 @@
           <a id="free-colab-link" class="btn btn-outline" href="https://colab.research.google.com/github/ekerzendorfer/MOL_LAB/blob/main/MOL_LAB.ipynb" target="_blank" rel="noopener noreferrer">Colab-Labor öffnen ↗</a>
         </article>
       </div>
-      <div class="panel quick-examples">
-        <div class="panel-topline">
-          <div><h3>Beispielmolekül auswählen</h3><p>Für den schnellen Einstieg: SMILES kopieren und bei Bedarf im Zielwerkzeug verwenden. Noch keine automatische Übergabe.</p></div>
-        </div>
-        <div id="example-chips" class="example-chips"></div>
-        <div class="smiles-box">
-          <label for="free-smiles"><strong>SMILES für dein Molekül</strong> <small>(auch selbst editierbar)</small></label>
-          <div class="smiles-entry"><input id="free-smiles" type="text" value="CCO" spellcheck="false" autocomplete="off" aria-describedby="smiles-hint"><button type="button" class="btn btn-secondary" data-action="copy-free-smiles">Kopieren</button></div>
-          <p id="smiles-hint" class="tool-note">SMILES ist eine Textdarstellung der Molekülverknüpfung. Das Feld ist eine Kopierhilfe, kein integrierter Moleküleditor; es prüft die Struktur nicht.</p>
-        </div>
-      </div>
       <div class="info-strip"><strong>Ausblick:</strong><span>Ein direkt integrierter 2D-Sketcher und ein eingebetteter 3D-Viewer sind für eine spätere Version vorgesehen. Zuerst prüfen wir Benutzerführung und Arbeitsabläufe.</span></div>
     </section>
   </main>
 
-  <footer class="footer"><div class="wrap footer-inner"><span>CHEMIE mit KI · MOLEKÜL-WERKSTATT <strong>V0.1 – Prototyp</strong></span><span>Kein Login · Arbeitsnotizen nur lokal auf diesem Gerät</span></div></footer>
+  <footer class="footer"><div class="wrap footer-inner"><span>CHEMIE mit KI · MOLEKÜL-WERKSTATT <strong>V0.2 – Übergabe-Prototyp</strong></span><span>Kein Login · Arbeitsnotizen nur lokal auf diesem Gerät</span></div></footer>
 </body>
 </html>
