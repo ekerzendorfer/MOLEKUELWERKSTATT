@@ -28,7 +28,7 @@ https://ekerzendorfer.github.io/MOLLAB_PRO/?smiles=CCO&name=Ethanol&source=molek
 | `smiles` | URL-kodierter SMILES (max. 2000 Zeichen, kein Leer-/Steuerzeichen); **nur** Strukturtext, kein SDF/3D |
 | `name` | Anzeigename (max. 100 Zeichen), nur in Textknoten angezeigt |
 | `source` | `molekuelwerkstatt` markiert einen Werkstatt-Aufruf; keine Authentifizierung |
-| `context` | `MW-001` → `#aufgabe`; `MW-002` → `?case=MW-002#aufgabe`; `frei` → `#frei`; unbekannte Werte werden auf `frei` begrenzt |
+| `context` | Freigegebene IDs: `MW-001`, `MW-002`, `MW-009`, `MW-015`, `MW-024` → jeweils der eigene Forschungsweg (`?case=<ID>#aufgabe`; bei MW-001 nur `#aufgabe`); `frei` → `#frei`. Unbekannte Werte werden auf `frei` begrenzt. |
 
 Die Funktion `MoleculeHandoff.makeLink` steht in **beiden** Repositories in `molecule-handoff.js`; `readLink` übernimmt die Parameter in MOLLAB PRO. Die Rückadresse ist im Code fest auf das bekannte Werkstatt-Portal begrenzt: frei übermittelte `return`-URLs werden **niemals** geöffnet. Die 2D-Übernahme wartet auf **beide** bereits vorhandenen Komponenten: JSME und 3Dmol-Viewer. RDKit-Deskriptoren werden bei späterer WebAssembly-Bereitschaft ergänzt.
 
@@ -60,3 +60,13 @@ Ist diese Übergabe praktisch bestätigt, kann derselbe kleinstmögliche Vertrag
 Der Handoff-Vertrag akzeptiert zusätzlich `context=MW-002`. MOLLAB PRO leitet den Rückweg dann **nicht** zur zuletzt geöffneten Aufgabe, sondern über `?case=MW-002#aufgabe` ausdrücklich zum Wasser-/Schwefelwasserstoff-Fall.
 
 Die Werkstatt verwendet **denselben Renderer** für MW-001 und MW-002; die voneinander unabhängigen Fortschritte liegen unter dem bisherigen Browser-Speicherschlüssel. Testfälle: `tests/handoff.test.cjs` und `tests/learning-paths.test.cjs`.
+
+## Ergänzung V0.4 – Forschungswege der Vorlagen A, B und C
+
+Das Rücklink-Protokoll unterstützt jetzt zusätzlich **MW-009, MW-015 und MW-024**. Die Parameter werden in beiden Apps nach derselben expliziten **Allowlist** geprüft; beliebige Werte wie `MW-999` erzeugen keinen frei konstruierten Rücklink.
+
+- **MW-009:** Übergabe von Propanal (`CCC=O`) oder Aceton (`CC(=O)C`); Rücklink `?case=MW-009#aufgabe`.
+- **MW-015:** Übergabe eines der vier auswählbaren Beispiele CO₂ (`O=C=O`), H₂O (`O`), NH₃ (`N`) oder CH₄ (`C`); Rücklink `?case=MW-015#aufgabe`. In der Werkstatt bleibt gespeichert, welches Beispiel gerade gewählt war.
+- **MW-024:** Übergabe von Cyclohexan (`C1CCCCC1`); Rücklink `?case=MW-024#aufgabe`. Relative MMFF-Energien werden **nicht** zwischen den Apps übertragen.
+
+Die automatisierten Tests sind in `tests/handoff.test.cjs` auf alle fünf Aufgabenkontexte erweitert. Die neuen Aufgabentypen und ihr lokaler Fortschritt werden in `tests/learning-paths.test.cjs` geprüft. Der reale Browser- und Colab-Test ist unter [Testblatt V0.4](PILOTWEGE_V0.4_TEST.md) beschrieben.
