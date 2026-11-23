@@ -3,7 +3,7 @@
 **Stand:** 23.11.2026 · **Dokumenttyp:** didaktisches Planungsdokument, **keine** neue aktive Aufgabenliste.  
 **Quelle:** `ekerzendorfer/MOL_LAB_DIDACTIC/molecules_v0_4_2.json`, Blob-SHA `f2ef10a3730fa752e6944499082d2219ecaf2bde`.  
 **Maschinenlesbare Entwürfe:** [Forschungswege-Katalog](../data/forschungswege_katalog_v0.1.json) und [DIDACTIC-Quellenmanifest](../data/didactic_quellen_manifest_v0.1.json).  
-**Aktuelle App:** [MOLEKÜL-WERKSTATT](https://ekerzendorfer.github.io/MOLEKUELWERKSTATT/), derzeit mit den fertig gestellten Aufgaben MW-001 und MW-002.
+**Aktuelle App:** [MOLEKÜL-WERKSTATT](https://ekerzendorfer.github.io/MOLEKUELWERKSTATT/), derzeit mit fünf implementierten Wegen (MW-001, MW-002, MW-009, MW-015, MW-024). MW-009/015/024 warten noch auf den Praxistest.
 
 ## 1. Auftrag und didaktisches Konzept
 
@@ -28,7 +28,7 @@ Ziel der Katalogversion V0.1 ist die **fachlich überprüfbare Zuordnung sämtli
 | Davon A – Vergleichen | 14 |
 | Davon B – Struktur oder Stoffgruppe untersuchen | 10 |
 | Davon C – räumliche Gestalt/Konformere | 6 |
-| Schon als durchgängige Werkstatt-Aufgabe implementiert | 2 (MW-001, MW-002) |
+| Schon als durchgängige Werkstatt-Aufgabe implementiert | 5 (MW-001, MW-002, MW-009, MW-015, MW-024) |
 | DIDACTIC-Moduleinträge einem Forschungsweg zugeordnet | **61 von 61** |
 | DIDACTIC-Einträge ohne eines der fünf Basis-Stoffdatenfelder | 35 |
 | DIDACTIC-Karten mit noch sehr allgemeiner MC-Leitfrage | 7 |
@@ -41,7 +41,7 @@ Ziel der Katalogversion V0.1 ist die **fachlich überprüfbare Zuordnung sämtli
 
 Für **kuratierte Zweiervergleiche** nach dem Muster MW-001 und MW-002. Aufgabenunterschiede liegen in den vorgelegten Molekülen, der Leitfrage, den zu beobachtenden Eigenschaften, den fachlichen Grenzen und dem experimentellen Bezug. Nicht jedes Paar benötigt dieselben Messwerte.
 
-**Standard-Werkzeugweg:** Werkstatt → DIDACTIC-Vergleich → ggf. freier 2D/3D-Einzelblick in MOLLAB_PRO → Werkstatt. Alle 14 Paarungen sind bereits in DIDACTIC hinterlegt; 12 Werkstattwege müssen noch redaktionell ausgearbeitet und implementiert werden.
+**Standard-Werkzeugweg:** Werkstatt → DIDACTIC-Vergleich → ggf. freier 2D/3D-Einzelblick in MOLLAB_PRO → Werkstatt. Alle 14 Paarungen sind bereits in DIDACTIC hinterlegt; 11 Werkstattwege müssen noch redaktionell ausgearbeitet und implementiert werden.
 
 ### B – Struktur oder Stoffgruppe untersuchen: 10 Wege
 
@@ -68,7 +68,7 @@ Eine 3D-Struktur ist nur der Einstieg. Die Lernenden unterscheiden Konfiguration
 | MW-006 | Diethylether und Diethylenglycol: H-Brücken richtig deuten | Diethylether · Diethylenglycol | geplant |
 | MW-007 | Methanol und Methanal: OH oder C=O? | Methanol · Methanal | geplant |
 | MW-008 | Aceton und Essigsäure: Carbonyl ist nicht gleich Carboxyl | Aceton · Essigsäure | geplant |
-| MW-015 | Molekülform: Bindungsdipol oder Moleküldipol? | Kohlenstoffdioxid · Ammoniak · Methan · Wasser | geplant |
+| MW-015 | Molekülform: Bindungsdipol oder Moleküldipol? | Kohlenstoffdioxid · Ammoniak · Methan · Wasser | **technisch umgesetzt · Praxistest offen** |
 | MW-016 | Alkoholreihe: Von Methanol zu 1-Hexanol | Methanol · Ethanol · n-Butanol · 1-Hexanol | geplant |
 
 ### Isomerie (7 Wege)
@@ -76,7 +76,7 @@ Eine 3D-Struktur ist nur der Einstieg. Die Lernenden unterscheiden Konfiguration
 | ID | Leitidee / Titel | DIDACTIC-Beispiele | Status |
 |---|---|---|---|
 | MW-001 | Gleiche Summenformel – andere Eigenschaften? | Ethanol · Dimethylether | **fertig** |
-| MW-009 | Propanal und Aceton: Aldehyd oder Keton? | Propanal · Aceton | geplant |
+| MW-009 | Propanal und Aceton: Aldehyd oder Keton? | Propanal · Aceton | **technisch umgesetzt · Praxistest offen** |
 | MW-010 | Butan und Isobutan: Warum verzweigen? | Butan · Isobutan | geplant |
 | MW-011 | Propansäure und Essigsäuremethylester: Säure oder Ester? | Propansäure · Essigsäuremethylester | geplant |
 | MW-012 | D-Alanin und L-Alanin: Spiegelbilder | D-Alanin · L-Alanin | geplant |
@@ -99,7 +99,7 @@ Eine 3D-Struktur ist nur der Einstieg. Die Lernenden unterscheiden Konfiguration
 | MW-021 | Butan: anti oder gauche? | Butan | geplant |
 | MW-022 | 1,2-Dichlorethan: Eine Drehung verändert den Dipol | 1,2-Dichlorethan | geplant |
 | MW-023 | Ethylenglykol: Zwei OH-Gruppen in Bewegung | Ethylenglykol | geplant |
-| MW-024 | Cyclohexan: Weshalb eine Sesselstruktur? | Cyclohexan | geplant |
+| MW-024 | Cyclohexan: Weshalb eine Sesselstruktur? | Cyclohexan | **technisch umgesetzt · Praxistest offen** |
 | MW-025 | n-Pentan: Mehr Bindungen, mehr Konformere | n-Pentan | geplant |
 | MW-026 | Milchsäure und 2-Butanol: Bewegung und Chiralität | Milchsäure · 2-Butanol | geplant |
 
@@ -191,7 +191,7 @@ Die folgenden 30 Entwürfe sind **redaktionelle Vorschläge**, sofern nicht ausd
 
 ### MW-009: Propanal und Aceton: Aldehyd oder Keton?
 
-- **Vorlage / Phase:** A – Vergleichen; Konzept; noch nicht umgesetzt; Priorität 1 (1 = früh, 3 = später).
+- **Vorlage / Phase:** A – Vergleichen; technisch implementiert; Praxistest offen; Priorität 1 (1 = früh, 3 = später).
 - **Leitfrage:** Was verändert die Position der Carbonylgruppe bei C₃H₆O?
 - **Quellbezug:** DIDACTIC-Isomerenpaar: Propanal ↔ Gegenstück; Propanal (`Isomerie/propanal`); Aceton (`Isomerie/aceton`).
 - **Lernziel:** Funktionelle Isomerie von Aldehyd und Keton deuten.
@@ -245,7 +245,7 @@ Die folgenden 30 Entwürfe sind **redaktionelle Vorschläge**, sofern nicht ausd
 
 ### MW-015: Molekülform: Bindungsdipol oder Moleküldipol?
 
-- **Vorlage / Phase:** B – Struktur und Stoffgruppe untersuchen; Konzept; noch nicht umgesetzt; Priorität 1 (1 = früh, 3 = später).
+- **Vorlage / Phase:** B – Struktur und Stoffgruppe untersuchen; technisch implementiert; Praxistest offen; Priorität 1 (1 = früh, 3 = später).
 - **Leitfrage:** Warum ist CO₂ trotz polarer Bindungen insgesamt unpolar?
 - **Quellbezug:** Einzelkarten / kuratierte Beispielserie; Kohlenstoffdioxid (`Polarität und Löslichkeit/kohlenstoffdioxid`); Ammoniak (`Polarität und Löslichkeit/ammoniak`); Methan (`Polarität und Löslichkeit/methan`); Wasser (`Polarität und Löslichkeit/wasser`).
 - **Lernziel:** Lineare, gewinkelte, trigonal-pyramidale und tetraedrische Gestalten vergleichen.
@@ -326,7 +326,7 @@ Die folgenden 30 Entwürfe sind **redaktionelle Vorschläge**, sofern nicht ausd
 
 ### MW-024: Cyclohexan: Weshalb eine Sesselstruktur?
 
-- **Vorlage / Phase:** C – Räumliche Gestalt und Konformere; Konzept; noch nicht umgesetzt; Priorität 2 (1 = früh, 3 = später).
+- **Vorlage / Phase:** C – Räumliche Gestalt und Konformere; technisch implementiert; Praxistest offen; Priorität 2 (1 = früh, 3 = später).
 - **Leitfrage:** Welche räumlichen Strukturen vermeiden Ringspannung?
 - **Quellbezug:** Einzelkarten / kuratierte Beispielserie; Cyclohexan (`Konformere/cyclohexan`).
 - **Lernziel:** Sessel-/Boot-Geometrie und Ringspannung qualitativ erklären.
@@ -430,14 +430,16 @@ Alle 53 unterschiedlichen SMILES-Strukturen können unabhängig vom konkreten Fo
 
 ## 8. Priorisierung: kleine, tatsächlich prüfbare Schritte
 
-### Stufe 1 – zwei fertige Wege als Referenz
+### Stufe 1 – zwei praktisch getestete Wege als Referenz
 - **MW-001** Ethanol/Dimethylether: implementiert und praktisch getestet.
 - **MW-002** Wasser/Schwefelwasserstoff: implementiert und praktisch getestet.
 
-### Stufe 2 – gezielte technische Validierung der Vorlagen
-1. **MW-009 (A): Propanal/Aceton**. Neue, fachlich gut prüfbare Vergleichsaufgabe; die Stoffdatenkorrektur für Propanal ist bereits vorhanden. Nach MW-001/002 geringe zusätzliche Technik.
-2. **MW-019 (B): Methanol/Phenol** oder **MW-015 (B): Molekülform und Dipole**. Hier muss die Werkstatt erstmals statt eines festen Zweiervergleichs eine **einzelne Struktur bzw. Beispielwahl** sinnvoll begleiten.
-3. **MW-024 (C): Cyclohexan**. Hier klären wir die Aufgabenführung zwischen DIDACTIC-Konformerbeispiel, freiem Viewer und vertiefender Colab-Optimierung.
+### Stufe 2 – drei implementierte Pilotwege der A/B/C-Vorlagen
+1. **MW-009 (A): Propanal/Aceton** – Zweiervergleich mit bereits korrigierten Propanal-Stoffdaten; technisch vorhanden, echter DIDACTIC-Test steht aus.
+2. **MW-015 (B): Molekülform und Dipole** – erstmalige Molekülauswahl innerhalb einer Aufgabe; CO₂, H₂O, NH₃ oder CH₄, jeweils mit getrennten Notizen. Technisch vorhanden, didaktischer Praxistest steht aus.
+3. **MW-024 (C): Cyclohexan** – DIDACTIC-Konformerbeispiel mit optionalem MOL_LAB und klarer MMFF-Modellgrenze. Technisch vorhanden, echter Konformer-/Colab-Test steht aus.
+
+Die konkrete Browser- und Fachabnahme steht unter [Testblatt V0.4](PILOTWEGE_V0.4_TEST.md).
 
 ### Stufe 3 – Aufgabenbibliothek statt überladener Startseite
 
@@ -454,7 +456,7 @@ Stoffdaten, Vergleichsfragen und fachliche Hinweise werden jeweils **vor** der F
 - **MOLLAB_PRO bleibt das freie 2D/3D-Werkzeug**; Übergabe per SMILES und sicherer Rücklink sind bereits erprobt.
 - **MOL_LAB-Colab bleibt vertiefender Rechenkern**, besonders für Konformere und komplexe Moleküle.
 - **Datenmodell:** stabile MW-IDs; `template`, `topic`, `sourceRefs`, optionale `sourcePair`, Leitfrage, Lernziel, fachliche Grenzen, Status und Priorität.
-- **Statuswerte:** `live` (wirklich implementiert, derzeit MW-001/002) oder `planned` (nur Entwurf). Der Katalog wird **noch nicht automatisch** als öffentlich verfügbare Aufgabensammlung in der App eingelesen.
+- **Statuswerte:** `live` (technisch implementiert, derzeit MW-001/002/009/015/024) oder `planned` (nur Entwurf). Der Katalog wird **noch nicht automatisch** als öffentlich verfügbare Aufgabensammlung in der App eingelesen.
 - **Fortschritt:** für jede Aufgabe getrennte Eingaben; beim zukünftigen Ausbau pro Aufgaben-ID speichern und bestehende MW-001/002-Daten behutsam migrieren.
 
 ## 10. Definition „Katalog V0.1 fertig“
@@ -465,8 +467,8 @@ Stoffdaten, Vergleichsfragen und fachliche Hinweise werden jeweils **vor** der F
 - [x] 30 Forschungswege zu A/B/C-Vorlagen und Modulen gruppiert;
 - [x] Quellenverweise bis auf Modul und ID dokumentiert;
 - [x] fachliche Risiken, fehlende Daten und noch nicht implementierte Funktionen gekennzeichnet;
-- [ ] Leitfragen und fachliche Begründungen aller 28 geplanten Wege mit Blick auf Zielgruppe/Unterricht redaktionell freigeben;
-- [ ] jeweils einen neuen B- und C-Weg technisch als Pilot entwickeln;
+- [ ] Leitfragen und fachliche Begründungen aller 25 verbleibenden geplanten Wege mit Blick auf Zielgruppe/Unterricht redaktionell freigeben;
+- [x] je einen neuen B- und C-Weg technisch als Pilot entwickeln (MW-015 und MW-024; fachlicher Praxistest ausständig);
 - [ ] benutzerfreundliche Filterbibliothek in der Werkstatt implementieren.
 
 **Abgrenzung:** Diese Dokumentation verändert keine vorhandenen DIDACTIC-Notebooks, keine MOLLAB_PRO-Funktionen und keine laufenden Forschungswege in der Werkstatt. Die tatsächliche Umsetzung bleibt ein nächster, separat zu testender Entwicklungsschritt.
