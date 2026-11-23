@@ -66,6 +66,15 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{
 .btn-outline:hover{background:#ebf7fc}
 .btn:disabled{opacity:.55;cursor:not-allowed}
 .info-strip{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-top:22px;padding:19px 23px;border-left:4px solid #77c4d0;background:#e9f4f8;border-radius:0 12px 12px 0;color:#2a5268;font-size:.94rem}
+.next-case{display:flex;align-items:center;gap:20px;padding:21px 24px;margin-top:20px;border-left:4px solid #2691a8;box-shadow:0 5px 20px rgba(14,36,62,.06)}
+.next-case-symbol{display:grid;place-items:center;flex:0 0 126px;min-height:84px;border-radius:13px;background:linear-gradient(130deg,#0a3454,#166482);color:#e5fbff;font:bold 1.3rem ui-monospace,Consolas,monospace;white-space:nowrap}
+.next-case-copy{flex:1;min-width:0}
+.next-case-copy .eyebrow{margin-bottom:3px}
+.next-case h3{font-size:1.15rem;margin:0 0 4px;line-height:1.28}
+.next-case p:last-child{font-size:.87rem;color:var(--muted);margin:0}
+.next-case .btn{flex-shrink:0}
+@media(max-width:800px){.next-case{flex-wrap:wrap}.next-case-symbol{flex-basis:95px;min-height:70px}.next-case .btn{margin-left:auto}}
+@media(max-width:520px){.next-case-symbol{flex:1 1 100%;min-height:58px}.next-case .btn{width:100%}}
 .info-strip strong{color:#0d4967}
 .view-heading{display:flex;justify-content:space-between;gap:25px;align-items:flex-start;margin-bottom:23px}
 .work-layout{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(265px,.85fr);gap:20px;align-items:start}
