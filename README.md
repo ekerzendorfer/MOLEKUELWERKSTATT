@@ -1,6 +1,6 @@
 # MOLEKÜL-WERKSTATT – CHEMIE mit KI
 
-**Projektstatus:** V0.1.0 – erster testbarer Einstieg (MW-001 + freies Molekülstudio), noch nicht im Portal veröffentlicht
+**Projektstatus:** V0.2.0 – erster SMILES-Übergabeprototyp (MW-001 + frei erkunden), noch nicht im CHEMIE_KI_LINKS-Portal veröffentlicht
 
 Die MOLEKÜL-WERKSTATT wird die **gemeinsame, didaktisch geführte Einstiegsoberfläche** zu den vorhandenen Molekül-Apps. Ausgangspunkt ist eine chemische Fragestellung – nicht die Auswahl einer Software. Vorbild: CHEMIE_ANALYTIK_HUB. Das Prinzip von MOL_LAB DIDACTIC (Beobachten → Vermuten → Antwort prüfen → Erklärung anzeigen) steht im Zentrum.
 
@@ -9,7 +9,7 @@ Die MOLEKÜL-WERKSTATT wird die **gemeinsame, didaktisch geführte Einstiegsober
 ## Vorhandene Komponenten (bleiben eigenständig)
 - [MOL_LAB DIDACTIC v0.4.2](https://github.com/ekerzendorfer/MOL_LAB_DIDACTIC) – kuratierte Vergleiche und Aufgaben; didaktischer Leitstern
 - [MOL_LAB_TASKS](https://github.com/ekerzendorfer/MOL_LAB_TASKS) – Aufgabenbestand, Ketcher, SMILES-Übergabe
-- [MOLLAB_PRO](https://github.com/ekerzendorfer/MOLLAB_PRO) – interaktiver 2D/3D-Viewer und Geometrievergleich (Überarbeitung geplant)
+- [MOLLAB_PRO](https://github.com/ekerzendorfer/MOLLAB_PRO) – modernisierter 2D/3D-Viewer und Geometrievergleich; URL-basierte Strukturübernahme aus der Werkstatt
 - [MOL_LAB (Colab)](https://github.com/ekerzendorfer/MOL_LAB) – RDKit, Konformere, MMFF/UFF, xTB-GFN2 für die wissenschaftliche Vertiefung
 
 **Nicht Teil dieses Projektschritts:** GENLABOR, PROTEINLABOR, Docking.
@@ -25,3 +25,15 @@ Der Prototyp bietet **zwei Einstiege**: den geführten Lernweg MW-001 (Ethanol/D
 Dateien der Anwendung: index.html, styles.css, app.js sowie data/learning_paths.json und data/tools.json.
 
 Die bisherigen Molekül-Apps bleiben unverändert. Eine automatische Rückgabe aus externen Apps, ein direkt eingebetteter Sketcher/Viewer und die technische Überarbeitung von MOLLAB_PRO folgen erst nach dem Pilot-Test.
+
+## V0.2.0 – Übergabe an MOLLAB PRO
+
+Bei MW-001 führen eigene Links für Ethanol und Dimethylether direkt in den 2D-Editor von MOLLAB PRO. Im freien Molekülstudio übernimmt der Link das ausgewählte Beispiel oder einen eigenen SMILES. Die Werkstatt bleibt im ersten Tab geöffnet, und MOLLAB PRO zeigt einen sicheren Rücklink zur Aufgabenansicht oder zum freien Arbeitsbereich.
+
+Die **3D-Berechnung startet weiterhin bewusst erst per Knopfdruck** im Zielwerkzeug. Es werden keine Arbeitsnotizen, Modellkoordinaten oder Ergebnisse übertragen. Die bestehende MOL_LAB-Colab-Vertiefung bleibt unverändert.
+
+**[Übergabeprotokoll und Testablauf](docs/HANDOFF_V0.2.md)** · **[MOLEKÜL-WERKSTATT öffnen](https://ekerzendorfer.github.io/MOLEKUELWERKSTATT/)**
+
+Technik: `molecule-handoff.js`, `tests/handoff.test.cjs`, `.github/workflows/handoff-regression.yml`.
+
+Die nächste Freigabe erfolgt nach einem echten Browserdurchlauf: Ethanol/Dimethylether → JSME → 3D → zurück zur Werkstatt. Das Portal CHEMIE_KI_LINKS ist **nicht** verändert worden.
