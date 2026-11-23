@@ -17,3 +17,4 @@ jobs:
         run: |
           node tests/handoff.test.cjs
           node tests/learning-paths.test.cjs
+          node tests/research-catalog.test.cjs
