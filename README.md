@@ -53,3 +53,15 @@ Das Zielwerkzeug ist der bereits kuratierte DIDACTIC-Vergleich im Modul „Polar
 **Sicherheitshinweis:** Schwefelwasserstoff ist giftig. MW-002 ist eine digitale Analyseaufgabe, keine praktische Versuchsanleitung mit H₂S.
 
 Nach der Browser-Abnahme können wir behutsam weitere didaktische Fälle aus MOL_LAB DIDACTIC übernehmen. Weder das zentrale CHEMIE_KI_LINKS-Portal noch das DIDACTIC-Notebook selbst wurden für MW-002 geändert.
+
+## Forschungswege-Katalog V0.1 – vollständige DIDACTIC-Erschließung
+
+Alle **61 DIDACTIC-Moduleinträge** (53 unterschiedliche SMILES) sind jetzt einem der **30 geplanten Forschungswege** zugeordnet: 14 Paarvergleiche (A), zehn Untersuchungs-/Beispielwege (B) und sechs Konformerwege (C). **Nur MW-001 und MW-002 sind bislang in der App umgesetzt**; die weiteren 28 sind fachlich-redaktionelle Entwürfe, keine anklickbaren Aufgaben.
+
+- **[Detaillierter Forschungswege-Katalog](docs/FORSCHUNGSWEGE_KATALOG_V0.1.md)** – 30 Steckbriefe mit Leitfrage, Lernziel, Quellkarten, didaktischen Grenzen, Prioritäten und Datenlücken
+- [Strukturierter Katalog (JSON)](data/forschungswege_katalog_v0.1.json) – für spätere Aufgabenbibliothek und Datenmigration
+- [DIDACTIC-Quellenmanifest](data/didactic_quellen_manifest_v0.1.json) – Revisionsbasis mit 61 eindeutigen Modul/Karten-IDs, sieben Isomeriepaaren und sieben Polaritätsvergleichen
+- [Automatischer Katalogtest](tests/research-catalog.test.cjs) – prüft Quellbezug und 61/61-Abdeckung
+
+**Vorschlag für die weitere Entwicklung:** Einen zusätzlichen Vergleich (MW-009, Propanal/Aceton), einen neuen Strukturweg (MW-019, Methanol/Phenol) und einen Konformerweg (MW-024, Cyclohexan) einzeln als Piloten umsetzen. Erst danach die filterbare Bibliothek aufbauen. DIDACTIC, MOLLAB_PRO, die Live-Lernwege und der CHEMIE_KI_LINKS-Hub bleiben bei dieser Katalogerstellung unverändert.
+
