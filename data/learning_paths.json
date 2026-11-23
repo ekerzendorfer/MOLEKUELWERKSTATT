@@ -83,13 +83,13 @@
       "primaryTool": "MOL_LAB_DIDACTIC",
       "targetModule": "Polarität und Löslichkeit",
       "targetExample": "Wasser vs. Schwefelwasserstoff",
-      "targetAction": "Vergleich anzeigen",
+      "targetAction": "Polaritäts-/Löslichkeitsvergleich",
       "investigationIntro": "Im MOL_LAB DIDACTIC ist das Vergleichspaar Wasser / Schwefelwasserstoff bereits als eigener Fall hinterlegt.",
       "notebookSteps": [
         "Colab: Laufzeit → Alle ausführen.",
         "Modul: Polarität und Löslichkeit.",
         "Vergleich: Wasser vs. Schwefelwasserstoff.",
-        "Aktion: Vergleich anzeigen (Polaritätsvergleich)."
+        "Aktion: Polaritäts-/Löslichkeitsvergleich."
       ],
       "predictionHint": "Überlege, welche Anziehungskräfte zwischen den Molekülen auftreten könnten. Achte auch auf ihre unterschiedlichen molaren Massen.",
       "observationPrompt": "Vergleiche die Molekülform, Bindungspolarität und Aggregatzustände. Welche Unterschiede findest du bei den möglichen zwischenmolekularen Kräften?",
