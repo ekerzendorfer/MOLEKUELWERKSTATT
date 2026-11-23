@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="MOLEKÜL-WERKSTATT – Moleküle erforschen, vergleichen und verstehen. Geführte Lernwege und freies 2D-/3D-Erkunden.">
   <title>MOLEKÜL-WERKSTATT | CHEMIE mit KI</title>
-  <link rel="stylesheet" href="./styles.css?v=0.2.0">
+  <link rel="stylesheet" href="./styles.css?v=0.3.0">
   <script src="./molecule-handoff.js?v=0.2.0" defer></script>
-  <script src="./app.js?v=0.2.0" defer></script>
+  <script src="./app.js?v=0.3.0" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
@@ -19,7 +19,7 @@
       </a>
       <nav class="topnav" aria-label="Hauptnavigation">
         <button type="button" data-view="start" class="nav-btn" aria-current="page">Einstieg</button>
-        <button type="button" data-view="aufgabe" class="nav-btn">MW-001</button>
+        <button type="button" data-view="aufgabe" class="nav-btn">Forschungsweg</button>
         <button type="button" data-view="frei" class="nav-btn">Frei erkunden</button>
       </nav>
     </div>
@@ -63,6 +63,15 @@
           <small class="muted">Direkte Zugänge zu 2D-Sketcher, 3D-Ansichten und Colab</small>
         </article>
       </div>
+      <article class="panel next-case" aria-labelledby="mw002-title">
+        <div class="next-case-symbol" aria-hidden="true">H₂O ↔ H₂S</div>
+        <div class="next-case-copy">
+          <p class="eyebrow dark">Weitere Forschungsaufgabe · MW-002</p>
+          <h3 id="mw002-title">Warum ist Wasser flüssig, Schwefelwasserstoff aber gasförmig?</h3>
+          <p>Vergleiche Molekülformen und zwischenmolekulare Kräfte. Finde heraus, warum die Siedetemperaturen so unterschiedlich sind.</p>
+        </div>
+        <button type="button" class="btn btn-secondary" data-action="select-case" data-case="MW-002">MW-002 beginnen →</button>
+      </article>
       <div class="info-strip">
         <strong>Wissenschaftliche Vertiefung bleibt möglich.</strong>
         <span>Bei Bedarf führt die Werkstatt weiter zu RDKit, Konformeren und xTB in Colab – ohne den Einstieg damit zu überfrachten.</span>
@@ -72,9 +81,9 @@
     <section id="view-aufgabe" class="view" aria-labelledby="case-title" hidden>
       <div class="view-heading">
         <div>
-          <p class="eyebrow dark">Geführter Lernweg · MW-001</p>
+          <p class="eyebrow dark" id="case-eyebrow">Geführter Lernweg · MW-001</p>
           <h2 id="case-title">Gleiche Summenformel – andere Stoffeigenschaften?</h2>
-          <p>Ethanol und Dimethylether haben beide die Summenformel C₂H₆O. Warum unterscheiden sie sich dennoch?</p>
+          <p id="case-intro">Ethanol und Dimethylether haben beide die Summenformel C₂H₆O. Warum unterscheiden sie sich dennoch?</p>
         </div>
         <button type="button" class="btn btn-quiet" data-view="start">← Zur Übersicht</button>
       </div>
@@ -99,7 +108,7 @@
         <aside class="work-side">
           <div class="panel context-panel">
             <p class="eyebrow dark">Die untersuchten Moleküle</p>
-            <div class="molecule-facts">
+            <div class="molecule-facts" id="case-molecules">
               <div><strong>Ethanol</strong><small>Alkohol · C₂H₆O</small><code>CCO</code><button type="button" class="copy-mini" data-copy="CCO" aria-label="SMILES von Ethanol kopieren">SMILES kopieren</button><a id="case-handoff-0" class="case-handoff" href="https://ekerzendorfer.github.io/MOLLAB_PRO/" target="_blank" rel="noopener noreferrer">In 2D/3D betrachten ↗</a></div>
               <div><strong>Dimethylether</strong><small>Ether · C₂H₆O</small><code>COC</code><button type="button" class="copy-mini" data-copy="COC" aria-label="SMILES von Dimethylether kopieren">SMILES kopieren</button><a id="case-handoff-1" class="case-handoff" href="https://ekerzendorfer.github.io/MOLLAB_PRO/" target="_blank" rel="noopener noreferrer">In 2D/3D betrachten ↗</a></div>
             </div>
@@ -163,6 +172,6 @@
     </section>
   </main>
 
-  <footer class="footer"><div class="wrap footer-inner"><span>CHEMIE mit KI · MOLEKÜL-WERKSTATT <strong>V0.2 – Übergabe-Prototyp</strong></span><span>Kein Login · Arbeitsnotizen nur lokal auf diesem Gerät</span></div></footer>
+  <footer class="footer"><div class="wrap footer-inner"><span>CHEMIE mit KI · MOLEKÜL-WERKSTATT <strong>V0.3 – zwei Lernwege</strong></span><span>Kein Login · Arbeitsnotizen nur lokal auf diesem Gerät</span></div></footer>
 </body>
 </html>
