@@ -68,6 +68,51 @@
     var tool = getTool(id);
     return tool && /^https:\/\//.test(tool.url) ? tool.url : "";
   }
+  function linkToMollab(smiles, name, context) {
+    if (!window.MoleculeHandoff) throw new Error("Übergabe-Modul ist nicht geladen.");
+    return window.MoleculeHandoff.makeLink(urlFor("MOLLAB_PRO"), {
+      smiles: smiles, name: name, context: context
+    });
+  }
+  function updateCaseHandoff() {
+    var path = currentPath();
+    if (!path || !Array.isArray(path.molecules)) return;
+    path.molecules.slice(0, 2).forEach(function (mol, idx) {
+      var link = elem("case-handoff-" + idx);
+      if (!link) return;
+      try {
+        link.href = linkToMollab(mol.smiles, mol.name, path.id);
+        link.title = mol.name + " direkt in MOLLAB_PRO laden";
+      } catch (error) {
+        link.removeAttribute("href");
+        link.title = "Übergabe nicht verfügbar: " + error.message;
+      }
+    });
+  }
+  function updateFreeHandoff() {
+    var link = elem("free-mollab-link");
+    var status = elem("free-transfer-status");
+    if (!link || !status || !toolData) return;
+    var smiles = state.freeSmiles.trim();
+    var examples = (data && data.free_examples) || [];
+    var selected = examples[state.selectedExample];
+    var name = selected && selected.smiles === smiles ? selected.name : "Eigenes Molekül";
+    if (!smiles) {
+      link.href = urlFor("MOLLAB_PRO");
+      link.textContent = "MOLLAB_PRO ohne Molekül öffnen ↗";
+      status.textContent = "Keine Struktur ausgewählt: Der 2D-Editor öffnet sich leer. Du kannst dort frei zeichnen.";
+      return;
+    }
+    try {
+      link.href = linkToMollab(smiles, name, "frei");
+      link.textContent = name + " in MOLLAB_PRO öffnen ↗";
+      status.textContent = "SMILES wird als URL-Parameter übergeben. In MOLLAB_PRO erscheint das Molekül direkt im 2D-Editor; die 3D-Erzeugung bleibt ein eigener Schritt.";
+    } catch (error) {
+      link.href = urlFor("MOLLAB_PRO");
+      link.textContent = "MOLLAB_PRO ohne Übergabe öffnen ↗";
+      status.textContent = "Übergabe nicht möglich: " + error.message + " Das Zielwerkzeug bleibt unabhängig zugänglich.";
+    }
+  }
   function setView(view, changeHash) {
     if (!allowedViews.includes(view)) view = "start";
     state.view = view;
@@ -81,7 +126,7 @@
       if (btn.dataset.view === view) btn.setAttribute("aria-current", "page");
       else btn.removeAttribute("aria-current");
     });
-    if (view === "aufgabe") renderStep();
+    if (view === "aufgabe") { renderStep(); updateCaseHandoff(); }
     if (view === "start") updateStart();
     if (view === "frei") renderFree();
     if (changeHash && window.location.hash !== "#" + view) window.location.hash = view;
@@ -202,7 +247,7 @@
         (idx === state.selectedExample ? 'true' : 'false') + '">' + safeText(item.name) + '</button>';
     }).join("");
     elem("free-smiles").value = state.freeSmiles;
-    if (urlFor("MOLLAB_PRO")) elem("free-mollab-link").href = urlFor("MOLLAB_PRO");
+    updateFreeHandoff();
     if (urlFor("MOL_LAB")) elem("free-colab-link").href = urlFor("MOL_LAB");
   }
   function updateField(input) {
@@ -289,6 +334,7 @@
       state.selectedExample = -1;
       persist();
       document.querySelectorAll("[data-example]").forEach(function (chip) { chip.setAttribute("aria-pressed","false"); });
+      updateFreeHandoff();
     }
   });
   document.addEventListener("change", function (event) {
