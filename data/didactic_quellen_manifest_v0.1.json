@@ -1,0 +1,700 @@
+{
+  "sourceRepo": "ekerzendorfer/MOL_LAB_DIDACTIC",
+  "sourceFile": "molecules_v0_4_2.json",
+  "sourceSha": "f2ef10a3730fa752e6944499082d2219ecaf2bde",
+  "importedAt": "2026-11-23",
+  "description": "Minimaler revisionsfähiger Snapshot der DIDACTIC-Quellzuordnung, nicht die eigentliche Unterrichtsdatenbank.",
+  "entries": [
+    {
+      "module": "Polarität und Löslichkeit",
+      "id": "wasser",
+      "name": "Wasser",
+      "smiles": "O",
+      "level": "Basis",
+      "physicalDataFields": 5,
+      "question": "Welche Aussage erklärt die besonderen Stoffeigenschaften von Wasser am besten?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Polarität und Löslichkeit",
+      "id": "methan",
+      "name": "Methan",
+      "smiles": "C",
+      "level": "Basis",
+      "physicalDataFields": 4,
+      "question": "Welche Aussage beschreibt Methan im Vergleich zu Wasser am besten?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Polarität und Löslichkeit",
+      "id": "ammoniak",
+      "name": "Ammoniak",
+      "smiles": "N",
+      "level": "Basis",
+      "physicalDataFields": 4,
+      "question": "Welche Aussage passt am besten zu Ammoniak?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Polarität und Löslichkeit",
+      "id": "kohlenstoffdioxid",
+      "name": "Kohlenstoffdioxid",
+      "smiles": "O=C=O",
+      "level": "Basis",
+      "physicalDataFields": 3,
+      "question": "Warum ist CO2 trotz polarer C=O-Bindungen insgesamt kaum polar?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Polarität und Löslichkeit",
+      "id": "methanol",
+      "name": "Methanol",
+      "smiles": "CO",
+      "level": "Basis",
+      "physicalDataFields": 5,
+      "question": "Warum ist Methanol sehr gut mit Wasser mischbar?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Polarität und Löslichkeit",
+      "id": "ethanol",
+      "name": "Ethanol",
+      "smiles": "CCO",
+      "level": "Basis",
+      "physicalDataFields": 5,
+      "question": "Warum ist Ethanol gut mit Wasser mischbar, obwohl es einen Kohlenwasserstoffrest besitzt?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Polarität und Löslichkeit",
+      "id": "n_butanol",
+      "name": "n-Butanol",
+      "smiles": "CCCCO",
+      "level": "Basis",
+      "physicalDataFields": 5,
+      "question": "Warum ist n-Butanol weniger wasserfreundlich als Methanol oder Ethanol?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Polarität und Löslichkeit",
+      "id": "methanal",
+      "name": "Methanal",
+      "smiles": "C=O",
+      "level": "Basis",
+      "physicalDataFields": 4,
+      "question": "Was unterscheidet Methanal als Carbonylverbindung von Methanol?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Polarität und Löslichkeit",
+      "id": "aceton",
+      "name": "Aceton",
+      "smiles": "CC(=O)C",
+      "level": "Basis",
+      "physicalDataFields": 5,
+      "question": "Welche Aussage beschreibt Aceton als Lösungsmittel am besten?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Polarität und Löslichkeit",
+      "id": "diethylether",
+      "name": "Diethylether",
+      "smiles": "CCOCC",
+      "level": "Basis",
+      "physicalDataFields": 5,
+      "question": "Warum ist Diethylether deutlich anders als Ethanol?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Polarität und Löslichkeit",
+      "id": "essigsaeure",
+      "name": "Essigsäure",
+      "smiles": "CC(=O)O",
+      "level": "Basis",
+      "physicalDataFields": 5,
+      "question": "Warum ist Essigsäure besonders gut für Struktur-Eigenschafts-Vergleiche geeignet?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Polarität und Löslichkeit",
+      "id": "schwefelwasserstoff",
+      "name": "Schwefelwasserstoff",
+      "smiles": "S",
+      "level": "Vergleich",
+      "physicalDataFields": 4,
+      "question": "Warum verhält sich H2S nicht einfach wie „schweres Wasser“?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Polarität und Löslichkeit",
+      "id": "hexan",
+      "name": "Hexan",
+      "smiles": "CCCCCC",
+      "level": "Vergleich",
+      "physicalDataFields": 5,
+      "question": "Warum ist Hexan flüssig, Methan aber gasförmig?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Polarität und Löslichkeit",
+      "id": "1_hexanol",
+      "name": "1-Hexanol",
+      "smiles": "CCCCCCO",
+      "level": "Vergleich",
+      "physicalDataFields": 5,
+      "question": "Was zeigt 1-Hexanol im Vergleich zu Ethanol besonders gut?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Polarität und Löslichkeit",
+      "id": "palmitinsaeure",
+      "name": "Palmitinsäure",
+      "smiles": "CCCCCCCCCCCCCCCC(=O)O",
+      "level": "Vertiefung",
+      "physicalDataFields": 4,
+      "question": "Warum ist Palmitinsäure trotz Carboxylgruppe kaum wasserlöslich?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Polarität und Löslichkeit",
+      "id": "diethylenglycol",
+      "name": "Diethylenglycol",
+      "smiles": "OCCOCCO",
+      "level": "Vergleich",
+      "physicalDataFields": 5,
+      "question": "Warum ist Diethylenglycol viel wasserfreundlicher als Diethylether?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Isomerie",
+      "id": "ethanol",
+      "name": "Ethanol",
+      "smiles": "CCO",
+      "level": "Basis",
+      "physicalDataFields": 5,
+      "question": "Warum hat Ethanol andere Stoffeigenschaften als Dimethylether?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Isomerie",
+      "id": "dimethylether",
+      "name": "Dimethylether",
+      "smiles": "COC",
+      "level": "Basis",
+      "physicalDataFields": 5,
+      "question": "Warum siedet Dimethylether viel niedriger als Ethanol?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Isomerie",
+      "id": "propanal",
+      "name": "Propanal",
+      "smiles": "CCC=O",
+      "level": "Basis",
+      "physicalDataFields": 5,
+      "question": "Was unterscheidet Propanal von Aceton?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Isomerie",
+      "id": "aceton",
+      "name": "Aceton",
+      "smiles": "CC(=O)C",
+      "level": "Basis",
+      "physicalDataFields": 5,
+      "question": "Welche Aussage beschreibt Aceton als Lösungsmittel am besten?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Isomerie",
+      "id": "butan",
+      "name": "Butan",
+      "smiles": "CCCC",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Was unterscheidet Butan von Isobutan?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Isomerie",
+      "id": "isobutan",
+      "name": "Isobutan",
+      "smiles": "CC(C)C",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Warum kann Verzweigung Stoffeigenschaften verändern?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Isomerie",
+      "id": "propansaeure",
+      "name": "Propansäure",
+      "smiles": "CCC(=O)O",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Warum ist Propansäure nicht mit Essigsäuremethylester gleichzusetzen?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Isomerie",
+      "id": "essigsaeuremethylester",
+      "name": "Essigsäuremethylester",
+      "smiles": "CC(=O)OC",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Warum zeigt ein Ester andere Eigenschaften als eine Carbonsäure?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Isomerie",
+      "id": "d_alanin",
+      "name": "D-Alanin",
+      "smiles": "C[C@@H](N)C(=O)O",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Was zeigt der Vergleich von D- und L-Alanin?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Isomerie",
+      "id": "l_alanin",
+      "name": "L-Alanin",
+      "smiles": "C[C@H](N)C(=O)O",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Welche Aussage passt am besten?",
+      "isGenericQuestion": true
+    },
+    {
+      "module": "Isomerie",
+      "id": "glucose_offen",
+      "name": "Glucose offen",
+      "smiles": "O=CC(O)C(O)C(O)C(O)CO",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Warum sind Glucose und Fructose trotz gleicher Summenformel verschieden?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Isomerie",
+      "id": "fructose_offen",
+      "name": "Fructose offen",
+      "smiles": "OCC(O)C(O)C(O)C(=O)CO",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Welche Aussage passt am besten?",
+      "isGenericQuestion": true
+    },
+    {
+      "module": "Isomerie",
+      "id": "maleinsaeure",
+      "name": "Maleinsäure",
+      "smiles": "O=C(O)/C=C\\C(=O)O",
+      "level": "Vertiefung",
+      "physicalDataFields": 3,
+      "question": "Warum kann cis/trans-Isomerie die Eigenschaften stark verändern?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Isomerie",
+      "id": "fumarsaeure",
+      "name": "Fumarsäure",
+      "smiles": "O=C(O)/C=C/C(=O)O",
+      "level": "Vertiefung",
+      "physicalDataFields": 3,
+      "question": "Warum ist Fumarsäure nicht einfach identisch mit Maleinsäure?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Funktionelle Gruppen",
+      "id": "methanol",
+      "name": "Methanol",
+      "smiles": "CO",
+      "level": "Basis",
+      "physicalDataFields": 5,
+      "question": "Warum ist Methanol sehr gut mit Wasser mischbar?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Funktionelle Gruppen",
+      "id": "ethanal",
+      "name": "Ethanal",
+      "smiles": "CC=O",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Warum ist Ethanal reaktiver als ein vergleichbarer Alkohol oder Alkan?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Funktionelle Gruppen",
+      "id": "aceton",
+      "name": "Aceton",
+      "smiles": "CC(=O)C",
+      "level": "Basis",
+      "physicalDataFields": 5,
+      "question": "Welche Aussage beschreibt Aceton als Lösungsmittel am besten?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Funktionelle Gruppen",
+      "id": "essigsaeure",
+      "name": "Essigsäure",
+      "smiles": "CC(=O)O",
+      "level": "Basis",
+      "physicalDataFields": 5,
+      "question": "Warum ist Essigsäure besonders gut für Struktur-Eigenschafts-Vergleiche geeignet?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Funktionelle Gruppen",
+      "id": "ethylacetat",
+      "name": "Ethylacetat",
+      "smiles": "CC(=O)OCC",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Was unterscheidet einen Ester wie Ethylacetat von einer Carbonsäure?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Funktionelle Gruppen",
+      "id": "diethylether",
+      "name": "Diethylether",
+      "smiles": "CCOCC",
+      "level": "Basis",
+      "physicalDataFields": 5,
+      "question": "Warum ist Diethylether deutlich anders als Ethanol?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Funktionelle Gruppen",
+      "id": "acetanhydrid",
+      "name": "Acetanhydrid",
+      "smiles": "CC(=O)OC(=O)C",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Warum gilt Acetanhydrid als deutlich reaktiver als ein einfacher Ester?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Funktionelle Gruppen",
+      "id": "ethylamin",
+      "name": "Ethylamin",
+      "smiles": "CCN",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Warum reagiert Ethylamin als Base?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Funktionelle Gruppen",
+      "id": "acetamid",
+      "name": "Acetamid",
+      "smiles": "CC(=O)N",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Warum ist Acetamid weniger reaktiv als viele andere Carbonylverbindungen?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Funktionelle Gruppen",
+      "id": "phenol",
+      "name": "Phenol",
+      "smiles": "c1ccccc1O",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Warum ist Phenol kein „normaler Alkohol“ wie Ethanol?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Funktionelle Gruppen",
+      "id": "anilin",
+      "name": "Anilin",
+      "smiles": "c1ccccc1N",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Warum verhält sich Anilin anders als ein einfaches Alkylamin?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Funktionelle Gruppen",
+      "id": "salicylsaeure",
+      "name": "Salicylsäure",
+      "smiles": "O=C(O)c1ccccc1O",
+      "level": "Vertiefung",
+      "physicalDataFields": 0,
+      "question": "Warum ist Salicylsäure für funktionelle Gruppen besonders interessant?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Funktionelle Gruppen",
+      "id": "vanillin",
+      "name": "Vanillin",
+      "smiles": "COc1cc(C=O)ccc1O",
+      "level": "Vertiefung",
+      "physicalDataFields": 0,
+      "question": "Welche Aussage erklärt Vanillin als gutes Beispiel für funktionelle Gruppen?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Konformere",
+      "id": "butan",
+      "name": "Butan",
+      "smiles": "CCCC",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Was unterscheidet Butan von Isobutan?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Konformere",
+      "id": "1_2_dichlorethan",
+      "name": "1,2-Dichlorethan",
+      "smiles": "ClCCCl",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Warum können bei 1,2-Dichlorethan verschiedene Konformere unterschiedliche Eigenschaften haben?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Konformere",
+      "id": "ethylenglykol",
+      "name": "Ethylenglykol",
+      "smiles": "OCCO",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Warum ist Ethylenglykol ein gutes Beispiel für Konformere?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Konformere",
+      "id": "cyclohexan",
+      "name": "Cyclohexan",
+      "smiles": "C1CCCCC1",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Warum ist die Sesselstruktur von Cyclohexan besonders günstig?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Konformere",
+      "id": "milchsaeure",
+      "name": "Milchsäure",
+      "smiles": "C[C@H](O)C(=O)O",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Was zeigt Milchsäure im Konformer-Modul besonders gut?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Konformere",
+      "id": "n_pentan",
+      "name": "n-Pentan",
+      "smiles": "CCCCC",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Warum liefert n-Pentan mehr mögliche Konformere als Butan?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Konformere",
+      "id": "2_butanol",
+      "name": "2-Butanol",
+      "smiles": "CCC(O)C",
+      "level": "Vertiefung",
+      "physicalDataFields": 0,
+      "question": "Was macht 2-Butanol als Konformer-Beispiel interessanter als ein einfaches Alkan?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Wirkstoffe und Biomoleküle",
+      "id": "coffein",
+      "name": "Coffein",
+      "smiles": "Cn1cnc2n(C)c(=O)n(C)c(=O)c12",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Warum ist Coffein trotz mehrerer N- und O-Atome nicht einfach „sehr wasserliebend“?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Wirkstoffe und Biomoleküle",
+      "id": "aspirin",
+      "name": "Aspirin",
+      "smiles": "CC(=O)Oc1ccccc1C(=O)O",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Warum ist Aspirin strukturchemisch interessant?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Wirkstoffe und Biomoleküle",
+      "id": "paracetamol",
+      "name": "Paracetamol",
+      "smiles": "CC(=O)Nc1ccc(O)cc1",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Welche Aussage passt am besten?",
+      "isGenericQuestion": true
+    },
+    {
+      "module": "Wirkstoffe und Biomoleküle",
+      "id": "ibuprofen",
+      "name": "Ibuprofen",
+      "smiles": "CC(C)Cc1ccc(cc1)[C@@H](C)C(=O)O",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Welche Aussage passt am besten?",
+      "isGenericQuestion": true
+    },
+    {
+      "module": "Wirkstoffe und Biomoleküle",
+      "id": "acetazolamid",
+      "name": "Acetazolamid",
+      "smiles": "CC(=O)Nc1nnc(s1)S(N)(=O)=O",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Welche Aussage passt am besten?",
+      "isGenericQuestion": true
+    },
+    {
+      "module": "Wirkstoffe und Biomoleküle",
+      "id": "glycin",
+      "name": "Glycin",
+      "smiles": "NCC(=O)O",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Warum ist Glycin trotz kleiner Größe stark polar?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Wirkstoffe und Biomoleküle",
+      "id": "alanin",
+      "name": "Alanin",
+      "smiles": "C[C@H](N)C(=O)O",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Welche Aussage passt am besten?",
+      "isGenericQuestion": true
+    },
+    {
+      "module": "Wirkstoffe und Biomoleküle",
+      "id": "phenylalanin",
+      "name": "Phenylalanin",
+      "smiles": "N[C@@H](Cc1ccccc1)C(=O)O",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Welche Aussage passt am besten?",
+      "isGenericQuestion": true
+    },
+    {
+      "module": "Wirkstoffe und Biomoleküle",
+      "id": "adenin",
+      "name": "Adenin",
+      "smiles": "Nc1ncnc2[nH]cnc12",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Warum ist Adenin für Biomoleküle wichtig?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Wirkstoffe und Biomoleküle",
+      "id": "ribose",
+      "name": "Ribose",
+      "smiles": "O=CC(O)C(O)C(O)CO",
+      "level": "Basis",
+      "physicalDataFields": 0,
+      "question": "Warum ist Ribose stark wasserfreundlich?",
+      "isGenericQuestion": false
+    },
+    {
+      "module": "Wirkstoffe und Biomoleküle",
+      "id": "citronensaeure",
+      "name": "Citronensäure",
+      "smiles": "O=C(O)CC(O)(CC(=O)O)C(=O)O",
+      "level": "Vertiefung",
+      "physicalDataFields": 0,
+      "question": "Warum ist Citronensäure stark wasserfreundlich und reaktiv in Säure-Base-Zusammenhängen?",
+      "isGenericQuestion": false
+    }
+  ],
+  "isomerPairs": [
+    {
+      "left": "Ethanol",
+      "right": "Dimethylether"
+    },
+    {
+      "left": "Propanal",
+      "right": "Aceton"
+    },
+    {
+      "left": "Butan",
+      "right": "Isobutan"
+    },
+    {
+      "left": "Propansäure",
+      "right": "Essigsäuremethylester"
+    },
+    {
+      "left": "D-Alanin",
+      "right": "L-Alanin"
+    },
+    {
+      "left": "Glucose offen",
+      "right": "Fructose offen"
+    },
+    {
+      "left": "Maleinsäure",
+      "right": "Fumarsäure"
+    }
+  ],
+  "polarityPairs": [
+    {
+      "key": "Wasser vs. Schwefelwasserstoff",
+      "a": "Wasser",
+      "b": "Schwefelwasserstoff",
+      "question": "Warum ist Wasser bei Raumtemperatur flüssig, Schwefelwasserstoff aber gasförmig?",
+      "hasQuiz": true
+    },
+    {
+      "key": "Methan vs. Hexan",
+      "a": "Methan",
+      "b": "Hexan",
+      "question": "Warum ist Methan gasförmig, Hexan aber flüssig, obwohl beide unpolar sind?",
+      "hasQuiz": true
+    },
+    {
+      "key": "Ethanol vs. 1-Hexanol",
+      "a": "Ethanol",
+      "b": "1-Hexanol",
+      "question": "Warum ist Ethanol gut wasserlöslich, 1-Hexanol aber deutlich schlechter?",
+      "hasQuiz": true
+    },
+    {
+      "key": "Essigsäure vs. Palmitinsäure",
+      "a": "Essigsäure",
+      "b": "Palmitinsäure",
+      "question": "Warum ist Essigsäure gut wasserlöslich, Palmitinsäure aber kaum?",
+      "hasQuiz": true
+    },
+    {
+      "key": "Diethylether vs. Diethylenglycol",
+      "a": "Diethylether",
+      "b": "Diethylenglycol",
+      "question": "Warum ist Diethylenglycol deutlich wasserfreundlicher als Diethylether?",
+      "hasQuiz": true
+    },
+    {
+      "key": "Methanol vs. Methanal",
+      "a": "Methanol",
+      "b": "Methanal",
+      "question": "Warum unterscheiden sich Methanol und Methanal trotz ähnlicher Größe in ihren Wechselwirkungen?",
+      "hasQuiz": true
+    },
+    {
+      "key": "Aceton vs. Essigsäure",
+      "a": "Aceton",
+      "b": "Essigsäure",
+      "question": "Warum verhalten sich Aceton und Essigsäure trotz Carbonylgruppe unterschiedlich?",
+      "hasQuiz": true
+    }
+  ]
+}
