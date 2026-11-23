@@ -5,7 +5,7 @@
   "version": "0.1",
   "date": "2026-11-23",
   "status": "concept_only",
-  "description": "DIDACTIC-zentrierter Quellenkatalog: erst didaktischer Einstieg, nach Bedarf MOLLAB_PRO (3D) und MOL_LAB (RDKit/MMFF/xTB). Nur MW-001 und MW-002 sind in der Werkstatt implementiert.",
+  "description": "Forschungswege-Katalog DIDACTIC: fünf aktive Lernwege (MW-001, MW-002, MW-009, MW-015, MW-024); weitere 25 geplant. Alle 61 Moduleinträge sind zugeordnet.",
   "notes": "Quellkarten sind Verweise auf Moleküleinträge in DIDACTIC; Eigenschaften, MC-Fragen und Laufzeitfunktionen werden nicht automatisch in die Werkstatt übertragen.",
   "sourceModuleEntries": 61,
   "sourceUniqueSmiles": 53,
@@ -373,7 +373,7 @@
     {
       "id": "MW-009",
       "template": "A",
-      "status": "planned",
+      "status": "live",
       "topic": "Isomerie",
       "title": "Propanal und Aceton: Aldehyd oder Keton?",
       "question": "Was verändert die Position der Carbonylgruppe bei C₃H₆O?",
@@ -411,7 +411,7 @@
         "MOLLAB_PRO",
         "MOL_LAB"
       ],
-      "needsEditorialReview": true,
+      "needsEditorialReview": false,
       "requiresConformerEngine": false
     },
     {
@@ -637,7 +637,7 @@
     {
       "id": "MW-015",
       "template": "B",
-      "status": "planned",
+      "status": "live",
       "topic": "Polarität und Löslichkeit",
       "title": "Molekülform: Bindungsdipol oder Moleküldipol?",
       "question": "Warum ist CO₂ trotz polarer Bindungen insgesamt unpolar?",
@@ -692,7 +692,7 @@
         "MOLLAB_PRO",
         "MOL_LAB"
       ],
-      "needsEditorialReview": true,
+      "needsEditorialReview": false,
       "requiresConformerEngine": false
     },
     {
@@ -1066,7 +1066,7 @@
     {
       "id": "MW-024",
       "template": "C",
-      "status": "planned",
+      "status": "live",
       "topic": "Konformere",
       "title": "Cyclohexan: Weshalb eine Sesselstruktur?",
       "question": "Welche räumlichen Strukturen vermeiden Ringspannung?",
@@ -1091,7 +1091,7 @@
         "MOL_LAB",
         "MOLLAB_PRO"
       ],
-      "needsEditorialReview": true,
+      "needsEditorialReview": false,
       "requiresConformerEngine": true
     },
     {
