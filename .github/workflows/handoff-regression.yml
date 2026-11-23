@@ -14,4 +14,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Validate URL handoff and UI integration
-        run: node tests/handoff.test.cjs
+        run: |
+          node tests/handoff.test.cjs
+          node tests/learning-paths.test.cjs
