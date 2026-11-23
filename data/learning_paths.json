@@ -1,6 +1,6 @@
 {
-  "schema_version": "0.1.0",
-  "release": "MW-001 – erster Pilotfall",
+  "schema_version": "0.3.0",
+  "release": "MW-001 und MW-002 – zwei geführte Pilotfälle",
   "learning_paths": [
     {
       "id": "MW-001",
@@ -38,6 +38,61 @@
       "optionalTools": [
         "MOLLAB_PRO",
         "MOL_LAB_TASKS"
+      ]
+    },
+    {
+      "id": "MW-002",
+      "title": "Warum ist Wasser flüssig, Schwefelwasserstoff aber gasförmig?",
+      "topic": "Polarität / zwischenmolekulare Kräfte",
+      "level": "Basis · SEK2 (für SEK1 vereinfachbar)",
+      "question": "Warum ist Wasser bei Raumtemperatur flüssig, Schwefelwasserstoff dagegen gasförmig?",
+      "intro": "Beide Moleküle sind gewinkelt und bestehen aus drei Atomen. Dennoch haben sie ganz unterschiedliche Siedetemperaturen und Aggregatzustände.",
+      "molecules": [
+        {
+          "name": "Wasser",
+          "smiles": "O",
+          "formula": "H₂O",
+          "kind": "polare O–H-Bindungen"
+        },
+        {
+          "name": "Schwefelwasserstoff",
+          "smiles": "S",
+          "formula": "H₂S",
+          "kind": "S–H-Bindungen"
+        }
+      ],
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "targetModule": "Polarität und Löslichkeit",
+      "targetExample": "Wasser vs. Schwefelwasserstoff",
+      "targetAction": "Vergleich anzeigen",
+      "investigationIntro": "Im MOL_LAB DIDACTIC ist das Vergleichspaar Wasser / Schwefelwasserstoff bereits als eigener Fall hinterlegt.",
+      "notebookSteps": [
+        "Colab: Laufzeit → Alle ausführen.",
+        "Modul: Polarität und Löslichkeit.",
+        "Vergleich: Wasser vs. Schwefelwasserstoff.",
+        "Aktion: Vergleich anzeigen (Polaritätsvergleich)."
+      ],
+      "predictionHint": "Überlege, welche Anziehungskräfte zwischen den Molekülen auftreten könnten. Achte auch auf ihre unterschiedlichen molaren Massen.",
+      "observationPrompt": "Vergleiche die Molekülform, Bindungspolarität und Aggregatzustände. Welche Unterschiede findest du bei den möglichen zwischenmolekularen Kräften?",
+      "observationPlaceholder": "Beide Moleküle sind …, aber bei Wasser …",
+      "interpretationQuestion": "Warum hat H₂O trotz geringerer molarer Masse einen viel höheren Siedepunkt als H₂S?",
+      "interpretationPlaceholder": "Zwischen Wassermolekülen entstehen …; bei H₂S …",
+      "explanation": [
+        "Wasser und Schwefelwasserstoff sind beide gewinkelt, unterscheiden sich jedoch in der Stärke ihrer zwischenmolekularen Wechselwirkungen. Die stark polaren O–H-Bindungen ermöglichen zwischen Wassermolekülen ein ausgeprägtes Wasserstoffbrücken-Netzwerk.",
+        "H₂S besitzt zwar ebenfalls gewinkelte und polare Moleküle, bildet unter üblichen Bedingungen aber kein vergleichbar starkes Wasserstoffbrücken-Netzwerk. Trotz seiner größeren molaren Masse siedet H₂S daher bei etwa −60 °C; Wasser bei etwa 100 °C (jeweils bei ungefähr 1 atm).",
+        "Einzelne 3D-Molekülmodelle zeigen die Molekülgestalt, aber nicht von selbst das Netzwerk der Anziehungskräfte zwischen vielen Molekülen. Experimentelle Stoffdaten sind deshalb für die Begründung unverzichtbar. Schwefelwasserstoff ist giftig: Dieser Fall ist eine digitale Vergleichsaufgabe, kein Vorschlag für einen Schulversuch mit H₂S."
+      ],
+      "conclusionPrompt": "Fasse zusammen, wie Molekülstruktur und zwischenmolekulare Wechselwirkungen die unterschiedlichen Aggregatzustände erklären.",
+      "conclusionPlaceholder": "Wasser ist bei Raumtemperatur flüssig, weil …",
+      "sourceReferences": [
+        {
+          "repo": "MOL_LAB_DIDACTIC",
+          "module": "Polarität und Löslichkeit",
+          "pair": "Wasser vs. Schwefelwasserstoff"
+        }
+      ],
+      "optionalTools": [
+        "MOLLAB_PRO"
       ]
     }
   ],
