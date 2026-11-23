@@ -66,6 +66,28 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{
 .btn-outline:hover{background:#ebf7fc}
 .btn:disabled{opacity:.55;cursor:not-allowed}
 .info-strip{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-top:22px;padding:19px 23px;border-left:4px solid #77c4d0;background:#e9f4f8;border-radius:0 12px 12px 0;color:#2a5268;font-size:.94rem}
+
+/* V0.4 – compact, question-led task selection */
+.more-paths{margin-top:28px}
+.more-paths .section-heading{margin-bottom:17px}
+.case-choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.case-choice-card{display:flex;flex-direction:column;align-items:flex-start;gap:9px;min-width:0;padding:20px 22px;
+  border:1px solid #dce5ef;border-radius:16px;background:#fff;box-shadow:0 6px 22px rgba(14,36,62,.045)}
+.case-choice-card .case-kicker{font-size:.73rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:#176986}
+.case-choice-card h3{font-size:1.1rem;line-height:1.27;margin:0}
+.case-choice-card p{font-size:.89rem;color:var(--muted);margin:0 0 3px;flex:1}
+.case-choice-card .btn{margin-top:4px}
+.variant-selector{background:#f0f7fa;border:1px solid #c9e2ed;border-radius:12px;padding:13px 15px;margin:0 0 21px}
+.variant-selector label{display:block;font-weight:760;margin-bottom:7px}
+.variant-selector select{width:100%;max-width:440px;border:1px solid #a9c9d9;border-radius:9px;background:white;
+  color:#183f57;min-height:44px;padding:9px 11px;font-weight:650}
+.variant-selector p{margin:8px 0 0!important;font-size:.82rem;color:#527187}
+.molecule-facts>div.active-molecule{border:1px solid #77b9d0;background:#eaf6fa}
+.deep-link-panel{padding:15px 18px;background:#f3f7fb;border:1px solid #d4e5ed;border-radius:12px;margin:13px 0}
+.deep-link-panel p{margin:0 0 9px;font-size:.88rem;color:var(--muted)}
+.deep-link-panel .btn{margin:3px 0}
+@media(max-width:750px){.case-choice-grid{grid-template-columns:1fr}}
+
 .next-case{display:flex;align-items:center;gap:20px;padding:21px 24px;margin-top:20px;border-left:4px solid #2691a8;box-shadow:0 5px 20px rgba(14,36,62,.06)}
 .next-case-symbol{display:grid;place-items:center;flex:0 0 126px;min-height:84px;border-radius:13px;background:linear-gradient(130deg,#0a3454,#166482);color:#e5fbff;font:bold 1.3rem ui-monospace,Consolas,monospace;white-space:nowrap}
 .next-case-copy{flex:1;min-width:0}
