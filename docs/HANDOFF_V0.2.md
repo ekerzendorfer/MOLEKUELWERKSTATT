@@ -28,7 +28,7 @@ https://ekerzendorfer.github.io/MOLLAB_PRO/?smiles=CCO&name=Ethanol&source=molek
 | `smiles` | URL-kodierter SMILES (max. 2000 Zeichen, kein Leer-/Steuerzeichen); **nur** Strukturtext, kein SDF/3D |
 | `name` | Anzeigename (max. 100 Zeichen), nur in Textknoten angezeigt |
 | `source` | `molekuelwerkstatt` markiert einen Werkstatt-Aufruf; keine Authentifizierung |
-| `context` | `MW-001` → Rücklink zu `#aufgabe`; `frei` → Rücklink zu `#frei`; unbekannte Werte werden auf `frei` begrenzt |
+| `context` | `MW-001` → `#aufgabe`; `MW-002` → `?case=MW-002#aufgabe`; `frei` → `#frei`; unbekannte Werte werden auf `frei` begrenzt |
 
 Die Funktion `MoleculeHandoff.makeLink` steht in **beiden** Repositories in `molecule-handoff.js`; `readLink` übernimmt die Parameter in MOLLAB PRO. Die Rückadresse ist im Code fest auf das bekannte Werkstatt-Portal begrenzt: frei übermittelte `return`-URLs werden **niemals** geöffnet. Die 2D-Übernahme wartet auf **beide** bereits vorhandenen Komponenten: JSME und 3Dmol-Viewer. RDKit-Deskriptoren werden bei späterer WebAssembly-Bereitschaft ergänzt.
 
@@ -54,3 +54,9 @@ Beide Repositories enthalten `tests/handoff.test.cjs`, ausgeführt in GitHub Act
 ## Weitere Vernetzung
 
 Ist diese Übergabe praktisch bestätigt, kann derselbe kleinstmögliche Vertrag für MOL_LAB_TASKS und weitere aufgabenbezogene Werkzeuge genutzt werden. Eine vollwertige Ergebnis-Rückgabe oder gemeinsamer 3D-Arbeitsstand ist ein **separater** Entwicklungsschritt.
+
+## Ergänzung V0.3: zwei Aufgaben
+
+Der Handoff-Vertrag akzeptiert zusätzlich `context=MW-002`. MOLLAB PRO leitet den Rückweg dann **nicht** zur zuletzt geöffneten Aufgabe, sondern über `?case=MW-002#aufgabe` ausdrücklich zum Wasser-/Schwefelwasserstoff-Fall.
+
+Die Werkstatt verwendet **denselben Renderer** für MW-001 und MW-002; die voneinander unabhängigen Fortschritte liegen unter dem bisherigen Browser-Speicherschlüssel. Testfälle: `tests/handoff.test.cjs` und `tests/learning-paths.test.cjs`.
