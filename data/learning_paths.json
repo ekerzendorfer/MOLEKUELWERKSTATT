@@ -38,7 +38,26 @@
       "optionalTools": [
         "MOLLAB_PRO",
         "MOL_LAB_TASKS"
-      ]
+      ],
+      "intro": "Ethanol und Dimethylether haben beide die Summenformel C₂H₆O. Warum unterscheiden sie sich dennoch?",
+      "predictionHint": "Beide Stoffe bestehen aus denselben Atomsorten in derselben Anzahl. Die Verknüpfung ihrer Atome ist aber unterschiedlich.",
+      "investigationIntro": "Im MOL_LAB DIDACTIC ist das Isomerenpaar bereits kuratiert. Du musst keine Moleküle selbst eingeben.",
+      "notebookSteps": [
+        "Colab: Laufzeit → Alle ausführen.",
+        "Modul: Isomerie.",
+        "Beispiel: Ethanol (eigene SMILES aus).",
+        "Aktion: Isomerenpaar vergleichen."
+      ],
+      "observationPrompt": "Was hast du beobachtet?",
+      "observationPlaceholder": "Ich sehe bei Ethanol … und bei Dimethylether …",
+      "interpretationQuestion": "Welches Molekül kann zwischen eigenen Molekülen Wasserstoffbrücken ausbilden, und warum?",
+      "interpretationPlaceholder": "Bei Ethanol …, weil …",
+      "explanation": [
+        "In Ethanol ist der Sauerstoff an ein Wasserstoffatom gebunden (O–H). Ethanolmoleküle können deshalb untereinander Wasserstoffbrücken spenden und aufnehmen. Dimethylether enthält zwar ebenfalls ein polares C–O–C-Fragment und kann Wasserstoffbrücken aufnehmen, besitzt aber keine O–H-Bindung und kann zwischen seinen eigenen Molekülen keine solchen Brücken spenden. Diese Unterschiede in den zwischenmolekularen Kräften erklären unter anderem die deutlich unterschiedlichen Siedepunkte.",
+        "Wichtig: Auch Dimethylether kann mit passenden Wasserstoffbrücken-Donoren wie Wasser wechselwirken. „Keine O–H-Gruppe“ bedeutet nicht „unpolar“."
+      ],
+      "conclusionPrompt": "Vergleiche deine anfängliche Vermutung mit deinen Beobachtungen. Formuliere eine kurze Schlussfolgerung, die den Zusammenhang zwischen Struktur und Eigenschaften erklärt.",
+      "conclusionPlaceholder": "Obwohl beide die gleiche Summenformel besitzen, …"
     },
     {
       "id": "MW-002",
