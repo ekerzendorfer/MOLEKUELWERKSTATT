@@ -1,6 +1,6 @@
 # MOLEKÜL-WERKSTATT – CHEMIE mit KI
 
-**Projektstatus:** V0.2.0 – erster SMILES-Übergabeprototyp (MW-001 + frei erkunden), noch nicht im CHEMIE_KI_LINKS-Portal veröffentlicht
+**Projektstatus:** V0.3.0 – zwei geführte Lernwege (MW-001, MW-002), unabhängige Notizen und direkte SMILES-Übergabe; noch nicht im CHEMIE_KI_LINKS-Portal veröffentlicht
 
 Die MOLEKÜL-WERKSTATT wird die **gemeinsame, didaktisch geführte Einstiegsoberfläche** zu den vorhandenen Molekül-Apps. Ausgangspunkt ist eine chemische Fragestellung – nicht die Auswahl einer Software. Vorbild: CHEMIE_ANALYTIK_HUB. Das Prinzip von MOL_LAB DIDACTIC (Beobachten → Vermuten → Antwort prüfen → Erklärung anzeigen) steht im Zentrum.
 
@@ -37,3 +37,19 @@ Die **3D-Berechnung startet weiterhin bewusst erst per Knopfdruck** im Zielwerkz
 Technik: `molecule-handoff.js`, `tests/handoff.test.cjs`, `.github/workflows/handoff-regression.yml`.
 
 Die nächste Freigabe erfolgt nach einem echten Browserdurchlauf: Ethanol/Dimethylether → JSME → 3D → zurück zur Werkstatt. Das Portal CHEMIE_KI_LINKS ist **nicht** verändert worden.
+
+## V0.3.0 – MW-002: Wasser und Schwefelwasserstoff
+
+Der zweite Forschungsweg behandelt **Molekülform, Polarität und zwischenmolekulare Kräfte**. Die zentrale Leitfrage: *Warum ist Wasser bei Raumtemperatur flüssig, Schwefelwasserstoff gasförmig?* Die vier didaktischen Schritte und der didaktisch bewusst verzögerte Erklärungsteil bleiben erhalten.
+
+Das Zielwerkzeug ist der bereits kuratierte DIDACTIC-Vergleich im Modul „Polarität und Löslichkeit“. Der direkte SMILES-Transfer zu MOLLAB PRO funktioniert für beide Moleküle. Ein Rücklink aus MOLLAB PRO bringt den Nutzer **gezielt zu MW-002**, nicht zurück zu MW-001. Die freien Werkzeuge und MW-001 bleiben uneingeschränkt verwendbar.
+
+**Wichtig:** MW-001 speichert seine bisherigen Notizen weiterhin unter dem ursprünglichen `localStorage`-Schlüssel `molekuelwerkstatt:v0.1`. Die Daten bleiben erhalten; MW-002 erhält einen separaten Teilbereich darin. Das Zurücksetzen einer Aufgabe löscht nicht den Fortschritt der anderen.
+
+- [MW-002 praktisch testen](docs/MW002_TEST.md)
+- [Datenbasis der Lernwege](data/learning_paths.json)
+- [Automatisierte Zustands- und Handoff-Tests](tests/learning-paths.test.cjs)
+
+**Sicherheitshinweis:** Schwefelwasserstoff ist giftig. MW-002 ist eine digitale Analyseaufgabe, keine praktische Versuchsanleitung mit H₂S.
+
+Nach der Browser-Abnahme können wir behutsam weitere didaktische Fälle aus MOL_LAB DIDACTIC übernehmen. Weder das zentrale CHEMIE_KI_LINKS-Portal noch das DIDACTIC-Notebook selbst wurden für MW-002 geändert.
