@@ -25,11 +25,11 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{
 .topnav{display:flex;gap:7px;flex-wrap:wrap}
 .nav-btn{background:transparent;border:1px solid rgba(192,223,235,.22);border-radius:12px;color:#d9ebf3;font-size:.86rem;font-weight:700;padding:10px 13px}
 .nav-btn:hover,.nav-btn[aria-current="page"]{background:rgba(38,164,192,.2);border-color:rgba(144,214,237,.65);color:#fff}
-.hero-intro{padding-top:52px;position:relative;z-index:1}
+.hero-intro{padding-top:39px;position:relative;z-index:1}
 .eyebrow{font-weight:800;text-transform:uppercase;font-size:.72rem;letter-spacing:.12em;color:#8fdae6;margin:0 0 8px}
 .eyebrow.dark{color:#0e7795}
-.hero h1{font-size:clamp(2.1rem,4.3vw,3.35rem);line-height:1.12;letter-spacing:-.035em;margin:0 0 12px;max-width:780px}
-.hero-lead{color:#c7d9e6;max-width:730px;font-size:1.075rem;margin:0}
+.hero h1{font-size:clamp(2rem,3.85vw,3.05rem);line-height:1.12;letter-spacing:-.035em;margin:0 0 10px;max-width:none;white-space:nowrap}
+.hero-lead{color:#c7d9e6;max-width:1100px;font-size:1.055rem;margin:0}
 .main-content{padding:37px 0 70px}
 .view{animation:soft-in .22s ease both}
 @keyframes soft-in{from{opacity:.5;transform:translateY(5px)}to{opacity:1;transform:none}}
@@ -115,6 +115,8 @@ textarea:focus,input:focus{border-color:#0f88ae}
 .lab-launch .btn{flex-shrink:0}
 .instruction-list{margin:12px 0 0;padding-left:22px}
 .instruction-list li{margin:5px 0}
+.notebook-steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:22px;row-gap:9px;margin:9px 0 0;padding-left:24px}
+.notebook-steps li{margin:0;padding-right:6px}
 .check-row{display:flex;align-items:flex-start;gap:10px;margin-top:18px;font-size:.91rem;cursor:pointer}
 .check-row input{width:18px;height:18px;flex-shrink:0;margin-top:4px;accent-color:#187aa0}
 .reveal{margin-top:16px}
@@ -143,6 +145,7 @@ textarea:focus,input:focus{border-color:#0f88ae}
 .smiles-entry input{min-width:0;flex:1;width:100%;padding:12px 13px;border:1px solid #b6cbdc;border-radius:10px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;background:#fbfdff}
 .footer{border-top:1px solid #d9e4ed;background:#edf3f8;color:#63778a;padding:19px 0;font-size:.8rem}
 .footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:950px){.hero h1{white-space:normal}}
 @media(max-width:920px){
  .home-options,.work-layout,.free-grid{grid-template-columns:1fr}
  .view-heading{flex-wrap:wrap}
@@ -168,6 +171,7 @@ textarea:focus,input:focus{border-color:#0f88ae}
  .stepper{gap:3px}
  .step-button{font-size:.69rem}
  .step-footer .save-hint{order:3;width:100%}
+ .notebook-steps{grid-template-columns:1fr;row-gap:4px}
  .lab-launch{flex-direction:column}
  .lab-launch .btn{width:100%}
  .smiles-entry{flex-direction:column}
