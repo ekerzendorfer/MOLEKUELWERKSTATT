@@ -1,0 +1,17 @@
+name: Molekuel-Werkstatt handoff regression
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  handoff:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate URL handoff and UI integration
+        run: node tests/handoff.test.cjs
