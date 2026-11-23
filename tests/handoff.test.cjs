@@ -26,6 +26,15 @@ assert.equal(second.smiles,"S");
 assert.equal(second.context,"MW-002");
 assert.equal(second.returnUrl,"https://ekerzendorfer.github.io/MOLEKUELWERKSTATT/?case=MW-002#aufgabe",
   "MW-002 should return to its own guided case rather than MW-001");
+for (const id of ["MW-009","MW-015","MW-024"]) {
+  const mol = id === "MW-009" ? "CCC=O" : id === "MW-015" ? "O=C=O" : "C1CCCCC1";
+  const link = handoff.makeLink(base,{smiles:mol,name:"Probe",context:id});
+  const parsed = handoff.readLink(link);
+  assert.equal(parsed.ok,true);
+  assert.equal(parsed.context,id);
+  assert.equal(parsed.smiles,mol);
+  assert.equal(parsed.returnUrl,"https://ekerzendorfer.github.io/MOLEKUELWERKSTATT/?case="+id+"#aufgabe");
+}
 assert.equal(handoff.readLink(base), null, "normal MOLLAB launch must remain unchanged");
 
 const untrusted = new URL(handoff.makeLink(base,{smiles:"CCO",name:"Ethanol",context:"MW-001"}));
@@ -51,7 +60,7 @@ if (fs.existsSync(path.join(__dirname,"..","app.js"))) {
   assert(html.includes('id="case-handoff-0"') && html.includes('id="case-handoff-1"'),"MW-001 links missing");
   assert(html.includes('id="free-mollab-link"'),"free-mode launch missing");
   assert(app.includes("updateFreeLink()"),"SMILES changes must refresh the launch link");
-  assert(app.includes("molLink(mol.smiles,mol.name,path.id)"),"each guided case must use its own molecules");
+  assert(app.includes("molLink(m.smiles,m.name,p.id)"),"each guided case must use its own molecules");
   assert(app.includes("caseState")===false || app.includes("activeNotes()"),"notes must be scoped per case");
 } else {
   assert(html.includes('id="handoffReturn"'),"return link missing");
