@@ -1,6 +1,6 @@
 {
-  "schema_version": "0.3.0",
-  "release": "MW-001 und MW-002 – zwei geführte Pilotfälle",
+  "schema_version": "0.4.0",
+  "release": "Fünf Forschungswege: MW-001, MW-002, MW-009, MW-015, MW-024",
   "learning_paths": [
     {
       "id": "MW-001",
@@ -57,7 +57,8 @@
         "Wichtig: Auch Dimethylether kann mit passenden Wasserstoffbrücken-Donoren wie Wasser wechselwirken. „Keine O–H-Gruppe“ bedeutet nicht „unpolar“."
       ],
       "conclusionPrompt": "Vergleiche deine anfängliche Vermutung mit deinen Beobachtungen. Formuliere eine kurze Schlussfolgerung, die den Zusammenhang zwischen Struktur und Eigenschaften erklärt.",
-      "conclusionPlaceholder": "Obwohl beide die gleiche Summenformel besitzen, …"
+      "conclusionPlaceholder": "Obwohl beide die gleiche Summenformel besitzen, …",
+      "template": "A"
     },
     {
       "id": "MW-002",
@@ -112,6 +113,203 @@
       ],
       "optionalTools": [
         "MOLLAB_PRO"
+      ],
+      "template": "A"
+    },
+    {
+      "id": "MW-009",
+      "template": "A",
+      "title": "Propanal und Aceton: Gleiche Formel – Aldehyd oder Keton?",
+      "topic": "Isomerie / funktionelle Gruppen",
+      "level": "Basis · SEK2",
+      "question": "Warum unterscheiden sich Propanal und Aceton trotz gleicher Summenformel C₃H₆O?",
+      "intro": "Beide Moleküle besitzen eine Carbonylgruppe. Entscheidend ist, an welche Atome das Carbonyl-C gebunden ist.",
+      "molecules": [
+        {
+          "name": "Propanal",
+          "smiles": "CCC=O",
+          "formula": "C₃H₆O",
+          "kind": "Aldehyd"
+        },
+        {
+          "name": "Aceton",
+          "smiles": "CC(=O)C",
+          "formula": "C₃H₆O",
+          "kind": "Keton"
+        }
+      ],
+      "predictionHint": "Vergleiche die Position der C=O-Gruppe. Könnte die unterschiedliche Umgebung des Carbonyl-C die Reaktivität beeinflussen?",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "targetModule": "Isomerie",
+      "targetExample": "Propanal",
+      "targetAction": "Isomerenpaar vergleichen",
+      "investigationIntro": "In DIDACTIC ist Propanal/Aceton als kuratiertes Isomerenpaar hinterlegt. Beginne mit Propanal und lasse das Paar anzeigen.",
+      "notebookSteps": [
+        "Colab: Laufzeit → Alle ausführen.",
+        "Modul: Isomerie.",
+        "Beispiel: Propanal (eigene SMILES aus).",
+        "Aktion: Isomerenpaar vergleichen."
+      ],
+      "observationPrompt": "Wo liegt die Carbonylgruppe? Vergleiche die Umgebung des Carbonyl-C, die 3D-Modelle sowie die Siedetemperaturen aus der Tabelle.",
+      "observationPlaceholder": "Bei Propanal liegt die C=O-Gruppe …; bei Aceton …",
+      "interpretationQuestion": "Warum lassen sich Aldehyde wie Propanal in der Regel leichter zu Carbonsäuren oxidieren als Ketone wie Aceton?",
+      "interpretationPlaceholder": "Bei Propanal ist das Carbonyl-C …; bei Aceton …",
+      "explanation": [
+        "Propanal (CH₃–CH₂–CHO) ist ein Aldehyd: Das Carbonyl-C trägt ein Wasserstoffatom und ist an einen Kohlenstoffrest gebunden. Aceton (CH₃–CO–CH₃) ist ein Keton: Hier ist das Carbonyl-C an zwei Kohlenstoffreste gebunden.",
+        "Die unterschiedliche Bindungsumgebung erklärt Unterschiede im Reaktionsverhalten. Aldehyde können unter geeigneten Bedingungen vergleichsweise leicht zu Carbonsäuren oxidiert werden; Ketone sind gegen viele milde Oxidationsmittel beständiger. Aus der Molekülform allein lässt sich aber keine vollständige Reaktionsvorhersage ableiten.",
+        "Die experimentellen Siedepunkte liegen bei etwa 49 °C (Propanal) und 56 °C (Aceton). Sie sollten aus den kuratierten Stoffdaten gelesen, nicht allein aus der 3D-Ansicht erraten werden."
+      ],
+      "conclusionPrompt": "Fasse in zwei bis drei Sätzen zusammen, wie eine andere Verknüpfung der Atome trotz identischer Summenformel andere Eigenschaften und Reaktionen ermöglicht.",
+      "conclusionPlaceholder": "Beide Stoffe sind C₃H₆O, aber …",
+      "sourceReferences": [
+        {
+          "repo": "MOL_LAB_DIDACTIC",
+          "module": "Isomerie",
+          "pair": "Propanal ↔ Aceton"
+        }
+      ],
+      "optionalTools": [
+        "MOLLAB_PRO"
+      ]
+    },
+    {
+      "id": "MW-015",
+      "template": "B",
+      "title": "Molekülform und Dipole: Warum ist CO₂ unpolar?",
+      "topic": "Polarität und Löslichkeit / Molekülgeometrie",
+      "level": "Basis · SEK2 (mit SEK1-Vergleich)",
+      "question": "Wann heben sich polare Bindungsdipole auf – und wann entsteht ein Moleküldipol?",
+      "intro": "CO₂ ist linear, Wasser gewinkelt, Ammoniak trigonal-pyramidal und Methan tetraedrisch. Erkunde eines der Beispiele und vergleiche bei Bedarf ein zweites.",
+      "molecules": [
+        {
+          "name": "Kohlenstoffdioxid",
+          "smiles": "O=C=O",
+          "formula": "CO₂",
+          "kind": "linear · Moleküldipol 0"
+        },
+        {
+          "name": "Wasser",
+          "smiles": "O",
+          "formula": "H₂O",
+          "kind": "gewinkelt · polar"
+        },
+        {
+          "name": "Ammoniak",
+          "smiles": "N",
+          "formula": "NH₃",
+          "kind": "trigonal-pyramidal · polar"
+        },
+        {
+          "name": "Methan",
+          "smiles": "C",
+          "formula": "CH₄",
+          "kind": "tetraedrisch · unpolar"
+        }
+      ],
+      "defaultMolecule": "Kohlenstoffdioxid",
+      "variantQuestions": {
+        "Kohlenstoffdioxid": "Warum heben sich im linearen CO₂ die Dipole der beiden polaren C=O-Bindungen auf?",
+        "Wasser": "Warum besitzt gewinkeltes Wasser trotz nur zweier O–H-Bindungen ein Dipolmoment?",
+        "Ammoniak": "Warum ist NH₃ trigonal-pyramidal und insgesamt polar?",
+        "Methan": "Warum ist tetraedrisches Methan insgesamt unpolar?"
+      },
+      "predictionHint": "Stelle dir die Richtung der Bindungsdipole als Pfeile vor. Welche Rolle spielt die räumliche Anordnung?",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "targetModule": "Polarität und Löslichkeit",
+      "targetAction": "Molekül analysieren",
+      "investigationIntro": "Wähle zunächst EIN Beispiel. Zeichne die Molekülform und sage voraus, ob sich die Bindungsdipole vektoriell aufheben. Optional untersuchst du weitere Beispiele – deine Notizen bleiben pro Beispiel getrennt.",
+      "notebookSteps": [
+        "Colab: Laufzeit → Alle ausführen.",
+        "Modul: Polarität und Löslichkeit.",
+        "Beispiel: {name} (eigene SMILES aus).",
+        "Aktion: Molekül analysieren."
+      ],
+      "observationPrompt": "Welche räumliche Geometrie erkennst du? Welche Bindungsdipole sind vorhanden, und welche Beiträge können sich durch Symmetrie aufheben?",
+      "observationPlaceholder": "Die Form ist …; die Bindungen …; in der räumlichen Summe …",
+      "interpretationQuestion": "Wie hängt die räumliche Molekülform mit dem gesamten Dipolmoment zusammen?",
+      "interpretationPlaceholder": "Die Bindungsdipole heben sich (nicht) auf, weil …",
+      "explanation": [
+        "Kohlenstoffdioxid besitzt zwei polare C=O-Bindungen, ist aber linear und symmetrisch: Die beiden gleich großen Bindungsdipole zeigen in entgegengesetzte Richtungen und heben einander auf. Sein permanentes Moleküldipolmoment ist deshalb null.",
+        "Wasser ist gewinkelt und besitzt ein deutliches Dipolmoment. Ammoniak ist trigonal-pyramidal und polar. Methan ist tetraedrisch und symmetrisch; seine C–H-Bindungen führen nicht zu einem permanenten Gesamtdipol.",
+        "Die Molekülpolarität ist eine Vektorsumme und lässt sich nicht aus der Zahl der Sauerstoff- oder Stickstoffatome allein bestimmen. Ein 3D-Modell zeigt die Geometrie, aber nicht automatisch die Dipolvektoren oder ein gemessenes Dipolmoment."
+      ],
+      "variantExplanations": {
+        "Kohlenstoffdioxid": "Prüfe beim gewählten Beispiel ausdrücklich die 180°-Anordnung der beiden C=O-Bindungen.",
+        "Wasser": "Prüfe beim gewählten Beispiel den gewinkelten Bindungswinkel und die gerichteten O–H-Dipole.",
+        "Ammoniak": "Beachte beim gewählten Beispiel das freie Elektronenpaar und die trigonal-pyramidale Anordnung.",
+        "Methan": "Vergleiche beim gewählten Beispiel die räumliche Symmetrie des Tetraeders mit der linearen CO₂-Struktur."
+      },
+      "conclusionPrompt": "Formuliere eine Regel dafür, wann aus polaren Bindungen ein polares Molekül wird. Begründe sie an deinem gewählten Beispiel.",
+      "conclusionPlaceholder": "Die Molekülform entscheidet, weil …",
+      "sourceReferences": [
+        {
+          "repo": "MOL_LAB_DIDACTIC",
+          "module": "Polarität und Löslichkeit",
+          "molecules": [
+            "Kohlenstoffdioxid",
+            "Wasser",
+            "Ammoniak",
+            "Methan"
+          ]
+        }
+      ],
+      "optionalTools": [
+        "MOLLAB_PRO"
+      ]
+    },
+    {
+      "id": "MW-024",
+      "template": "C",
+      "title": "Cyclohexan: Warum ist die Sesselstruktur günstig?",
+      "topic": "Konformere / räumliche Struktur",
+      "level": "Vertiefung · SEK2 / FH-Einstieg",
+      "question": "Warum bevorzugt Cyclohexan eine nicht-planare Sesselstruktur?",
+      "intro": "Die sechsgliedrige Ringstruktur ist beweglich. Untersuche die räumliche Gestalt und warum die Sesselkonformation energetisch günstig ist.",
+      "molecules": [
+        {
+          "name": "Cyclohexan",
+          "smiles": "C1CCCCC1",
+          "formula": "C₆H₁₂",
+          "kind": "gesättigter Sechsring · nicht planar"
+        }
+      ],
+      "predictionHint": "Überlege, welche C–C–C-Bindungswinkel und welche Stellung benachbarter C–H-Bindungen in einem flachen Sechsring auftreten würden.",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "targetModule": "Konformere",
+      "targetExample": "Cyclohexan",
+      "targetAction": "Konformere berechnen",
+      "investigationIntro": "DIDACTIC erzeugt 3D-Strukturen und kann mehrere MMFF-optimierte Konformere vergleichen. Die Suche findet vor allem stabile Minima, nicht zwangsläufig eine Boot- oder Übergangsstruktur.",
+      "notebookSteps": [
+        "Colab: Laufzeit → Alle ausführen.",
+        "Modul: Konformere; Beispiel: Cyclohexan.",
+        "Aktion 1: Molekül analysieren.",
+        "Aktion 2: Konformere berechnen (relative MMFF-Energien)."
+      ],
+      "observationPrompt": "Welche räumliche Form besitzen die gefundenen Konformere? Sind alle sechs C-Atome in einer Ebene? Wie viele unterschiedliche Minima und Energieunterschiede zeigt DIDACTIC tatsächlich?",
+      "observationPlaceholder": "Im 3D-Modell erkenne ich …; die Konformersuche liefert …",
+      "interpretationQuestion": "Welche Winkel- und Torsionsspannungen vermeidet die Sesselstruktur? Was zeigt die Konformersuche – und was kann sie nicht zeigen?",
+      "interpretationPlaceholder": "Die Sesselstruktur ist günstiger, weil …; die Modellgrenze ist …",
+      "explanation": [
+        "Ein planarer Cyclohexanring würde ungünstige Bindungswinkel und weitgehend ekliptische C–H-Stellungen erzwingen. In der Sesselstruktur liegen die C–C–C-Winkel nahe dem tetraedrischen Ideal; benachbarte Bindungen können weitgehend gestaffelt stehen. So werden Winkel- und Torsionsspannung deutlich reduziert.",
+        "RDKit/MMFF optimiert erzeugte Konformere zu lokalen Energieminima. Deshalb ist es kein Fehler, wenn mehrere Starts auf dieselbe oder sehr ähnliche Sesselgeometrien zulaufen. Eine Bootstruktur oder die Ringinversion wird durch diese einfache Minimierung nicht automatisch systematisch untersucht.",
+        "Die Energieangaben der einfachen DIDACTIC-Konformersuche sind relative Modellwerte (kcal/mol), keine experimentellen Energien und kein Beweis für einen vollständigen Konformationsraum."
+      ],
+      "conclusionPrompt": "Erkläre in eigenen Worten, warum der Sessel energetisch günstig ist und welche Grenzen die verwendete Konformersuche besitzt.",
+      "conclusionPlaceholder": "Die Sesselstruktur vermeidet …; das Rechenmodell zeigt …",
+      "optionalDeepTool": "MOL_LAB",
+      "deepTitle": "Wissenschaftliche Vertiefung im MOL_LAB",
+      "deepDescription": "Optional: eigene Konformer- und Energieuntersuchungen mit RDKit/MMFF bzw. xTB. Cyclohexan-SMILES C1CCCCC1 bei Bedarf manuell übernehmen. Kein automatischer Energietransfer zur Werkstatt.",
+      "caution": "Ein einzelnes 3D-Modell und eine MMFF-Minimierung belegen weder sämtliche Konformerenergien noch den Mechanismus der Ringinversion.",
+      "sourceReferences": [
+        {
+          "repo": "MOL_LAB_DIDACTIC",
+          "module": "Konformere",
+          "molecule": "Cyclohexan"
+        }
+      ],
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB"
       ]
     }
   ],
