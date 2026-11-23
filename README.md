@@ -1,6 +1,6 @@
 # MOLEKÜL-WERKSTATT – CHEMIE mit KI
 
-**Projektstatus:** V0.3.0 – zwei geführte Lernwege (MW-001, MW-002), unabhängige Notizen und direkte SMILES-Übergabe; noch nicht im CHEMIE_KI_LINKS-Portal veröffentlicht
+**Projektstatus:** V0.4.0 – fünf geführte Forschungswege (A/B/C-Vorlagen), getrennte Notizen und direkte 2D/3D-Übergabe; noch nicht im CHEMIE_KI_LINKS-Portal veröffentlicht
 
 Die MOLEKÜL-WERKSTATT wird die **gemeinsame, didaktisch geführte Einstiegsoberfläche** zu den vorhandenen Molekül-Apps. Ausgangspunkt ist eine chemische Fragestellung – nicht die Auswahl einer Software. Vorbild: CHEMIE_ANALYTIK_HUB. Das Prinzip von MOL_LAB DIDACTIC (Beobachten → Vermuten → Antwort prüfen → Erklärung anzeigen) steht im Zentrum.
 
@@ -56,12 +56,28 @@ Nach der Browser-Abnahme können wir behutsam weitere didaktische Fälle aus MOL
 
 ## Forschungswege-Katalog V0.1 – vollständige DIDACTIC-Erschließung
 
-Alle **61 DIDACTIC-Moduleinträge** (53 unterschiedliche SMILES) sind jetzt einem der **30 geplanten Forschungswege** zugeordnet: 14 Paarvergleiche (A), zehn Untersuchungs-/Beispielwege (B) und sechs Konformerwege (C). **Nur MW-001 und MW-002 sind bislang in der App umgesetzt**; die weiteren 28 sind fachlich-redaktionelle Entwürfe, keine anklickbaren Aufgaben.
+Alle **61 DIDACTIC-Moduleinträge** (53 unterschiedliche SMILES) sind jetzt einem der **30 geplanten Forschungswege** zugeordnet: 14 Paarvergleiche (A), zehn Untersuchungs-/Beispielwege (B) und sechs Konformerwege (C). **MW-001, MW-002, MW-009, MW-015 und MW-024 sind technisch umgesetzt**; weitere 25 sind fachlich-redaktionelle Entwürfe, keine anklickbaren Aufgaben.
 
 - **[Detaillierter Forschungswege-Katalog](docs/FORSCHUNGSWEGE_KATALOG_V0.1.md)** – 30 Steckbriefe mit Leitfrage, Lernziel, Quellkarten, didaktischen Grenzen, Prioritäten und Datenlücken
 - [Strukturierter Katalog (JSON)](data/forschungswege_katalog_v0.1.json) – für spätere Aufgabenbibliothek und Datenmigration
 - [DIDACTIC-Quellenmanifest](data/didactic_quellen_manifest_v0.1.json) – Revisionsbasis mit 61 eindeutigen Modul/Karten-IDs, sieben Isomeriepaaren und sieben Polaritätsvergleichen
 - [Automatischer Katalogtest](tests/research-catalog.test.cjs) – prüft Quellbezug und 61/61-Abdeckung
 
-**Vorschlag für die weitere Entwicklung:** Einen zusätzlichen Vergleich (MW-009, Propanal/Aceton), einen neuen Strukturweg (MW-019, Methanol/Phenol) und einen Konformerweg (MW-024, Cyclohexan) einzeln als Piloten umsetzen. Erst danach die filterbare Bibliothek aufbauen. DIDACTIC, MOLLAB_PRO, die Live-Lernwege und der CHEMIE_KI_LINKS-Hub bleiben bei dieser Katalogerstellung unverändert.
+**Weitere Entwicklung nach dem Praxistest:** Die drei Vorlagen A/B/C anhand von MW-009, MW-015 und MW-024 prüfen, eventuelle Bedienhürden korrigieren und dann eine filterbare Aufgabenbibliothek konzipieren. DIDACTIC und der CHEMIE_KI_LINKS-Hub bleiben unverändert.
 
+
+## V0.4.0 – drei neue Pilot-Forschungswege
+
+Zusätzlich zu den praktisch bewährten MW-001 und MW-002:
+
+- **MW-009 (A): Propanal / Aceton** – Carbonylposition, Aldehyd/Keton, Eigenschafts- und Reaktivitätsvergleich. DIDACTIC: *Isomerie → Propanal → Isomerenpaar vergleichen*.
+- **MW-015 (B): Molekülform und Dipole** – aus *CO₂, H₂O, NH₃ und CH₄* **ein Beispiel wählen** und untersuchen. Die Beispiele können freiwillig gewechselt werden; dabei bleiben Vermutung, Beobachtung und Fazit für jedes Molekül gesondert gespeichert. DIDACTIC: *Polarität und Löslichkeit → gewähltes Beispiel → Molekül analysieren*.
+- **MW-024 (C): Cyclohexan und die Sesselstruktur** – Geometrie, Winkel-/Torsionsspannung, **Konformer-Suche in DIDACTIC mit relativen MMFF-Modellenergien**; optional vertiefende Rechnungen im MOL_LAB-Colab-Notebook. DIDACTIC: *Konformere → Cyclohexan → Molekül analysieren → Konformere berechnen*.
+
+Der gemeinsame Forschungsweg **Vermuten → Untersuchen → Deuten → Sichern** bleibt unverändert. Die fachliche Erklärung erscheint erst nach eigener Anforderung. Im Seitenbereich ist die direkte Übernahme der jeweiligen Molekülstruktur in MOLLAB PRO möglich; der Rücklink führt auch bei den drei neuen IDs gezielt zur richtigen Aufgabe.
+
+**Speicherkompatibilität:** `localStorage` bleibt unter `molekuelwerkstatt:v0.1`; die bisherigen MW-001-Notizen und die MW-002-Einträge werden in derselben Struktur weiterverwendet. MW-009 und MW-024 erhalten eigene Fortschritte; MW-015 speichert die vier Beispiele zusätzlich getrennt.
+
+**[Testblatt V0.4 – alle drei Pilotwege](docs/PILOTWEGE_V0.4_TEST.md)**. Die automatischen Regressionstests prüfen alte Notizen, neue Unterrichtstexte, die Beispielauswahl, sichere Rücklinks und die gezielte Rücksetzung. Der echte Unterrichts-/Colab-Durchlauf steht noch aus.
+
+Die umfangreiche Aufgabenbibliothek mit allen 30 katalogisierten Wegen ist damit **nicht** schon implementiert. Das freie Molekülstudio bleibt ohne Aufgabenbindung nutzbar.
