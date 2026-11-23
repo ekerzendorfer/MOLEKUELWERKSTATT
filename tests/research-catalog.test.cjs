@@ -62,7 +62,7 @@ for(const p of catalog.paths){
 }
 assert.deepEqual(counts,{A:14,B:10,C:6});
 assert.equal(pairCount,14);
-assert.equal(liveCount,2);
+assert.equal(liveCount,5);
 assert.equal(coverage.size,61,"not all DIDACTIC entries represented");
 assert.equal(smiles.size,53,"not all distinct DIDACTIC SMILES represented");
 assert.equal(catalog.sourceModuleEntries,61);
@@ -71,4 +71,4 @@ assert.equal(catalog.sourceUniqueSmiles,53);
 assert.equal(catalog.coveredDistinctSmiles,53);
 assert.equal(manifest.entries.filter(x=>x.physicalDataFields===0).length,35);
 assert.equal(manifest.entries.filter(x=>x.isGenericQuestion).length,7);
-console.log("Research catalog: 30 paths, 14 original pairs, 61/61 module entries, 53/53 SMILES and 2 live paths – OK");
+console.log("Research catalog: 30 paths, 14 original pairs, 61/61 module entries, 53/53 SMILES and 5 live paths – OK");
