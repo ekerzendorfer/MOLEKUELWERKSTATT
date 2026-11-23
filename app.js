@@ -136,12 +136,12 @@
         '<h4>Vergleiche die beiden Strukturen</h4>' +
         '<p>Im MOL_LAB DIDACTIC ist das Isomerenpaar bereits kuratiert. Du musst keine Moleküle selbst eingeben.</p>' +
         '<div class="callout">' +
-          '<strong>So gehst du im Notebook vor:</strong>' +
-          '<ol class="instruction-list">' +
-            '<li>Öffne das Notebook in einem neuen Tab und führe die nötigen Zellen aus (in Colab: <strong>Laufzeit → Alle ausführen</strong>).</li>' +
-            '<li>Wähle bei <strong>Modul</strong> den Eintrag <strong>Isomerie</strong>.</li>' +
-            '<li>Wähle bei <strong>Beispiel</strong> <strong>Ethanol</strong>. „Eigenen SMILES verwenden“ bleibt ausgeschaltet.</li>' +
-            '<li>Klicke auf <strong>Isomerenpaar vergleichen</strong> und betrachte 2D-/3D-Strukturen und Stoffdaten.</li>' +
+          '<strong>Im Notebook – vier kurze Schritte:</strong>' +
+          '<ol class="notebook-steps">' +
+            '<li><strong>Colab:</strong> Laufzeit → Alle ausführen.</li>' +
+            '<li><strong>Modul:</strong> Isomerie.</li>' +
+            '<li><strong>Beispiel:</strong> Ethanol (eigene SMILES aus).</li>' +
+            '<li><strong>Aktion:</strong> Isomerenpaar vergleichen.</li>' +
           '</ol>' +
         '</div>' +
         '<div class="lab-launch"><a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="' + safeText(didactic) + '">MOL_LAB DIDACTIC öffnen ↗</a>' +
