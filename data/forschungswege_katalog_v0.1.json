@@ -1,0 +1,1237 @@
+{
+  "sourceRepo": "ekerzendorfer/MOL_LAB_DIDACTIC",
+  "sourceFile": "molecules_v0_4_2.json",
+  "sourceSha": "f2ef10a3730fa752e6944499082d2219ecaf2bde",
+  "version": "0.1",
+  "date": "2026-11-23",
+  "status": "concept_only",
+  "description": "Redaktionelle Zuordnung der gesamten DIDACTIC-Datenbasis zu geplanten Forschungswegen; kein zusätzlich implementierter Kurs.",
+  "notes": "Quellkarten sind Verweise auf Moleküleinträge in DIDACTIC; Eigenschaften, MC-Fragen und Laufzeitfunktionen werden nicht automatisch in die Werkstatt übertragen.",
+  "sourceModuleEntries": 61,
+  "sourceUniqueSmiles": 53,
+  "coveredSourceEntries": 61,
+  "coveredDistinctSmiles": 53,
+  "curatedPairCount": 14,
+  "templates": {
+    "A": 14,
+    "B": 10,
+    "C": 6
+  },
+  "paths": [
+    {
+      "id": "MW-001",
+      "template": "A",
+      "status": "live",
+      "topic": "Isomerie",
+      "title": "Gleiche Summenformel – andere Eigenschaften?",
+      "question": "Warum unterscheiden sich Ethanol und Dimethylether trotz gleicher Summenformel?",
+      "priority": 1,
+      "sourcePair": {
+        "collection": "isomer",
+        "key": "Ethanol"
+      },
+      "sourceRefs": [
+        {
+          "module": "Isomerie",
+          "id": "ethanol",
+          "name": "Ethanol",
+          "smiles": "CCO",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": true,
+          "question": "Warum hat Ethanol andere Stoffeigenschaften als Dimethylether?"
+        },
+        {
+          "module": "Isomerie",
+          "id": "dimethylether",
+          "name": "Dimethylether",
+          "smiles": "COC",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": true,
+          "question": "Warum siedet Dimethylether viel niedriger als Ethanol?"
+        }
+      ],
+      "learningGoal": "Unterschied zwischen Alkohol und Ether; H-Brücken-Donoren und -Akzeptoren.",
+      "modelLimits": "Stoffdaten als Vergleich; kein QM-Modell.",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB"
+      ]
+    },
+    {
+      "id": "MW-002",
+      "template": "A",
+      "status": "live",
+      "topic": "Polarität und Löslichkeit",
+      "title": "Wasser oder Schwefelwasserstoff – warum flüssig und gasförmig?",
+      "question": "Warum ist Wasser bei Raumtemperatur flüssig, H₂S aber gasförmig?",
+      "priority": 1,
+      "sourcePair": {
+        "collection": "polarity",
+        "key": "Wasser vs. Schwefelwasserstoff"
+      },
+      "sourceRefs": [
+        {
+          "module": "Polarität und Löslichkeit",
+          "id": "wasser",
+          "name": "Wasser",
+          "smiles": "O",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": true,
+          "question": "Welche Aussage erklärt die besonderen Stoffeigenschaften von Wasser am besten?"
+        },
+        {
+          "module": "Polarität und Löslichkeit",
+          "id": "schwefelwasserstoff",
+          "name": "Schwefelwasserstoff",
+          "smiles": "S",
+          "sourceLevel": "Vergleich",
+          "hasPhysicalData": true,
+          "question": "Warum verhält sich H2S nicht einfach wie „schweres Wasser“?"
+        }
+      ],
+      "learningGoal": "Molekülform, Bindungspolarität und H-Brücken-Netzwerk auseinanderhalten.",
+      "modelLimits": "H₂S giftig: ausschließlich digitale Modell-/Stoffdatenauswertung.",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB"
+      ]
+    },
+    {
+      "id": "MW-003",
+      "template": "A",
+      "status": "planned",
+      "topic": "Polarität und Löslichkeit",
+      "title": "Methan und Hexan: Unpolar ist nicht wechselwirkungsfrei",
+      "question": "Warum ist Methan gasförmig, Hexan aber flüssig?",
+      "priority": 1,
+      "sourcePair": {
+        "collection": "polarity",
+        "key": "Methan vs. Hexan"
+      },
+      "sourceRefs": [
+        {
+          "module": "Polarität und Löslichkeit",
+          "id": "methan",
+          "name": "Methan",
+          "smiles": "C",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": true,
+          "question": "Welche Aussage beschreibt Methan im Vergleich zu Wasser am besten?"
+        },
+        {
+          "module": "Polarität und Löslichkeit",
+          "id": "hexan",
+          "name": "Hexan",
+          "smiles": "CCCCCC",
+          "sourceLevel": "Vergleich",
+          "hasPhysicalData": true,
+          "question": "Warum ist Hexan flüssig, Methan aber gasförmig?"
+        }
+      ],
+      "learningGoal": "Größe, Polarisierbarkeit und London-Dispersionskräfte verknüpfen.",
+      "modelLimits": "London-Kräfte werden im Viewer nicht direkt dargestellt.",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB"
+      ]
+    },
+    {
+      "id": "MW-004",
+      "template": "A",
+      "status": "planned",
+      "topic": "Polarität und Löslichkeit",
+      "title": "Ethanol und 1-Hexanol: Ein OH reicht nicht immer",
+      "question": "Warum verringert eine längere Kohlenstoffkette die Wasserlöslichkeit?",
+      "priority": 1,
+      "sourcePair": {
+        "collection": "polarity",
+        "key": "Ethanol vs. 1-Hexanol"
+      },
+      "sourceRefs": [
+        {
+          "module": "Polarität und Löslichkeit",
+          "id": "ethanol",
+          "name": "Ethanol",
+          "smiles": "CCO",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": true,
+          "question": "Warum ist Ethanol gut mit Wasser mischbar, obwohl es einen Kohlenwasserstoffrest besitzt?"
+        },
+        {
+          "module": "Polarität und Löslichkeit",
+          "id": "1_hexanol",
+          "name": "1-Hexanol",
+          "smiles": "CCCCCCO",
+          "sourceLevel": "Vergleich",
+          "hasPhysicalData": true,
+          "question": "Was zeigt 1-Hexanol im Vergleich zu Ethanol besonders gut?"
+        }
+      ],
+      "learningGoal": "Einfluss von polarem und unpolarem Molekülteil abwägen.",
+      "modelLimits": "Löslichkeit aus Stoffdaten, nicht aus einem einzelnen 3D-Modell ableiten.",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB"
+      ]
+    },
+    {
+      "id": "MW-005",
+      "template": "A",
+      "status": "planned",
+      "topic": "Polarität und Löslichkeit",
+      "title": "Essigsäure und Palmitinsäure: Wie groß darf der Rest sein?",
+      "question": "Warum ist Palmitinsäure trotz Carboxylgruppe kaum wasserlöslich?",
+      "priority": 2,
+      "sourcePair": {
+        "collection": "polarity",
+        "key": "Essigsäure vs. Palmitinsäure"
+      },
+      "sourceRefs": [
+        {
+          "module": "Polarität und Löslichkeit",
+          "id": "essigsaeure",
+          "name": "Essigsäure",
+          "smiles": "CC(=O)O",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": true,
+          "question": "Warum ist Essigsäure besonders gut für Struktur-Eigenschafts-Vergleiche geeignet?"
+        },
+        {
+          "module": "Polarität und Löslichkeit",
+          "id": "palmitinsaeure",
+          "name": "Palmitinsäure",
+          "smiles": "CCCCCCCCCCCCCCCC(=O)O",
+          "sourceLevel": "Vertiefung",
+          "hasPhysicalData": true,
+          "question": "Warum ist Palmitinsäure trotz Carboxylgruppe kaum wasserlöslich?"
+        }
+      ],
+      "learningGoal": "Lange unpolare Alkylkette gegen polare funktionelle Gruppe abwägen.",
+      "modelLimits": "pH, Salzbildung und Kristallstruktur nicht automatisch berücksichtigt.",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB"
+      ]
+    },
+    {
+      "id": "MW-006",
+      "template": "A",
+      "status": "planned",
+      "topic": "Polarität und Löslichkeit",
+      "title": "Diethylether und Diethylenglycol: H-Brücken richtig deuten",
+      "question": "Warum ist Diethylenglycol stärker wasserfreundlich?",
+      "priority": 1,
+      "sourcePair": {
+        "collection": "polarity",
+        "key": "Diethylether vs. Diethylenglycol"
+      },
+      "sourceRefs": [
+        {
+          "module": "Polarität und Löslichkeit",
+          "id": "diethylether",
+          "name": "Diethylether",
+          "smiles": "CCOCC",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": true,
+          "question": "Warum ist Diethylether deutlich anders als Ethanol?"
+        },
+        {
+          "module": "Polarität und Löslichkeit",
+          "id": "diethylenglycol",
+          "name": "Diethylenglycol",
+          "smiles": "OCCOCCO",
+          "sourceLevel": "Vergleich",
+          "hasPhysicalData": true,
+          "question": "Warum ist Diethylenglycol viel wasserfreundlicher als Diethylether?"
+        }
+      ],
+      "learningGoal": "H-Brücken-Donor und -Akzeptor unterscheiden.",
+      "modelLimits": "Löslichkeit und H-Brücken nicht aus der Anzahl O-Atome allein erklären.",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB"
+      ]
+    },
+    {
+      "id": "MW-007",
+      "template": "A",
+      "status": "planned",
+      "topic": "Polarität und Löslichkeit",
+      "title": "Methanol und Methanal: OH oder C=O?",
+      "question": "Warum unterscheiden sich Methanol und Methanal in ihren Wechselwirkungen?",
+      "priority": 1,
+      "sourcePair": {
+        "collection": "polarity",
+        "key": "Methanol vs. Methanal"
+      },
+      "sourceRefs": [
+        {
+          "module": "Polarität und Löslichkeit",
+          "id": "methanol",
+          "name": "Methanol",
+          "smiles": "CO",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": true,
+          "question": "Warum ist Methanol sehr gut mit Wasser mischbar?"
+        },
+        {
+          "module": "Polarität und Löslichkeit",
+          "id": "methanal",
+          "name": "Methanal",
+          "smiles": "C=O",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": true,
+          "question": "Was unterscheidet Methanal als Carbonylverbindung von Methanol?"
+        }
+      ],
+      "learningGoal": "Carbonylgruppe und Hydroxygruppe vergleichen.",
+      "modelLimits": "Wässrige Hydratisierung von Methanal nicht aus isoliertem Molekül erklären.",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB"
+      ]
+    },
+    {
+      "id": "MW-008",
+      "template": "A",
+      "status": "planned",
+      "topic": "Polarität und Löslichkeit",
+      "title": "Aceton und Essigsäure: Carbonyl ist nicht gleich Carboxyl",
+      "question": "Warum kann Essigsäure sauer reagieren, Aceton aber nicht entsprechend?",
+      "priority": 1,
+      "sourcePair": {
+        "collection": "polarity",
+        "key": "Aceton vs. Essigsäure"
+      },
+      "sourceRefs": [
+        {
+          "module": "Polarität und Löslichkeit",
+          "id": "aceton",
+          "name": "Aceton",
+          "smiles": "CC(=O)C",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": true,
+          "question": "Welche Aussage beschreibt Aceton als Lösungsmittel am besten?"
+        },
+        {
+          "module": "Polarität und Löslichkeit",
+          "id": "essigsaeure",
+          "name": "Essigsäure",
+          "smiles": "CC(=O)O",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": true,
+          "question": "Warum ist Essigsäure besonders gut für Struktur-Eigenschafts-Vergleiche geeignet?"
+        }
+      ],
+      "learningGoal": "Carboxylgruppe, Säure-Base-Chemie und H-Brücken vergleichen.",
+      "modelLimits": "Dissoziationsgleichgewicht und pH nicht als 3D-Funktion versprechen.",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB"
+      ]
+    },
+    {
+      "id": "MW-009",
+      "template": "A",
+      "status": "planned",
+      "topic": "Isomerie",
+      "title": "Propanal und Aceton: Aldehyd oder Keton?",
+      "question": "Was verändert die Position der Carbonylgruppe bei C₃H₆O?",
+      "priority": 1,
+      "sourcePair": {
+        "collection": "isomer",
+        "key": "Propanal"
+      },
+      "sourceRefs": [
+        {
+          "module": "Isomerie",
+          "id": "propanal",
+          "name": "Propanal",
+          "smiles": "CCC=O",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": true,
+          "question": "Was unterscheidet Propanal von Aceton?"
+        },
+        {
+          "module": "Isomerie",
+          "id": "aceton",
+          "name": "Aceton",
+          "smiles": "CC(=O)C",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": true,
+          "question": "Welche Aussage beschreibt Aceton als Lösungsmittel am besten?"
+        }
+      ],
+      "learningGoal": "Funktionelle Isomerie von Aldehyd und Keton deuten.",
+      "modelLimits": "Propanal-Stoffdaten im DIDACTIC-Bestand nachgetragen.",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB"
+      ]
+    },
+    {
+      "id": "MW-010",
+      "template": "A",
+      "status": "planned",
+      "topic": "Isomerie",
+      "title": "Butan und Isobutan: Warum verzweigen?",
+      "question": "Warum können verzweigte Alkane andere Siedeeigenschaften haben?",
+      "priority": 1,
+      "sourcePair": {
+        "collection": "isomer",
+        "key": "Butan"
+      },
+      "sourceRefs": [
+        {
+          "module": "Isomerie",
+          "id": "butan",
+          "name": "Butan",
+          "smiles": "CCCC",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Was unterscheidet Butan von Isobutan?"
+        },
+        {
+          "module": "Isomerie",
+          "id": "isobutan",
+          "name": "Isobutan",
+          "smiles": "CC(C)C",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Warum kann Verzweigung Stoffeigenschaften verändern?"
+        }
+      ],
+      "learningGoal": "Konstitutionsisomerie vs. Molekülgestalt unterscheiden.",
+      "modelLimits": "Beide Karten haben noch keine Stoffdaten; zuerst verlässliche Vergleichswerte prüfen.",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB"
+      ]
+    },
+    {
+      "id": "MW-011",
+      "template": "A",
+      "status": "planned",
+      "topic": "Isomerie",
+      "title": "Propansäure und Essigsäuremethylester: Säure oder Ester?",
+      "question": "Wie kann dieselbe Summenformel zu anderen funktionellen Gruppen führen?",
+      "priority": 1,
+      "sourcePair": {
+        "collection": "isomer",
+        "key": "Propansäure"
+      },
+      "sourceRefs": [
+        {
+          "module": "Isomerie",
+          "id": "propansaeure",
+          "name": "Propansäure",
+          "smiles": "CCC(=O)O",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Warum ist Propansäure nicht mit Essigsäuremethylester gleichzusetzen?"
+        },
+        {
+          "module": "Isomerie",
+          "id": "essigsaeuremethylester",
+          "name": "Essigsäuremethylester",
+          "smiles": "CC(=O)OC",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Warum zeigt ein Ester andere Eigenschaften als eine Carbonsäure?"
+        }
+      ],
+      "learningGoal": "Carbonsäure und Ester strukturell und im Säure-Base-Verhalten vergleichen.",
+      "modelLimits": "Physikalische Daten bei beiden Stoffen noch nicht kuratiert.",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB"
+      ]
+    },
+    {
+      "id": "MW-012",
+      "template": "A",
+      "status": "planned",
+      "topic": "Isomerie",
+      "title": "D-Alanin und L-Alanin: Spiegelbilder",
+      "question": "Weshalb sind spiegelbildliche Strukturen nicht immer biologisch austauschbar?",
+      "priority": 2,
+      "sourcePair": {
+        "collection": "isomer",
+        "key": "D-Alanin"
+      },
+      "sourceRefs": [
+        {
+          "module": "Isomerie",
+          "id": "d_alanin",
+          "name": "D-Alanin",
+          "smiles": "C[C@@H](N)C(=O)O",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Was zeigt der Vergleich von D- und L-Alanin?"
+        },
+        {
+          "module": "Isomerie",
+          "id": "l_alanin",
+          "name": "L-Alanin",
+          "smiles": "C[C@H](N)C(=O)O",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Welche Aussage passt am besten?"
+        }
+      ],
+      "learningGoal": "Chiralität von Konformation unterscheiden.",
+      "modelLimits": "Stereochemische SMILES, Protonierungszustand und 3D-Quelle eigens prüfen; keine echte Spiegelung durch Drehen.",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB"
+      ]
+    },
+    {
+      "id": "MW-013",
+      "template": "A",
+      "status": "planned",
+      "topic": "Isomerie",
+      "title": "Glucose und Fructose – offene Ketten",
+      "question": "Wie unterscheiden sich Aldose und Ketose bei gleicher Summenformel?",
+      "priority": 2,
+      "sourcePair": {
+        "collection": "isomer",
+        "key": "Glucose offen"
+      },
+      "sourceRefs": [
+        {
+          "module": "Isomerie",
+          "id": "glucose_offen",
+          "name": "Glucose offen",
+          "smiles": "O=CC(O)C(O)C(O)C(O)CO",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Warum sind Glucose und Fructose trotz gleicher Summenformel verschieden?"
+        },
+        {
+          "module": "Isomerie",
+          "id": "fructose_offen",
+          "name": "Fructose offen",
+          "smiles": "OCC(O)C(O)C(O)C(=O)CO",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Welche Aussage passt am besten?"
+        }
+      ],
+      "learningGoal": "Offenkettige Aldose und Ketose in Strukturformeln erkennen.",
+      "modelLimits": "Isolierte offene Form ist ein Modell; Ringschluss und wässriges Gleichgewicht werden nicht nachgebildet; keine Reinstoffwerte für isolierte offene Form einsetzen.",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB"
+      ]
+    },
+    {
+      "id": "MW-014",
+      "template": "A",
+      "status": "planned",
+      "topic": "Isomerie",
+      "title": "Maleinsäure und Fumarsäure: cis/trans",
+      "question": "Warum verändert die räumliche Anordnung bei C=C die Stoffeigenschaften?",
+      "priority": 2,
+      "sourcePair": {
+        "collection": "isomer",
+        "key": "Maleinsäure"
+      },
+      "sourceRefs": [
+        {
+          "module": "Isomerie",
+          "id": "maleinsaeure",
+          "name": "Maleinsäure",
+          "smiles": "O=C(O)/C=C\\C(=O)O",
+          "sourceLevel": "Vertiefung",
+          "hasPhysicalData": true,
+          "question": "Warum kann cis/trans-Isomerie die Eigenschaften stark verändern?"
+        },
+        {
+          "module": "Isomerie",
+          "id": "fumarsaeure",
+          "name": "Fumarsäure",
+          "smiles": "O=C(O)/C=C/C(=O)O",
+          "sourceLevel": "Vertiefung",
+          "hasPhysicalData": true,
+          "question": "Warum ist Fumarsäure nicht einfach identisch mit Maleinsäure?"
+        }
+      ],
+      "learningGoal": "Geometrische Isomerie mit unterschiedlichen Eigenschaften verknüpfen.",
+      "modelLimits": "Stereochemische Schrägstriche im SMILES erhalten; exakte 3D-Stereochemie prüfen.",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB"
+      ]
+    },
+    {
+      "id": "MW-015",
+      "template": "B",
+      "status": "planned",
+      "topic": "Polarität und Löslichkeit",
+      "title": "Molekülform: Bindungsdipol oder Moleküldipol?",
+      "question": "Warum ist CO₂ trotz polarer Bindungen insgesamt unpolar?",
+      "priority": 1,
+      "sourcePair": null,
+      "sourceRefs": [
+        {
+          "module": "Polarität und Löslichkeit",
+          "id": "kohlenstoffdioxid",
+          "name": "Kohlenstoffdioxid",
+          "smiles": "O=C=O",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": true,
+          "question": "Warum ist CO2 trotz polarer C=O-Bindungen insgesamt kaum polar?"
+        },
+        {
+          "module": "Polarität und Löslichkeit",
+          "id": "ammoniak",
+          "name": "Ammoniak",
+          "smiles": "N",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": true,
+          "question": "Welche Aussage passt am besten zu Ammoniak?"
+        },
+        {
+          "module": "Polarität und Löslichkeit",
+          "id": "methan",
+          "name": "Methan",
+          "smiles": "C",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": true,
+          "question": "Welche Aussage beschreibt Methan im Vergleich zu Wasser am besten?"
+        },
+        {
+          "module": "Polarität und Löslichkeit",
+          "id": "wasser",
+          "name": "Wasser",
+          "smiles": "O",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": true,
+          "question": "Welche Aussage erklärt die besonderen Stoffeigenschaften von Wasser am besten?"
+        }
+      ],
+      "learningGoal": "Lineare, gewinkelte, trigonal-pyramidale und tetraedrische Gestalten vergleichen.",
+      "modelLimits": "Moleküldipol entsteht aus Vektoraddition; auf einzelne Moleküle beschränkte 3D-Modelle ersetzen keine Messung.",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB"
+      ]
+    },
+    {
+      "id": "MW-016",
+      "template": "B",
+      "status": "planned",
+      "topic": "Polarität und Löslichkeit",
+      "title": "Alkoholreihe: Von Methanol zu 1-Hexanol",
+      "question": "Wie beeinflusst die Kettenlänge die Wasserfreundlichkeit?",
+      "priority": 1,
+      "sourcePair": null,
+      "sourceRefs": [
+        {
+          "module": "Polarität und Löslichkeit",
+          "id": "methanol",
+          "name": "Methanol",
+          "smiles": "CO",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": true,
+          "question": "Warum ist Methanol sehr gut mit Wasser mischbar?"
+        },
+        {
+          "module": "Polarität und Löslichkeit",
+          "id": "ethanol",
+          "name": "Ethanol",
+          "smiles": "CCO",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": true,
+          "question": "Warum ist Ethanol gut mit Wasser mischbar, obwohl es einen Kohlenwasserstoffrest besitzt?"
+        },
+        {
+          "module": "Polarität und Löslichkeit",
+          "id": "n_butanol",
+          "name": "n-Butanol",
+          "smiles": "CCCCO",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": true,
+          "question": "Warum ist n-Butanol weniger wasserfreundlich als Methanol oder Ethanol?"
+        },
+        {
+          "module": "Polarität und Löslichkeit",
+          "id": "1_hexanol",
+          "name": "1-Hexanol",
+          "smiles": "CCCCCCO",
+          "sourceLevel": "Vergleich",
+          "hasPhysicalData": true,
+          "question": "Was zeigt 1-Hexanol im Vergleich zu Ethanol besonders gut?"
+        }
+      ],
+      "learningGoal": "Trend anhand gleicher OH-Gruppe bei zunehmendem Alkylrest erarbeiten.",
+      "modelLimits": "Daten müssen bei gleichen Bedingungen vergleichbar sein.",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB"
+      ]
+    },
+    {
+      "id": "MW-017",
+      "template": "B",
+      "status": "planned",
+      "topic": "Funktionelle Gruppen",
+      "title": "Carbonylfamilie: Wer gehört wohin?",
+      "question": "Wie erkennt man Aldehyd, Keton, Carbonsäure, Ester, Anhydrid und Amid?",
+      "priority": 2,
+      "sourcePair": null,
+      "sourceRefs": [
+        {
+          "module": "Funktionelle Gruppen",
+          "id": "ethanal",
+          "name": "Ethanal",
+          "smiles": "CC=O",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Warum ist Ethanal reaktiver als ein vergleichbarer Alkohol oder Alkan?"
+        },
+        {
+          "module": "Funktionelle Gruppen",
+          "id": "aceton",
+          "name": "Aceton",
+          "smiles": "CC(=O)C",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": true,
+          "question": "Welche Aussage beschreibt Aceton als Lösungsmittel am besten?"
+        },
+        {
+          "module": "Funktionelle Gruppen",
+          "id": "essigsaeure",
+          "name": "Essigsäure",
+          "smiles": "CC(=O)O",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": true,
+          "question": "Warum ist Essigsäure besonders gut für Struktur-Eigenschafts-Vergleiche geeignet?"
+        },
+        {
+          "module": "Funktionelle Gruppen",
+          "id": "ethylacetat",
+          "name": "Ethylacetat",
+          "smiles": "CC(=O)OCC",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Was unterscheidet einen Ester wie Ethylacetat von einer Carbonsäure?"
+        },
+        {
+          "module": "Funktionelle Gruppen",
+          "id": "acetanhydrid",
+          "name": "Acetanhydrid",
+          "smiles": "CC(=O)OC(=O)C",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Warum gilt Acetanhydrid als deutlich reaktiver als ein einfacher Ester?"
+        },
+        {
+          "module": "Funktionelle Gruppen",
+          "id": "acetamid",
+          "name": "Acetamid",
+          "smiles": "CC(=O)N",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Warum ist Acetamid weniger reaktiv als viele andere Carbonylverbindungen?"
+        },
+        {
+          "module": "Funktionelle Gruppen",
+          "id": "diethylether",
+          "name": "Diethylether",
+          "smiles": "CCOCC",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": true,
+          "question": "Warum ist Diethylether deutlich anders als Ethanol?"
+        }
+      ],
+      "learningGoal": "Strukturmotive erkennen und qualitativ unterschiedliche Reaktivität begründen.",
+      "modelLimits": "Ethanal, Ethylacetat, Acetanhydrid und Acetamid: derzeit keine kuratierten Stoffdaten; Ether als Abgrenzungsfall.",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB"
+      ]
+    },
+    {
+      "id": "MW-018",
+      "template": "B",
+      "status": "planned",
+      "topic": "Funktionelle Gruppen",
+      "title": "Ethylamin und Anilin: Nicht jedes Amin ist gleich basisch",
+      "question": "Wie verändert die aromatische Anbindung das freie Elektronenpaar am N?",
+      "priority": 2,
+      "sourcePair": null,
+      "sourceRefs": [
+        {
+          "module": "Funktionelle Gruppen",
+          "id": "ethylamin",
+          "name": "Ethylamin",
+          "smiles": "CCN",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Warum reagiert Ethylamin als Base?"
+        },
+        {
+          "module": "Funktionelle Gruppen",
+          "id": "anilin",
+          "name": "Anilin",
+          "smiles": "c1ccccc1N",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Warum verhält sich Anilin anders als ein einfaches Alkylamin?"
+        }
+      ],
+      "learningGoal": "Aromatische und aliphatische Amine vergleichen; Mesomerie qualitativ ansprechen.",
+      "modelLimits": "pKa-Werte und Protonierungsbedingungen bei Detailaussagen berücksichtigen.",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB"
+      ]
+    },
+    {
+      "id": "MW-019",
+      "template": "B",
+      "status": "planned",
+      "topic": "Funktionelle Gruppen",
+      "title": "Methanol und Phenol: Ist jede OH-Gruppe eine Alkoholgruppe?",
+      "question": "Warum unterscheiden sich Phenol und aliphatischer Alkohol in Eigenschaften und Säurestärke?",
+      "priority": 1,
+      "sourcePair": null,
+      "sourceRefs": [
+        {
+          "module": "Funktionelle Gruppen",
+          "id": "methanol",
+          "name": "Methanol",
+          "smiles": "CO",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": true,
+          "question": "Warum ist Methanol sehr gut mit Wasser mischbar?"
+        },
+        {
+          "module": "Funktionelle Gruppen",
+          "id": "phenol",
+          "name": "Phenol",
+          "smiles": "c1ccccc1O",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Warum ist Phenol kein „normaler Alkohol“ wie Ethanol?"
+        }
+      ],
+      "learningGoal": "OH am Aromaten vs. gesättigten C; Funktionelle Gruppe und Säurestärke begründen.",
+      "modelLimits": "Säurestärken nicht allein an einer 3D-Ansicht ablesen.",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB"
+      ]
+    },
+    {
+      "id": "MW-020",
+      "template": "B",
+      "status": "planned",
+      "topic": "Funktionelle Gruppen",
+      "title": "Salicylsäure und Vanillin: Mehrere Gruppen in einem Molekül",
+      "question": "Wie bestimmt das Zusammenspiel mehrerer funktioneller Gruppen das Verhalten?",
+      "priority": 2,
+      "sourcePair": null,
+      "sourceRefs": [
+        {
+          "module": "Funktionelle Gruppen",
+          "id": "salicylsaeure",
+          "name": "Salicylsäure",
+          "smiles": "O=C(O)c1ccccc1O",
+          "sourceLevel": "Vertiefung",
+          "hasPhysicalData": false,
+          "question": "Warum ist Salicylsäure für funktionelle Gruppen besonders interessant?"
+        },
+        {
+          "module": "Funktionelle Gruppen",
+          "id": "vanillin",
+          "name": "Vanillin",
+          "smiles": "COc1cc(C=O)ccc1O",
+          "sourceLevel": "Vertiefung",
+          "hasPhysicalData": false,
+          "question": "Welche Aussage erklärt Vanillin als gutes Beispiel für funktionelle Gruppen?"
+        }
+      ],
+      "learningGoal": "Carboxyl-, Phenol-, Aldehyd- und Ether-Motive am Beispiel erkennen.",
+      "modelLimits": "Mehrfachfunktionen benötigen angepasste Aufgabentexte statt pauschaler Stoffwertvergleiche.",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB"
+      ]
+    },
+    {
+      "id": "MW-021",
+      "template": "C",
+      "status": "planned",
+      "topic": "Konformere",
+      "title": "Butan: anti oder gauche?",
+      "question": "Weshalb besitzen Drehstellungen um C–C unterschiedliche Energien?",
+      "priority": 2,
+      "sourcePair": null,
+      "sourceRefs": [
+        {
+          "module": "Konformere",
+          "id": "butan",
+          "name": "Butan",
+          "smiles": "CCCC",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Was unterscheidet Butan von Isobutan?"
+        }
+      ],
+      "learningGoal": "Torsionswinkel und Konformerenergie unterscheiden.",
+      "modelLimits": "Einfacher 3D-Viewer liefert noch keine Energieberechnung; Colab/MMFF/xTB für Vertiefung.",
+      "primaryTool": "MOL_LAB",
+      "optionalTools": [
+        "MOL_LAB_DIDACTIC",
+        "MOLLAB_PRO"
+      ]
+    },
+    {
+      "id": "MW-022",
+      "template": "C",
+      "status": "planned",
+      "topic": "Konformere",
+      "title": "1,2-Dichlorethan: Eine Drehung verändert den Dipol",
+      "question": "Warum sind nicht alle Drehstellungen energetisch gleichwertig?",
+      "priority": 2,
+      "sourcePair": null,
+      "sourceRefs": [
+        {
+          "module": "Konformere",
+          "id": "1_2_dichlorethan",
+          "name": "1,2-Dichlorethan",
+          "smiles": "ClCCCl",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Warum können bei 1,2-Dichlorethan verschiedene Konformere unterschiedliche Eigenschaften haben?"
+        }
+      ],
+      "learningGoal": "Konformation, polare C–Cl-Bindungen und Drehwinkel betrachten.",
+      "modelLimits": "Vergleich der Konformerenergien erfordert passende Optimierung; Solvatation beeinflusst Ergebnisse.",
+      "primaryTool": "MOL_LAB",
+      "optionalTools": [
+        "MOL_LAB_DIDACTIC",
+        "MOLLAB_PRO"
+      ]
+    },
+    {
+      "id": "MW-023",
+      "template": "C",
+      "status": "planned",
+      "topic": "Konformere",
+      "title": "Ethylenglykol: Zwei OH-Gruppen in Bewegung",
+      "question": "Wie beeinflusst die räumliche Nähe von OH-Gruppen die Konformation?",
+      "priority": 2,
+      "sourcePair": null,
+      "sourceRefs": [
+        {
+          "module": "Konformere",
+          "id": "ethylenglykol",
+          "name": "Ethylenglykol",
+          "smiles": "OCCO",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Warum ist Ethylenglykol ein gutes Beispiel für Konformere?"
+        }
+      ],
+      "learningGoal": "Flexible Moleküle und mögliche intramolekulare Wechselwirkungen untersuchen.",
+      "modelLimits": "Gasphase und Lösung können andere Konformerpräferenzen zeigen.",
+      "primaryTool": "MOL_LAB",
+      "optionalTools": [
+        "MOL_LAB_DIDACTIC",
+        "MOLLAB_PRO"
+      ]
+    },
+    {
+      "id": "MW-024",
+      "template": "C",
+      "status": "planned",
+      "topic": "Konformere",
+      "title": "Cyclohexan: Weshalb eine Sesselstruktur?",
+      "question": "Welche räumlichen Strukturen vermeiden Ringspannung?",
+      "priority": 2,
+      "sourcePair": null,
+      "sourceRefs": [
+        {
+          "module": "Konformere",
+          "id": "cyclohexan",
+          "name": "Cyclohexan",
+          "smiles": "C1CCCCC1",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Warum ist die Sesselstruktur von Cyclohexan besonders günstig?"
+        }
+      ],
+      "learningGoal": "Sessel-/Boot-Geometrie und Ringspannung qualitativ erklären.",
+      "modelLimits": "Konformere/Übergänge nicht aus nur einer zufällig erzeugten 3D-Struktur ableiten.",
+      "primaryTool": "MOL_LAB",
+      "optionalTools": [
+        "MOL_LAB_DIDACTIC",
+        "MOLLAB_PRO"
+      ]
+    },
+    {
+      "id": "MW-025",
+      "template": "C",
+      "status": "planned",
+      "topic": "Konformere",
+      "title": "n-Pentan: Mehr Bindungen, mehr Konformere",
+      "question": "Warum nimmt mit der Kettenlänge die Zahl möglicher Konformationen zu?",
+      "priority": 2,
+      "sourcePair": null,
+      "sourceRefs": [
+        {
+          "module": "Konformere",
+          "id": "n_pentan",
+          "name": "n-Pentan",
+          "smiles": "CCCCC",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Warum liefert n-Pentan mehr mögliche Konformere als Butan?"
+        }
+      ],
+      "learningGoal": "Drehfreiheiten und Kombinationen von Torsionswinkeln verstehen.",
+      "modelLimits": "Konformere nicht mit Konstitutionsisomeren verwechseln.",
+      "primaryTool": "MOL_LAB",
+      "optionalTools": [
+        "MOL_LAB_DIDACTIC",
+        "MOLLAB_PRO"
+      ]
+    },
+    {
+      "id": "MW-026",
+      "template": "C",
+      "status": "planned",
+      "topic": "Konformere",
+      "title": "Milchsäure und 2-Butanol: Bewegung und Chiralität",
+      "question": "Wie unterscheiden wir Rotation um Einfachbindungen von Spiegelbildisomerie?",
+      "priority": 3,
+      "sourcePair": null,
+      "sourceRefs": [
+        {
+          "module": "Konformere",
+          "id": "milchsaeure",
+          "name": "Milchsäure",
+          "smiles": "C[C@H](O)C(=O)O",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Was zeigt Milchsäure im Konformer-Modul besonders gut?"
+        },
+        {
+          "module": "Konformere",
+          "id": "2_butanol",
+          "name": "2-Butanol",
+          "smiles": "CCC(O)C",
+          "sourceLevel": "Vertiefung",
+          "hasPhysicalData": false,
+          "question": "Was macht 2-Butanol als Konformer-Beispiel interessanter als ein einfaches Alkan?"
+        }
+      ],
+      "learningGoal": "Konformation und Konfiguration voneinander abgrenzen.",
+      "modelLimits": "2-Butanol-SMILES hat noch kein @-Stereozentrum; für Enantiomerenvergleich explizite Konfiguration wählen.",
+      "primaryTool": "MOL_LAB",
+      "optionalTools": [
+        "MOL_LAB_DIDACTIC",
+        "MOLLAB_PRO"
+      ]
+    },
+    {
+      "id": "MW-027",
+      "template": "B",
+      "status": "planned",
+      "topic": "Wirkstoffe und Biomoleküle",
+      "title": "Wirkstoffstrukturen lesen: Was leisten funktionelle Gruppen?",
+      "question": "Welche polaren und unpolaren Bereiche lassen sich in fünf Wirkstoffbeispielen erkennen?",
+      "priority": 3,
+      "sourcePair": null,
+      "sourceRefs": [
+        {
+          "module": "Wirkstoffe und Biomoleküle",
+          "id": "coffein",
+          "name": "Coffein",
+          "smiles": "Cn1cnc2n(C)c(=O)n(C)c(=O)c12",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Warum ist Coffein trotz mehrerer N- und O-Atome nicht einfach „sehr wasserliebend“?"
+        },
+        {
+          "module": "Wirkstoffe und Biomoleküle",
+          "id": "aspirin",
+          "name": "Aspirin",
+          "smiles": "CC(=O)Oc1ccccc1C(=O)O",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Warum ist Aspirin strukturchemisch interessant?"
+        },
+        {
+          "module": "Wirkstoffe und Biomoleküle",
+          "id": "paracetamol",
+          "name": "Paracetamol",
+          "smiles": "CC(=O)Nc1ccc(O)cc1",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Welche Aussage passt am besten?"
+        },
+        {
+          "module": "Wirkstoffe und Biomoleküle",
+          "id": "ibuprofen",
+          "name": "Ibuprofen",
+          "smiles": "CC(C)Cc1ccc(cc1)[C@@H](C)C(=O)O",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Welche Aussage passt am besten?"
+        },
+        {
+          "module": "Wirkstoffe und Biomoleküle",
+          "id": "acetazolamid",
+          "name": "Acetazolamid",
+          "smiles": "CC(=O)Nc1nnc(s1)S(N)(=O)=O",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Welche Aussage passt am besten?"
+        }
+      ],
+      "learningGoal": "Funktionelle Gruppen, Wechselwirkungspotenzial und Grenzen einfacher 2D/3D-Vorhersagen erkennen.",
+      "modelLimits": "Wirkung, Dosis, Bindungstaschen und Stoffwechsel werden nicht allein aus SMILES abgeleitet; mehrere Varianten.",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB"
+      ]
+    },
+    {
+      "id": "MW-028",
+      "template": "B",
+      "status": "planned",
+      "topic": "Wirkstoffe und Biomoleküle",
+      "title": "Aminosäuren: Glycin, Alanin, Phenylalanin",
+      "question": "Wie verändert die Seitenkette die Eigenschaften einer Aminosäure?",
+      "priority": 2,
+      "sourcePair": null,
+      "sourceRefs": [
+        {
+          "module": "Wirkstoffe und Biomoleküle",
+          "id": "glycin",
+          "name": "Glycin",
+          "smiles": "NCC(=O)O",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Warum ist Glycin trotz kleiner Größe stark polar?"
+        },
+        {
+          "module": "Wirkstoffe und Biomoleküle",
+          "id": "alanin",
+          "name": "Alanin",
+          "smiles": "C[C@H](N)C(=O)O",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Welche Aussage passt am besten?"
+        },
+        {
+          "module": "Wirkstoffe und Biomoleküle",
+          "id": "phenylalanin",
+          "name": "Phenylalanin",
+          "smiles": "N[C@@H](Cc1ccccc1)C(=O)O",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Welche Aussage passt am besten?"
+        }
+      ],
+      "learningGoal": "Amphoteres Verhalten, Zwitterionen und unterschiedliche Seitenketten einordnen.",
+      "modelLimits": "Neutralform der SMILES beschreibt bei Wasser nicht automatisch vorherrschende Zwitterionen.",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB"
+      ]
+    },
+    {
+      "id": "MW-029",
+      "template": "B",
+      "status": "planned",
+      "topic": "Wirkstoffe und Biomoleküle",
+      "title": "Adenin und Ribose: Bausteine der RNA",
+      "question": "Welche strukturellen Rollen übernehmen Base und Zucker?",
+      "priority": 2,
+      "sourcePair": null,
+      "sourceRefs": [
+        {
+          "module": "Wirkstoffe und Biomoleküle",
+          "id": "adenin",
+          "name": "Adenin",
+          "smiles": "Nc1ncnc2[nH]cnc12",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Warum ist Adenin für Biomoleküle wichtig?"
+        },
+        {
+          "module": "Wirkstoffe und Biomoleküle",
+          "id": "ribose",
+          "name": "Ribose",
+          "smiles": "O=CC(O)C(O)C(O)CO",
+          "sourceLevel": "Basis",
+          "hasPhysicalData": false,
+          "question": "Warum ist Ribose stark wasserfreundlich?"
+        }
+      ],
+      "learningGoal": "Purinring, OH-Gruppen und Stoffklassen unterscheiden.",
+      "modelLimits": "Ribose als offene Struktur vereinfacht; RNA enthält ringförmige Ribose und ein Nucleotid, nicht freie Einzelmoleküle.",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB"
+      ]
+    },
+    {
+      "id": "MW-030",
+      "template": "B",
+      "status": "planned",
+      "topic": "Wirkstoffe und Biomoleküle",
+      "title": "Citronensäure: Drei Carboxylgruppen",
+      "question": "Was bedeutet eine mehrprotonige Säure für das Säure-Base-Verhalten?",
+      "priority": 2,
+      "sourcePair": null,
+      "sourceRefs": [
+        {
+          "module": "Wirkstoffe und Biomoleküle",
+          "id": "citronensaeure",
+          "name": "Citronensäure",
+          "smiles": "O=C(O)CC(O)(CC(=O)O)C(=O)O",
+          "sourceLevel": "Vertiefung",
+          "hasPhysicalData": false,
+          "question": "Warum ist Citronensäure stark wasserfreundlich und reaktiv in Säure-Base-Zusammenhängen?"
+        }
+      ],
+      "learningGoal": "Carboxylgruppen zählen und qualitative Mehrprotonigkeit erkennen.",
+      "modelLimits": "pH/pKa nicht aus einem isolierten 3D-Modell berechnen.",
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB"
+      ]
+    }
+  ]
+}
