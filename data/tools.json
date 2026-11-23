@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "tools": [
+    {
+      "id": "MOL_LAB_DIDACTIC",
+      "name": "MOL_LAB DIDACTIC",
+      "url": "https://colab.research.google.com/github/ekerzendorfer/MOL_LAB_DIDACTIC/blob/main/MOL_LAB_DIDACTIC_v0_4_2.ipynb",
+      "role": "Geführte Vergleiche"
+    },
+    {
+      "id": "MOLLAB_PRO",
+      "name": "MOLLAB_PRO",
+      "url": "https://ekerzendorfer.github.io/MOLLAB_PRO/",
+      "role": "2D-Sketcher und 3D-Ansichten"
+    },
+    {
+      "id": "MOL_LAB_TASKS",
+      "name": "MOL_LAB TASKS",
+      "url": "https://ekerzendorfer.github.io/MOL_LAB_TASKS/",
+      "role": "Aufgabensammlung und 2D-Editor"
+    },
+    {
+      "id": "MOL_LAB",
+      "name": "MOL_LAB (Colab)",
+      "url": "https://colab.research.google.com/github/ekerzendorfer/MOL_LAB/blob/main/MOL_LAB.ipynb",
+      "role": "RDKit, MMFF, Konformere, xTB"
+    }
+  ]
+}

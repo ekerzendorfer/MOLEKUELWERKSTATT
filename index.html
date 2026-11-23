@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MOLEKÜL-WERKSTATT – Moleküle erforschen, vergleichen und verstehen. Geführte Lernwege und freies 2D-/3D-Erkunden.">
+  <title>MOLEKÜL-WERKSTATT | CHEMIE mit KI</title>
+  <link rel="stylesheet" href="./styles.css?v=0.1.0">
+  <script src="./app.js?v=0.1.0" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <header class="hero">
+    <div class="wrap hero-top">
+      <a class="brand" href="#start" data-view-link="start" aria-label="MOLEKÜL-WERKSTATT – Startseite">
+        <span class="brand-symbol" aria-hidden="true">⚛</span>
+        <span><small>CHEMIE mit KI</small><strong>MOLEKÜL-WERKSTATT</strong></span>
+      </a>
+      <nav class="topnav" aria-label="Hauptnavigation">
+        <button type="button" data-view="start" class="nav-btn" aria-current="page">Einstieg</button>
+        <button type="button" data-view="aufgabe" class="nav-btn">MW-001</button>
+        <button type="button" data-view="frei" class="nav-btn">Frei erkunden</button>
+      </nav>
+    </div>
+    <div class="wrap hero-intro">
+      <p class="eyebrow">Von der Struktur zum Verständnis</p>
+      <h1>Entdecken, vergleichen, verstehen.</h1>
+      <p class="hero-lead">Beginne mit einer chemischen Frage – oder zeichne und zeige einfach ein Molekül in 2D und 3D.</p>
+    </div>
+  </header>
+
+  <main id="main" class="wrap main-content">
+    <p id="notice" class="notice" role="status" aria-live="polite" hidden></p>
+
+    <section id="view-start" class="view" aria-labelledby="start-title">
+      <div class="section-heading">
+        <p class="eyebrow dark">Dein Einstieg</p>
+        <h2 id="start-title">Was möchtest du heute machen?</h2>
+        <p>Für einen Lernweg brauchst du keine Softwarekenntnisse. Für eine spontane Molekülvorführung keine Aufgabenstellung.</p>
+      </div>
+      <div class="home-options">
+        <article class="feature-card primary-feature">
+          <div class="feature-kicker"><span class="number-dot">01</span> Geführt untersuchen</div>
+          <h3>Warum haben zwei Moleküle mit gleicher Formel unterschiedliche Eigenschaften?</h3>
+          <p>Vergleiche Ethanol und Dimethylether: Vermute, untersuche die Struktur und sichere deine Erklärung.</p>
+          <div class="formula-pair" aria-label="Vergleich von Ethanol und Dimethylether">
+            <div><span>Ethanol</span><strong>CH₃–CH₂–OH</strong></div>
+            <span class="vs">↔</span>
+            <div><span>Dimethylether</span><strong>CH₃–O–CH₃</strong></div>
+          </div>
+          <button type="button" class="btn btn-primary" data-action="start-case">Vergleich MW-001 starten <span aria-hidden="true">→</span></button>
+          <small class="muted">4 Schritte · Isomerie, funktionelle Gruppen, Wasserstoffbrücken</small>
+        </article>
+        <article class="feature-card secondary-feature">
+          <div class="feature-kicker"><span class="number-dot">02</span> Ohne Aufgabe</div>
+          <h3>Ein Molekül zeichnen und in 3D betrachten</h3>
+          <p>Du möchtest eine Struktur an der Tafel erklären, eine 3D-Darstellung erzeugen oder einfach etwas ausprobieren?</p>
+          <div class="free-teaser" aria-hidden="true">
+            <span class="molecule-symbol">H₃C</span><span class="bond-symbol">—</span><span class="molecule-symbol accent">O</span><span class="bond-symbol">—</span><span class="molecule-symbol">H</span>
+          </div>
+          <button type="button" class="btn btn-secondary" data-view="frei">Zum freien Molekülstudio <span aria-hidden="true">→</span></button>
+          <small class="muted">Direkte Zugänge zu 2D-Sketcher, 3D-Ansichten und Colab</small>
+        </article>
+      </div>
+      <div class="info-strip">
+        <strong>Wissenschaftliche Vertiefung bleibt möglich.</strong>
+        <span>Bei Bedarf führt die Werkstatt weiter zu RDKit, Konformeren und xTB in Colab – ohne den Einstieg damit zu überfrachten.</span>
+      </div>
+    </section>
+
+    <section id="view-aufgabe" class="view" aria-labelledby="case-title" hidden>
+      <div class="view-heading">
+        <div>
+          <p class="eyebrow dark">Geführter Lernweg · MW-001</p>
+          <h2 id="case-title">Gleiche Summenformel – andere Stoffeigenschaften?</h2>
+          <p>Ethanol und Dimethylether haben beide die Summenformel C₂H₆O. Warum unterscheiden sie sich dennoch?</p>
+        </div>
+        <button type="button" class="btn btn-quiet" data-view="start">← Zur Übersicht</button>
+      </div>
+
+      <div class="work-layout">
+        <div class="work-main">
+          <div class="panel step-panel">
+            <div class="panel-topline">
+              <h3>Dein Forschungsweg</h3>
+              <span id="step-fraction" class="progress-label">Schritt 1 von 4</span>
+            </div>
+            <nav id="steps" class="stepper" aria-label="Arbeitsschritte"></nav>
+            <div id="step-body" class="step-body" aria-live="polite"></div>
+            <div class="step-footer">
+              <button type="button" id="prev-step" class="btn btn-quiet" data-action="prev-step">← Zurück</button>
+              <span class="save-hint">Notizen bleiben auf diesem Gerät erhalten</span>
+              <button type="button" id="next-step" class="btn btn-primary" data-action="next-step">Weiter →</button>
+            </div>
+          </div>
+        </div>
+
+        <aside class="work-side">
+          <div class="panel context-panel">
+            <p class="eyebrow dark">Die untersuchten Moleküle</p>
+            <div class="molecule-facts">
+              <div><strong>Ethanol</strong><small>Alkohol · C₂H₆O</small><code>CCO</code><button type="button" class="copy-mini" data-copy="CCO" aria-label="SMILES von Ethanol kopieren">SMILES kopieren</button></div>
+              <div><strong>Dimethylether</strong><small>Ether · C₂H₆O</small><code>COC</code><button type="button" class="copy-mini" data-copy="COC" aria-label="SMILES von Dimethylether kopieren">SMILES kopieren</button></div>
+            </div>
+          </div>
+          <div class="panel context-panel">
+            <p class="eyebrow dark">Dein Arbeitsstand</p>
+            <p id="case-status" class="context-status">Noch keine Notizen.</p>
+            <button type="button" class="text-button danger" data-action="reset-case">Diese Aufgabe zurücksetzen</button>
+          </div>
+          <div class="panel context-panel subdued">
+            <strong>Nur das Ergebnis zählt? Nicht ganz.</strong>
+            <p>Halte zuerst deine Vermutung fest. Die Erklärung erscheint erst, wenn du sie bewusst anforderst.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="view-frei" class="view" aria-labelledby="free-title" hidden>
+      <div class="view-heading">
+        <div>
+          <p class="eyebrow dark">Freies Molekülstudio</p>
+          <h2 id="free-title">Zeichnen, darstellen, untersuchen – ohne Aufgabe</h2>
+          <p>Für Unterrichtsvorführungen und eigene Ideen. Die Werkstatt führt zu den vorhandenen Werkzeugen, ohne eine Aufgabenlösung vorzuschreiben.</p>
+        </div>
+        <button type="button" class="btn btn-quiet" data-view="start">← Zur Übersicht</button>
+      </div>
+      <div class="free-grid">
+        <article class="panel free-tool hero-tool">
+          <span class="tool-icon" aria-hidden="true">✎</span>
+          <h3>2D zeichnen → 3D darstellen</h3>
+          <p>Das vorhandene <strong>MOLLAB_PRO</strong> bietet einen 2D-Sketcher und einen 3D-Viewer mit unterschiedlichen Darstellungsformen.</p>
+          <ol class="instruction-list">
+            <li>Molekül im 2D-Sketcher zeichnen.</li>
+            <li><strong>Start</strong> und danach <strong>Basis-3D</strong> wählen.</li>
+            <li>Modell drehen, Darstellungsform wählen oder ein Bild exportieren.</li>
+          </ol>
+          <a id="free-mollab-link" class="btn btn-primary" href="https://ekerzendorfer.github.io/MOLLAB_PRO/" target="_blank" rel="noopener noreferrer">2D-/3D-Werkzeug öffnen ↗</a>
+          <p class="tool-note">Öffnet in einem neuen Tab. Der freie Zugang ist nicht an MW-001 gebunden.</p>
+        </article>
+        <article class="panel free-tool">
+          <span class="tool-icon" aria-hidden="true">⬡</span>
+          <h3>Weitere 3D-Modelle und Berechnungen</h3>
+          <p>Im <strong>MOL_LAB (Colab)</strong> kannst du aus SMILES dreidimensionale Modelle und Konformere berechnen; MMFF/UFF und xTB stehen für vertiefende Arbeiten zur Verfügung.</p>
+          <p class="tool-note">Hierfür muss in Google Colab eine Python-Laufzeit gestartet werden. Für eine schnelle Unterrichtsvorführung ist meist das 2D-/3D-Werkzeug links einfacher.</p>
+          <a id="free-colab-link" class="btn btn-outline" href="https://colab.research.google.com/github/ekerzendorfer/MOL_LAB/blob/main/MOL_LAB.ipynb" target="_blank" rel="noopener noreferrer">Colab-Labor öffnen ↗</a>
+        </article>
+      </div>
+      <div class="panel quick-examples">
+        <div class="panel-topline">
+          <div><h3>Beispielmolekül auswählen</h3><p>Für den schnellen Einstieg: SMILES kopieren und bei Bedarf im Zielwerkzeug verwenden. Noch keine automatische Übergabe.</p></div>
+        </div>
+        <div id="example-chips" class="example-chips"></div>
+        <div class="smiles-box">
+          <label for="free-smiles"><strong>SMILES für dein Molekül</strong> <small>(auch selbst editierbar)</small></label>
+          <div class="smiles-entry"><input id="free-smiles" type="text" value="CCO" spellcheck="false" autocomplete="off" aria-describedby="smiles-hint"><button type="button" class="btn btn-secondary" data-action="copy-free-smiles">Kopieren</button></div>
+          <p id="smiles-hint" class="tool-note">SMILES ist eine Textdarstellung der Molekülverknüpfung. Das Feld ist eine Kopierhilfe, kein integrierter Moleküleditor; es prüft die Struktur nicht.</p>
+        </div>
+      </div>
+      <div class="info-strip"><strong>Ausblick:</strong><span>Ein direkt integrierter 2D-Sketcher und ein eingebetteter 3D-Viewer sind für eine spätere Version vorgesehen. Zuerst prüfen wir Benutzerführung und Arbeitsabläufe.</span></div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="wrap footer-inner"><span>CHEMIE mit KI · MOLEKÜL-WERKSTATT <strong>V0.1 – Prototyp</strong></span><span>Kein Login · Arbeitsnotizen nur lokal auf diesem Gerät</span></div></footer>
+</body>
+</html>

@@ -1,0 +1,70 @@
+{
+  "schema_version": "0.1.0",
+  "release": "MW-001 – erster Pilotfall",
+  "learning_paths": [
+    {
+      "id": "MW-001",
+      "title": "Gleiche Summenformel – andere Stoffeigenschaften?",
+      "topic": "Isomerie / Struktur–Eigenschaft",
+      "level": "Basis · SEK2 (für SEK1 vereinfachbar)",
+      "question": "Warum unterscheiden sich Ethanol und Dimethylether trotz derselben Summenformel C₂H₆O?",
+      "molecules": [
+        {
+          "name": "Ethanol",
+          "smiles": "CCO",
+          "formula": "C2H6O"
+        },
+        {
+          "name": "Dimethylether",
+          "smiles": "COC",
+          "formula": "C2H6O"
+        }
+      ],
+      "primaryTool": "MOL_LAB_DIDACTIC",
+      "targetModule": "Isomerie",
+      "targetExample": "Ethanol",
+      "targetAction": "Isomerenpaar vergleichen",
+      "sourceReferences": [
+        {
+          "repo": "MOL_LAB_DIDACTIC",
+          "module": "Isomerie",
+          "pair": "Ethanol ↔ Dimethylether"
+        },
+        {
+          "repo": "MOL_LAB_TASKS",
+          "taskId": "sek1_org_003"
+        }
+      ],
+      "optionalTools": [
+        "MOLLAB_PRO",
+        "MOL_LAB_TASKS"
+      ]
+    }
+  ],
+  "free_examples": [
+    {
+      "name": "Wasser",
+      "smiles": "O"
+    },
+    {
+      "name": "Ethanol",
+      "smiles": "CCO"
+    },
+    {
+      "name": "Aceton",
+      "smiles": "CC(=O)C"
+    },
+    {
+      "name": "Benzol",
+      "smiles": "c1ccccc1"
+    },
+    {
+      "name": "Cyclohexan",
+      "smiles": "C1CCCCC1"
+    },
+    {
+      "name": "Koffein",
+      "smiles": "Cn1cnc2n(C)c(=O)n(C)c(=O)c12"
+    }
+  ]
+}

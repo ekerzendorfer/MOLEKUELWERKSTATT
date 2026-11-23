@@ -226,3 +226,17 @@ Direkt untersucht am 23.11.2026:
 - `ekerzendorfer/MOLLAB_PRO`: `index.html`; bestehender Viewer und manuelle Transformationsoberfläche.
 
 Die hier beschriebene Werkstatt und die Zielstruktur sind **Konzeptvorschläge**, keine Behauptung bereits implementierter Funktionalität. Externe Browser-/Colab-Durchläufe stehen noch aus.
+
+## Ergänzung nach Fachabstimmung (23.11.2026) – freies Molekülstudio
+
+Die MOLEKÜL-WERKSTATT hat **zwei Hauptwege**: (1) **Geführt untersuchen** mit MW-001 und (2) **Frei erkunden** ohne Aufgabenbindung, insbesondere für spontane Unterrichtsvorführungen von 2D-Strukturen und 3D-Modellen.
+
+In der ersten Pilotversion öffnet „Frei erkunden“ das bereits vorhandene MOLLAB_PRO mit 2D-Sketcher und 3D-Viewer; optional ist MOL_LAB (Colab) für Konformere, MMFF/UFF und xTB erreichbar. Die Werkstatt bietet Beispielmoleküle und SMILES-Kopierhilfe. Eine automatische SMILES-Übernahme in MOLLAB_PRO wird nicht behauptet. Ein direkt eingebetteter 2D-Sketcher und 3D-Viewer bleiben ein späterer Integrationsschritt. Das didaktische Primat gilt für geführte Aufgaben; freie Exploration ist bewusst ohne Leitfrage zugänglich.
+
+### Implementierungsstand V0.1.0
+
+- Geführter Lernweg MW-001 Ethanol/Dimethylether als erster vollständiger Fall: Vermuten, Untersuchen, Deuten, Sichern; lokale Notizen; Erklärung erst bei ausdrücklichem Aufruf; kopier-/herunterladbarer Bericht.
+- Freies Molekülstudio mit direktem 2D-/3D-Zugang, Colab-Option und editierbarer SMILES-Kopierhilfe.
+- Keine Änderungen an bisherigen Molekül-Apps oder am CHEMIE_KI_LINKS-Portal.
+- Keine automatische Resultat-Rückgabe; Bestätigung einer externen Untersuchung nur als Selbstangabe.
+- GitHub-Pages-Freischaltung und Sicht-/Funktionstest im Browser vor endgültiger Freigabe.
