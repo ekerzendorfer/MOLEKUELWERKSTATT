@@ -72,6 +72,11 @@ function simulate(initial,locationUrl="https://ekerzendorfer.github.io/MOLEKUELW
    return selector==="[data-action]"?{dataset:{action,case:caseId}}:null;
   }}});
  }
+ function view(name) {
+  listeners.click({target:{closest(selector){
+    return selector==="[data-view]"?{dataset:{view:name}}:null;
+  }}});
+ }
  function input(field,value){
   listeners.input({target:{dataset:{field},value,id:"field-"+field}});
  }
@@ -79,7 +84,7 @@ function simulate(initial,locationUrl="https://ekerzendorfer.github.io/MOLEKUELW
   listeners.change({target:{id,value,checked}});
  }
  function current(){return JSON.parse(store[key]);}
- return {store,dom,win,click,input,change,current};
+ return {store,dom,win,click,view,input,change,current};
 }
 async function test(){
  const app=simulate({
@@ -95,7 +100,9 @@ async function test(){
  assert(app.dom["step-body"].innerHTML.includes("Alte Deutung MW001"));
  assert.equal(app.current().hypothesis,"Meine alte MW-001 Vermutung");
  assert.equal(app.current().cases["MW-002"].hypothesis,"Gespeicherte MW002-Hypothese");
+ app.view("start");
  assert(app.dom["case-choices"].innerHTML.includes("MW-024"),"all new paths should be visible");
+ app.view("aufgabe");
  app.click("select-case","MW-002");
  assert(app.dom["case-title"].textContent.includes("Schwefelwasserstoff"));
  assert(app.dom["step-body"].innerHTML.includes("Gespeicherte MW002-Hypothese")===false,
