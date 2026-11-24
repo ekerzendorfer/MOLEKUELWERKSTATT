@@ -23,7 +23,7 @@
       "primaryTool": "MOL_LAB_DIDACTIC",
       "targetModule": "Isomerie",
       "targetExample": "Ethanol",
-      "targetAction": "Isomerenpaar vergleichen",
+      "targetAction": "Isomerenpaar auswählen",
       "sourceReferences": [
         {
           "repo": "MOL_LAB_DIDACTIC",
@@ -41,12 +41,12 @@
       ],
       "intro": "Ethanol und Dimethylether haben beide die Summenformel C₂H₆O. Warum unterscheiden sie sich dennoch?",
       "predictionHint": "Beide Stoffe bestehen aus denselben Atomsorten in derselben Anzahl. Die Verknüpfung ihrer Atome ist aber unterschiedlich.",
-      "investigationIntro": "Im MOL_LAB DIDACTIC ist das Isomerenpaar bereits kuratiert. Du musst keine Moleküle selbst eingeben.",
+      "investigationIntro": "Im MOL_LAB DIDACTIC V0.5 kannst du das kuratierte Isomerenpaar direkt auswählen. Die Vergleichsansicht öffnet sich sofort.",
       "notebookSteps": [
         "Colab: Laufzeit → Alle ausführen.",
         "Modul: Isomerie.",
-        "Beispiel: Ethanol (eigene SMILES aus).",
-        "Aktion: Isomerenpaar vergleichen."
+        "Isomerenpaar: Ethanol ↔ Dimethylether auswählen.",
+        "Der Vergleich startet unmittelbar; die Anzeige lässt sich zwischen 2D, 3D und Elementoberfläche umschalten."
       ],
       "observationPrompt": "Was hast du beobachtet?",
       "observationPlaceholder": "Ich sehe bei Ethanol … und bei Dimethylether …",
@@ -142,13 +142,13 @@
       "primaryTool": "MOL_LAB_DIDACTIC",
       "targetModule": "Isomerie",
       "targetExample": "Propanal",
-      "targetAction": "Isomerenpaar vergleichen",
-      "investigationIntro": "In DIDACTIC ist Propanal/Aceton als kuratiertes Isomerenpaar hinterlegt. Beginne mit Propanal und lasse das Paar anzeigen.",
+      "targetAction": "Isomerenpaar auswählen",
+      "investigationIntro": "In DIDACTIC V0.5 ist Propanal/Aceton als Isomerenpaar hinterlegt. Wähle es im Dropdown; der Vergleich startet sofort.",
       "notebookSteps": [
         "Colab: Laufzeit → Alle ausführen.",
         "Modul: Isomerie.",
-        "Beispiel: Propanal (eigene SMILES aus).",
-        "Aktion: Isomerenpaar vergleichen."
+        "Isomerenpaar: Propanal ↔ Aceton auswählen.",
+        "Der Vergleich startet unmittelbar; die Anzeige lässt sich zwischen 2D, 3D und Elementoberfläche umschalten."
       ],
       "observationPrompt": "Wo liegt die Carbonylgruppe? Vergleiche die Umgebung des Carbonyl-C, die 3D-Modelle sowie die Siedetemperaturen aus der Tabelle.",
       "observationPlaceholder": "Bei Propanal liegt die C=O-Gruppe …; bei Aceton …",

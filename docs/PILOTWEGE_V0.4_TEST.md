@@ -12,7 +12,7 @@ Die drei Beispiele prüfen bewusst drei unterschiedliche didaktische Aufgabentyp
 
 1. Eigene Vermutung formulieren: Lage und chemische Umgebung der C=O-Gruppe.
 2. In der Werkstatt die SMILES `CCC=O` (Propanal) bzw. `CC(=O)C` (Aceton) prüfen; die 2D-/3D-Links öffnen jeweils das gewünschte Molekül in MOLLAB_PRO.
-3. **MOL_LAB DIDACTIC:** Colab `Laufzeit → Alle ausführen`; **Modul: Isomerie**; **Beispiel: Propanal** (eigene SMILES ausgeschaltet); **Isomerenpaar vergleichen**.
+3. **MOL_LAB DIDACTIC:** Colab `Laufzeit → Alle ausführen`; **Modul: Isomerie**; **Isomerenpaar Propanal ↔ Aceton auswählen**. Die Vergleichsansicht startet unmittelbar; 2D/3D/Oberfläche lassen sich direkt an jeder Strukturkarte umschalten.
 4. In der Vergleichstabelle kontrollieren: Strukturgruppe, experimentelle Siedepunkte (rund 49 °C vs. 56 °C), Reaktivitätshinweise.
 5. Eigene Beobachtung und Begründung: Aldehyd-C mit H vs. Keton-C mit zwei C-Resten; unterschiedliche Oxidierbarkeit *unter passenden Reaktionsbedingungen*.
 6. Fachliche Erklärung nur nach Klick einblenden; Protokoll sichern.

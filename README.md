@@ -7,7 +7,7 @@ Die MOLEKÜL-WERKSTATT wird die **gemeinsame, didaktisch geführte Einstiegsober
 ➡️ **[Detailliertes Konzept V0.1](docs/KONZEPT_V0.1_EINSTIEG.md)**
 
 ## Vorhandene Komponenten (bleiben eigenständig)
-- [MOL_LAB DIDACTIC v0.4.2](https://github.com/ekerzendorfer/MOL_LAB_DIDACTIC) – kuratierte Vergleiche und Aufgaben; didaktischer Leitstern
+- [MOL_LAB DIDACTIC v0.5](https://github.com/ekerzendorfer/MOL_LAB_DIDACTIC) – kuratierte Vergleiche und Aufgaben; didaktischer Leitstern
 - [MOL_LAB_TASKS](https://github.com/ekerzendorfer/MOL_LAB_TASKS) – Aufgabenbestand, Ketcher, SMILES-Übergabe
 - [MOLLAB_PRO](https://github.com/ekerzendorfer/MOLLAB_PRO) – modernisierter 2D/3D-Viewer und Geometrievergleich; URL-basierte Strukturübernahme aus der Werkstatt
 - [MOL_LAB (Colab)](https://github.com/ekerzendorfer/MOL_LAB) – RDKit, Konformere, MMFF/UFF, xTB-GFN2 für die wissenschaftliche Vertiefung
@@ -70,7 +70,7 @@ Alle **61 DIDACTIC-Moduleinträge** (53 unterschiedliche SMILES) sind jetzt eine
 
 Zusätzlich zu den praktisch bewährten MW-001 und MW-002:
 
-- **MW-009 (A): Propanal / Aceton** – Carbonylposition, Aldehyd/Keton, Eigenschafts- und Reaktivitätsvergleich. DIDACTIC: *Isomerie → Propanal → Isomerenpaar vergleichen*.
+- **MW-009 (A): Propanal / Aceton** – Carbonylposition, Aldehyd/Keton, Eigenschafts- und Reaktivitätsvergleich. DIDACTIC: *Isomerie → Isomerenpaar Propanal ↔ Aceton wählen (startet sofort)*.
 - **MW-015 (B): Molekülform und Dipole** – aus *CO₂, H₂O, NH₃ und CH₄* **ein Beispiel wählen** und untersuchen. Die Beispiele können freiwillig gewechselt werden; dabei bleiben Vermutung, Beobachtung und Fazit für jedes Molekül gesondert gespeichert. DIDACTIC: *Polarität und Löslichkeit → gewähltes Beispiel → Molekül analysieren*.
 - **MW-024 (C): Cyclohexan und die Sesselstruktur** – Geometrie, Winkel-/Torsionsspannung, **Konformer-Suche in DIDACTIC mit relativen MMFF-Modellenergien**; optional vertiefende Rechnungen im MOL_LAB-Colab-Notebook. DIDACTIC: *Konformere → Cyclohexan → Molekül analysieren → Konformere berechnen*.
 
@@ -81,3 +81,7 @@ Der gemeinsame Forschungsweg **Vermuten → Untersuchen → Deuten → Sichern**
 **[Testblatt V0.4 – alle drei Pilotwege](docs/PILOTWEGE_V0.4_TEST.md)**. Die automatischen Regressionstests prüfen alte Notizen, neue Unterrichtstexte, die Beispielauswahl, sichere Rücklinks und die gezielte Rücksetzung. Der echte Unterrichts-/Colab-Durchlauf steht noch aus.
 
 Die umfangreiche Aufgabenbibliothek mit allen 30 katalogisierten Wegen ist damit **nicht** schon implementiert. Das freie Molekülstudio bleibt ohne Aufgabenbindung nutzbar.
+
+## Anpassung an DIDACTIC V0.5 – 24.11.2026
+
+Nach der Freigabe des DIDACTIC-Isomerie-Moduls auf `main` wurden die Lernanleitungen MW-001 (Ethanol ↔ Dimethylether) und MW-009 (Propanal ↔ Aceton) auf den **Paar-Dropdown mit automatischem Vergleichsstart** umgestellt. Das Werkstatt-Programm und die fünf Forschungswege bleiben unverändert; insbesondere werden bestehende Notizen und die URL-Rücklinks nicht verändert.
