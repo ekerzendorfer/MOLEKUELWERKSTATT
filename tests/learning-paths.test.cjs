@@ -123,7 +123,7 @@ async function test(){
  assert(app.dom["case-handoff-0"].href.includes("context=MW-009"),"MOLLAB return context lost");
  app.input("hypothesis","Aldehyd statt Keton");
  app.click("next-step");
- assert(app.dom["step-body"].innerHTML.includes("Isomerenpaar: Propanal"));
+ assert(app.dom["step-body"].innerHTML.includes("Propanal ↔ Aceton"));
  assert(app.dom["step-body"].innerHTML.includes("Propanal"));
  app.click("next-step");
  assert(!app.dom["step-body"].innerHTML.includes("Aldehyde können unter geeigneten Bedingungen"),
