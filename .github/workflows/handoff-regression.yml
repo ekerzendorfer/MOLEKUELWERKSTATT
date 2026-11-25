@@ -2,7 +2,7 @@ name: Molekuel-Werkstatt handoff regression
 
 on:
   push:
-    branches: [main, v0.4-three-pilot-paths]
+    branches: [main, v0.4-three-pilot-paths, mw024-cyclohexan-v08]
   workflow_dispatch:
 
 permissions:
