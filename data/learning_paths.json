@@ -291,7 +291,7 @@
       "interpretationQuestion": "Warum ist der Sessel energetisch am günstigsten? Welche Wechselwirkungen machen die Wanne ungünstig und warum stabilisiert eine Verdrillung das Twist-Boat? Weshalb darf die Wanne nicht als drittes Energieminimum gelten?",
       "interpretationPlaceholder": "Die Sesselstruktur minimiert …; Twist-Boat …; Wanne ist kein Minimum, weil …",
       "explanation": [
-        "Ein planarer Cyclohexanring hätte ungünstige Bindungswinkel und weitgehend ekliptische C–H-Stellungen. Im Sessel liegen die C–C–C-Winkel ungefähr beim tetraedrischen Ideal und benachbarte Bindungen stehen weitgehend gestaffelt. Dadurch werden Winkel- und Torsionsspannung reduziert.",
+        "Ein planarer Cyclohexanring hätte ungünstige Bindungswinkel und weitgehend ekliptische C–H-Stellungen. Im Sessel liegen die C–C–C-Winkel ungefähr beim tetraedrischen Ideal und benachbarte Bindungen stehen weitgehend gestaffelt. So werden Winkel- und Torsionsspannung deutlich reduziert.",
         "Die Wanne besitzt ungünstige ekliptische Bindungsstellungen und Wechselwirkungen zwischen den sogenannten Flaggenmast-Wasserstoffen. Verdrillung reduziert diese Wechselwirkungen: Das Twist-Boat ist ein höheres lokales Energieminimum, die symmetrische Wanne eine höherenergetische stationäre Übergangs-/Sattelgeometrie zwischen Twist-Boat-Formen.",
         "DIDACTIC erzeugt für Cyclohexan deshalb drei gezielte 3D-Referenzgeometrien. Die relativen MMFF94-Energien sind Potentialmodellwerte (kcal/mol), keine experimentellen freien Energien und keine Ringinversionsbarrieren. Der für die Ringinversion ebenfalls wichtige Halbsessel ist nicht abgebildet. Bei anderen Molekülen bleibt die gewöhnliche MMFF-Konformersuche aktiv."
       ],
