@@ -9,7 +9,7 @@
   var STEPS=["Vermuten","Untersuchen","Deuten","Sichern"];
   var VIEWS=["start","aufgabe","frei"];
   var NOTE_FIELDS=["hypothesis","observation","interpretation","conclusion"];
-  var emptyCase={step:0,hypothesis:"",observation:"",interpretation:"",conclusion:"",
+  var emptyCase={step:0,hypothesis:"",observation:"",observationParts:[],interpretation:"",conclusion:"",
     investigated:false,explanation:false,done:false};
   var data=null,toolData=null,canSave=true,state=readState();
 
@@ -27,6 +27,10 @@
     }
     result.step=Math.min(3,Math.max(0,Math.floor(result.step)||0));
     NOTE_FIELDS.forEach(function(key){result[key]=result[key].slice(0,4000);});
+    result.observationParts=Array.isArray(obj&&obj.observationParts)?
+      obj.observationParts.slice(0,5).map(function(value){
+        return typeof value==="string"?value.slice(0,1200):"";
+      }):[];
     return result;
   }
   function readState(){
@@ -85,7 +89,8 @@
       Object.values(state.cases[VARIANT_ID].variants):
       [id==="MW-001"?state:state.cases[id]];
     return cases.some(function(c){
-      return c.done||c.step>0||NOTE_FIELDS.some(function(k){return !!c[k].trim();});
+      return c.done||c.step>0||NOTE_FIELDS.some(function(k){return !!c[k].trim();})||
+         (c.observationParts||[]).some(function(v){return !!v.trim();});
     });
   }
   function toolUrl(id){
@@ -105,7 +110,7 @@
     var more=elem("case-choices");
     more.innerHTML=data.learning_paths.filter(function(p){return p.id!=="MW-001";}).map(function(p){
       var description=p.id==="MW-015"?"Vier Moleküle zur Wahl – ein Beispiel genügt.":
-        p.id==="MW-024"?"Ringgeometrie und optionale MMFF-Konformersuche.":
+        p.id==="MW-024"?"Vier Ringformen in drei kurzen Beobachtungsaufgaben.":
         p.id==="MW-009"?"Aldehyd und Keton bei gleicher Summenformel.":
         "Wasserstoffbrücken und zwischenmolekulare Kräfte.";
       var kind=p.template==="A"?"Vergleichen":p.template==="B"?"Entdecken":"Konformere";
@@ -174,6 +179,8 @@
   function stepTo(n){activeNotes().step=Math.min(3,Math.max(0,n));persist();renderStep();}
   function renderStatus(){
     var n=activeNotes(),count=NOTE_FIELDS.filter(function(k){return !!n[k].trim();}).length;
+    if(state.caseId==="MW-024"&&!n.observation.trim()&&
+       (n.observationParts||[]).some(function(v){return !!v.trim();}))count++;
     var text=count+" von 4 Notizfeldern bearbeitet";
     if(n.investigated)text+=" · Untersuchung selbst bestätigt";
     if(n.done)text+=" · abgeschlossen";
@@ -234,8 +241,27 @@
       }
       html+='<label class="check-row"><input type="checkbox" id="investigated"'+(n.investigated?' checked':'')+
         '>Ich habe die Untersuchung im externen Werkzeug selbst durchgeführt.</label>'+
-        '<label class="field-label" for="field-observation">'+escapeHtml(p.observationPrompt||"Was hast du beobachtet?")+'</label>'+
-        '<textarea id="field-observation" data-field="observation" maxlength="4000" placeholder="'+
+        '<p class="field-label">'+escapeHtml(p.observationPrompt||"Was hast du beobachtet?")+'</p>';
+      if(Array.isArray(p.observationTasks)&&p.observationTasks.length){
+        html+=p.observationTasks.map(function(task,i){
+          return '<section class="micro-observation" aria-labelledby="observation-title-'+i+'">'+
+            '<h5 id="observation-title-'+i+'">'+escapeHtml(task.title)+'</h5>'+
+            '<p>'+escapeHtml(task.question)+'</p>'+
+            '<p class="example-input">'+escapeHtml(task.hint||"")+'</p>'+
+            '<label class="field-label" for="observation-part-'+i+'">Deine Antwort</label>'+
+            '<textarea id="observation-part-'+i+'" data-observation-index="'+i+
+            '" maxlength="1200" placeholder="'+escapeHtml(task.placeholder||"Ich sehe …")+'">'+
+            escapeHtml((n.observationParts||[])[i]||"")+'</textarea></section>';
+        }).join("");
+        if(p.advancedObservation){
+          html+='<details class="micro-advanced"><summary>Freiwillige Vertiefung: Torsionswinkel und Koplanarität</summary>'+
+            '<p>'+escapeHtml(p.advancedObservation)+'</p></details>';
+        }
+        html+='<label class="field-label" for="field-observation">Weitere Beobachtungen (freiwillig)</label>';
+      }else{
+        html+='<label class="field-label" for="field-observation">Deine Beobachtung</label>';
+      }
+      html+='<textarea id="field-observation" data-field="observation" maxlength="4000" placeholder="'+
         escapeHtml(p.observationPlaceholder||"Meine Beobachtung …")+'">'+escapeHtml(n.observation)+'</textarea>'+
         (p.id==="MW-002"?
           '<p class="example-input">H₂S ist giftig – diese Aufgabe ist ausschließlich für die digitale Untersuchung vorgesehen.</p>':
@@ -285,7 +311,14 @@
         molecules.map(function(m){return m.name+" ("+m.smiles+")";}).join("; ")+"\n"+
       (p.template==="B"?"**Untersuchtes Beispiel:** "+chosen.name+"\n":"")+
       "\n## Vermutung\n"+(n.hypothesis.trim()||"(nicht eingetragen)")+
-      "\n\n## Beobachtungen\n"+(n.observation.trim()||"(nicht eingetragen)")+
+      "\n\n## Beobachtungen\n"+
+      ((Array.isArray(p.observationTasks)&&p.observationTasks.length)?
+       p.observationTasks.map(function(task,i){
+         return "### "+task.title+"\n"+
+                (((n.observationParts||[])[i]||"").trim()||"(nicht eingetragen)");
+       }).join("\n\n")+
+       (n.observation.trim()?"\n\nZusatznotiz: "+n.observation.trim():""):
+       (n.observation.trim()||"(nicht eingetragen)"))+
       "\n\n## Deutung\n"+(n.interpretation.trim()||"(nicht eingetragen)")+
       "\n\n## Fazit\n"+(n.conclusion.trim()||"(nicht eingetragen)")+
       "\n\n**Digitale Untersuchung:** "+(n.investigated?"von mir bestätigt":"nicht bestätigt")+
@@ -388,6 +421,17 @@
   });
   document.addEventListener("input",function(event){
     var input=event.target,field=input.dataset.field;
+    var index=input.dataset.observationIndex;
+    if(index!==undefined&&state.caseId==="MW-024"){
+      var pos=Number(index),p=currentPath(),n=activeNotes();
+      if(Number.isInteger(pos)&&pos>=0&&p&&Array.isArray(p.observationTasks)&&
+         pos<p.observationTasks.length){
+        if(!Array.isArray(n.observationParts))n.observationParts=[];
+        n.observationParts[pos]=input.value.slice(0,1200);
+        n.done=false;persist();renderStatus();
+      }
+      return;
+    }
     if(NOTE_FIELDS.includes(field)){
       var n=activeNotes();n[field]=input.value.slice(0,4000);n.done=false;
       persist();renderStatus();
