@@ -89,3 +89,7 @@ Nach der Freigabe des DIDACTIC-Isomerie-Moduls auf `main` wurden die Lernanleitu
 ### MW-024 – AHS-taugliche Teilaufgaben (25.11.2026)
 
 Der Beobachtungsschritt ist in drei kurze Felder geteilt: **Formen entdecken**, **Energien ablesen**, **Stabilität erkennen**. Jede Antwort wird getrennt lokal gespeichert und erscheint im kopierbaren Protokoll. Vorhandene Beobachtungsnotizen bleiben im zusätzlichen freien Feld erhalten. Torsionswinkel und Koplanarität sind nur noch ein freiwilliger ausklappbarer Fachhinweis; DIDACTIC besitzt dafür keine Winkel-/Ebenen-Messfunktion. Die optionalen MOL_LAB-Experimente sind klar von den vier kuratierten DIDACTIC-Geometrien getrennt.
+
+### Abschlussprüfung MW-024 (25.11.2026)
+
+Der freiwillige MOL_LAB-Vertiefungslink führt nach der Freigabe des Mess- und Konformerlabors nun auf das dauerhaft verfügbare [Cyclohexan-Startnotebook auf MOL_LAB `main`](https://colab.research.google.com/github/ekerzendorfer/MOL_LAB/blob/main/MOL_LAB_MW024.ipynb). Die Werkstatt-Version selbst bleibt bis zur praktischen Veröffentlichung auf dem Entwicklungszweig `mw024-cyclohexan-v08`.

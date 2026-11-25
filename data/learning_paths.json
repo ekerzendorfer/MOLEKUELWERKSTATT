@@ -334,7 +334,7 @@
         }
       ],
       "advancedObservation": "Freiwillige Fachvertiefung: Ein Torsionswinkel beschreibt die relative Verdrehung über vier aufeinanderfolgende Atome. Welche vier Ring-C-Atome genau koplanar sind, lässt sich allein aus einem schräg betrachteten 3D-Modell nicht zuverlässig ablesen. Dafür wären Atomnummern und Mess-/Ebenenwerkzeuge nötig. DIDACTIC stellt diese derzeit nicht bereit. Solche Messungen gehören deshalb nicht zur Pflichtaufgabe.",
-      "optionalDeepUrl": "https://colab.research.google.com/github/ekerzendorfer/MOL_LAB/blob/fix-konformere-postopt-rms/MOL_LAB_MW024.ipynb"
+      "optionalDeepUrl": "https://colab.research.google.com/github/ekerzendorfer/MOL_LAB/blob/main/MOL_LAB_MW024.ipynb"
     }
   ],
   "free_examples": [
