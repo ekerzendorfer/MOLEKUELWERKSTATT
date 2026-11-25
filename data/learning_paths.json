@@ -263,8 +263,8 @@
       "title": "Cyclohexan: Warum ist die Sesselstruktur günstig?",
       "topic": "Konformere / räumliche Struktur",
       "level": "Vertiefung · SEK2 / FH-Einstieg",
-      "question": "Warum bevorzugt Cyclohexan eine nicht-planare Sesselstruktur?",
-      "intro": "Die sechsgliedrige Ringstruktur ist beweglich. Untersuche die räumliche Gestalt und warum die Sesselkonformation energetisch günstig ist.",
+      "question": "Warum ist die Sesselstruktur am günstigsten, und welche Bedeutung haben Twist-Boat, Wanne und Halbsessel für die Ringinversion?",
+      "intro": "Der Cyclohexanring ist räumlich beweglich. DIDACTIC zeigt nun vier gezielt erzeugte Ringformen und hilft dabei, stabile Minima von instabilen und geometrisch eingeschränkten Übergangsmodellen zu unterscheiden.",
       "molecules": [
         {
           "name": "Cyclohexan",
@@ -273,34 +273,35 @@
           "kind": "gesättigter Sechsring · nicht planar"
         }
       ],
-      "predictionHint": "Überlege, welche C–C–C-Bindungswinkel und welche Stellung benachbarter C–H-Bindungen in einem flachen Sechsring auftreten würden.",
+      "predictionHint": "Ordne vier typische Ringformen nach ihrer vermuteten Energie: Sessel, Twist-Boat, Wanne und Halbsessel. Welche Formen dürften bei einer freien Minimierung erhalten bleiben?",
       "primaryTool": "MOL_LAB_DIDACTIC",
       "targetModule": "Konformere",
       "targetExample": "Cyclohexan",
       "targetAction": "Konformere berechnen",
-      "investigationIntro": "Im DIDACTIC-V0.8-Entwicklungsstand werden drei gezielt erzeugte Cyclohexan-Referenzformen nebeneinander dargestellt: Sessel (Minimum), Twist-Boat (lokales Minimum) und Wanne (instabile Sattel-/Übergangsgeometrie). Die Wanne ist kein drittes stabiles Minimum und wird daher nicht aus einer gewöhnlichen Zufallssuche erwartet.",
+      "investigationIntro": "In DIDACTIC V0.8 stehen vier kuratierte Cyclohexan-Ringmodelle nebeneinander: Sessel (Minimum), Twist-Boat (lokales Minimum), Wanne (Sattelgeometrie, kein drittes stabiles Minimum) und Halbsessel (hochenergetische, geometrisch fixierte Annäherung an die Übergangslage). Die Halbsessel-Referenz ist keine exakte, rechnerisch lokalisierte Übergangszustandsgeometrie.",
       "notebookSteps": [
-        "Colab: V0.8-Entwicklungsversion öffnen, Laufzeit → Alle ausführen.",
+        "Colab: DIDACTIC V0.8 auf main öffnen und Laufzeit → Alle ausführen.",
         "Modul: Konformere; Beispiel: Cyclohexan.",
         "Aktion 1: Molekül analysieren.",
-        "Aktion 2: Konformere berechnen – Sessel, Twist-Boat und Wanne als drei kuratierte 3D-Referenzgeometrien betrachten.",
-        "Die relativen MMFF94-Potentiale vergleichen und die Wanne ausdrücklich als Sattel-/Übergangsgeometrie (kein Minimum) einordnen."
+        "Aktion 2: Konformere berechnen – Sessel, Twist-Boat und Wanne sowie Halbsessel als vier 3D-Referenzformen betrachten.",
+        "Die relativen MMFF94-Modellpotentiale und die Einordnung (Minimum, Sattelgeometrie, geometrisch restringiertes Übergangsmodell) vergleichen."
       ],
-      "observationPrompt": "Vergleiche die drei 3D-Ringformen Sessel, Twist-Boat und Wanne. Welche C–H-Bindungen sind weitgehend gestaffelt, welche ekliptisch? Was bedeutet die Energie-Reihenfolge Sessel < Twist-Boat < Wanne, und welche Form ist kein stabiles Minimum?",
-      "observationPlaceholder": "Sessel: …; Twist-Boat: …; Wanne: …; die MMFF-Modellenergien zeigen …",
-      "interpretationQuestion": "Warum ist der Sessel energetisch am günstigsten? Welche Wechselwirkungen machen die Wanne ungünstig und warum stabilisiert eine Verdrillung das Twist-Boat? Weshalb darf die Wanne nicht als drittes Energieminimum gelten?",
-      "interpretationPlaceholder": "Die Sesselstruktur minimiert …; Twist-Boat …; Wanne ist kein Minimum, weil …",
+      "observationPrompt": "Vergleiche die vier 3D-Ringformen: Sessel, Twist-Boat, Wanne und Halbsessel. Wie unterscheiden sich die Torsionswinkel? Welche Ring-C-Atome sind beim Halbsessel annähernd koplanar? Welche Formen sind Minima und warum liegt der Halbsessel energetisch am höchsten?",
+      "observationPlaceholder": "Sessel …; Twist-Boat …; Wanne …; Halbsessel …; die angezeigten MMFF-Modellpotentiale …",
+      "interpretationQuestion": "Warum ist der Sessel am günstigsten? Welche Spannungen erhöhen die Energie der Wanne? Wie hilft der Halbsessel, die Ringinversion zu verstehen, und weshalb ist sein MMFF-Potential keine nachgewiesene Aktivierungsbarriere?",
+      "interpretationPlaceholder": "Im Sessel …; bei Twist-Boat und Wanne …; der Halbsessel ist als Übergangsmodell hilfreich, aber …",
       "explanation": [
-        "Ein planarer Cyclohexanring hätte ungünstige Bindungswinkel und weitgehend ekliptische C–H-Stellungen. Im Sessel liegen die C–C–C-Winkel ungefähr beim tetraedrischen Ideal und benachbarte Bindungen stehen weitgehend gestaffelt. So werden Winkel- und Torsionsspannung deutlich reduziert.",
-        "Die Wanne besitzt ungünstige ekliptische Bindungsstellungen und Wechselwirkungen zwischen den sogenannten Flaggenmast-Wasserstoffen. Verdrillung reduziert diese Wechselwirkungen: Das Twist-Boat ist ein höheres lokales Energieminimum, die symmetrische Wanne eine höherenergetische stationäre Übergangs-/Sattelgeometrie zwischen Twist-Boat-Formen.",
-        "DIDACTIC erzeugt für Cyclohexan deshalb drei gezielte 3D-Referenzgeometrien. Die relativen MMFF94-Energien sind Potentialmodellwerte (kcal/mol), keine experimentellen freien Energien und keine Ringinversionsbarrieren. Der für die Ringinversion ebenfalls wichtige Halbsessel ist nicht abgebildet. Bei anderen Molekülen bleibt die gewöhnliche MMFF-Konformersuche aktiv."
+        "Ein planarer Cyclohexanring hätte ungünstige Bindungswinkel und weitgehend ekliptische C–H-Stellungen. Im Sessel liegen die C–C–C-Winkel nahe dem tetraedrischen Ideal; viele Bindungen stehen gestaffelt. So werden Winkel- und Torsionsspannung deutlich reduziert.",
+        "Die Wanne zeigt ekliptische Bindungsstellungen und ungünstige Flaggenmast-Wechselwirkungen. Durch Verdrillung werden diese Wechselwirkungen vermindert; deshalb ist das Twist-Boat ein höheres lokales Energieminimum, während die symmetrische Wanne eine Sattelgeometrie darstellt.",
+        "Für die Ringinversion ist der Halbsessel besonders wichtig: Sessel → Halbsessel → Twist-Boat → Wanne → Twist-Boat → Halbsessel → Sessel. DIDACTIC stellt den Halbsessel als geometrisch eingeschränktes Modell mit vier nahezu koplanaren Ring-C-Atomen dar. Diese Struktur wurde nicht durch eine Übergangszustands-/Hesse-Analyse als Sattelpunkt lokalisiert.",
+        "Die angezeigten relativen MMFF94-Potentiale sind Modellwerte, keine gemessenen freien Energien und keine rechnerisch bestätigten Aktivierungsbarrieren. Nur Sessel und Twist-Boat sind Minima; die anderen beiden Formen müssen für die Erklärung der Energiefläche gesondert betrachtet werden."
       ],
-      "conclusionPrompt": "Begründe die Energie-Reihenfolge Sessel < Twist-Boat < Wanne und erläutere, warum die Wanne zwar als 3D-Referenzmodell darstellbar ist, aber nicht als stabiles Energieminimum gelten darf.",
-      "conclusionPlaceholder": "Die Sesselstruktur vermeidet …; das Rechenmodell zeigt …",
+      "conclusionPrompt": "Ordne Sessel, Twist-Boat, Wanne und Halbsessel nach Energie und erkläre, warum nur zwei dieser Ringformen als Minima gelten. Was lernt man aus den beiden Übergangsmodellen über die Ringinversion?",
+      "conclusionPlaceholder": "Die energetische Reihenfolge …; die Ringinversion läuft über …; die Modellgrenzen bestehen darin, dass …",
       "optionalDeepTool": "MOL_LAB",
       "deepTitle": "Wissenschaftliche Vertiefung im MOL_LAB",
-      "deepDescription": "Optional: die Energielandschaft und Ringinversion im MOL_LAB (RDKit/MMFF bzw. xTB) vertiefen. Für ein korrektes Minimum-/Sattelpunktprofil sind geeignete geometrische Constraints, Übergangszustands- und Frequenzprüfungen nötig; kein automatischer Transfer der Modellenergien zur Werkstatt.",
-      "caution": "Die Wanne ist keine dritte stabile Konformation, sondern eine Sattel-/Übergangsgeometrie. Die drei angezeigten MMFF-Potentialenergien sind modellabhängig und weder Gleichgewichtsanteile noch Aktivierungsbarrieren; für eine vollständige Ringinversion müsste insbesondere auch der Halbsessel betrachtet werden.",
+      "deepDescription": "Optional: Für eine wissenschaftliche Untersuchung im MOL_LAB eine echte Ringinversions-Energiefläche mit geometrischen Constraints, Energiedifferenzen und gegebenenfalls Übergangszustands-/Hesse-Analyse bearbeiten. Die DIDACTIC-Referenzen sind kein vollständiges energetisches Reaktionsprofil.",
+      "caution": "Nicht vier Minima: Sessel und Twist-Boat sind Minima, die Wanne ist eine Sattelgeometrie. Der Halbsessel wurde geometrisch eingeschränkt erzeugt, nicht als exakter Übergangszustand bestätigt. MMFF-Potentialwerte sind keine experimentellen freien Energien und keine berechneten Ringinversionsbarrieren.",
       "sourceReferences": [
         {
           "repo": "MOL_LAB_DIDACTIC",

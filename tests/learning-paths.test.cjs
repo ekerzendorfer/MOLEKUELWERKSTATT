@@ -29,6 +29,11 @@ assert(lessons[4].investigationIntro.includes("kein drittes stabiles Minimum"));
 assert(lessons[4].caution.includes("Sattel"));
 assert(lessons[4].explanation.some(s=>s.includes("Flaggenmast")));
 assert(lessons[4].explanation.some(s=>s.includes("Halbsessel")));
+assert(lessons[4].notebookSteps.some(s=>s.includes("sowie Halbsessel")));
+assert(lessons[4].investigationIntro.includes("geometrisch fixierte Annäherung"));
+assert(lessons[4].caution.includes("keine berechneten Ringinversionsbarrieren"));
+assert(lessons[4].explanation.some(s=>s.includes("Sessel → Halbsessel → Twist-Boat")));
+assert(lessons[4].observationPrompt.includes("vier 3D-Ringformen"));
 assert.equal(lessons[4].optionalDeepTool,"MOL_LAB");
 
 const tools=JSON.parse(fs.readFileSync(path.join(base,"data/tools.json"),"utf8"));
