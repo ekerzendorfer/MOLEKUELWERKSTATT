@@ -31,7 +31,7 @@ assert(lessons[4].explanation.some(s=>s.includes("Flaggenmast")));
 assert(lessons[4].explanation.some(s=>s.includes("Halbsessel")));
 assert(lessons[4].observationPrompt.includes("Drei kleine Beobachtungen"));
 assert.equal(lessons[4].observationTasks.length,3);
-assert(lessons[4].advancedObservation.includes("keine"));
+assert(lessons[4].advancedObservation.includes("nicht zur Pflichtaufgabe"));
 assert(lessons[4].caution.includes("nicht gemessen"));
 assert.equal(lessons[4].optionalDeepTool,"MOL_LAB");
 
