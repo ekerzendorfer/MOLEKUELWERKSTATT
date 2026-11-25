@@ -273,7 +273,7 @@
           "kind": "gesättigter Sechsring · nicht planar"
         }
       ],
-      "predictionHint": "Ein Cyclohexanring muss nicht flach sein. Vermute: Ist eine flache oder eine räumlich gefaltete Ringform günstiger? Begründe in einem Satz.",
+      "predictionHint": "Vermute zuerst: Ist eine flache oder eine räumlich gefaltete Ringform günstiger? Begründe in einem Satz. Überprüfe deine Idee anschließend mit „In 2D/3D betrachten“ in MOLLAB PRO (3D erzeugen und drehen). Falls ein Molekülbaukasten (z. B. Molymod®) verfügbar ist, stecke sechs tetraedrische C-Atome mit je zwei H-Atomen zu einem Ring zusammen. Versuche, ihn ohne Kraftaufwand flach zu legen. Was beobachtest du?",
       "primaryTool": "MOL_LAB_DIDACTIC",
       "targetModule": "Konformere",
       "targetExample": "Cyclohexan",

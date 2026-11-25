@@ -42,17 +42,32 @@ Die drei Beispiele prüfen bewusst drei unterschiedliche didaktische Aufgabentyp
 
 **Direktlink:** https://ekerzendorfer.github.io/MOLEKUELWERKSTATT/?case=MW-024#aufgabe
 
-**Leitfrage:** Warum ist die nicht-planare Sesselkonformation energetisch günstig?
+**Leitfrage:** Warum ist beim Cyclohexan die Sesselstruktur besonders günstig?
 
-1. Eigene Vermutung notieren: Winkel im Ring und gestaffelte/ekliptische C–H-Stellungen.
-2. Cyclohexan (`C1CCCCC1`) über **„In 2D/3D betrachten“** in MOLLAB_PRO öffnen und prüfen, dass die 3D-Struktur nicht flach ist.
-3. **MOL_LAB DIDACTIC:** Colab `Laufzeit → Alle ausführen`; **Modul: Konformere**; **Beispiel: Cyclohexan**; zuerst **Molekül analysieren**, danach **Konformere berechnen**.
-4. Verfügbare relative MMFF-Energien und angezeigte Konformere beschreiben. **Nicht erwarten**, dass die einfache Minimierung gezielt die Bootkonformation oder die Ringinversionsbarriere liefert; mehrere Starts können zur gleichen Sesselstruktur optimieren.
-5. Eigene Interpretation: Bindungswinkel nahe 109,5°, weitgehend gestaffelte Nachbarbindungen – günstiger als eine hypothetisch planare Ringstruktur.
-6. **Optional:** Über „MOL_LAB in Colab öffnen“ tiefer gehen; `C1CCCCC1` bei Bedarf kopieren und im MOL_LAB selbst eintragen. Keine automatische Übergabe von Energien oder Geometrien behaupten.
-7. Erklärung erst nach eigener Deutung einblenden; Ergebnisbericht sichern und Rücklink aus MOLLAB_PRO nach **MW-024** prüfen.
+1. Eigene Vermutung notieren. Optional in MOLLAB PRO über „In 2D/3D betrachten“ die 3D-Form prüfen; mit einem Molekülbaukasten (z. B. Molymod®) einen Sechsring aus tetraedrischen C-Atomen mit je zwei H-Atomen aufbauen und ohne Kraftaufwand flach zu legen versuchen. Ein planarer Ring ist nicht spannungsfrei.
+2. DIDACTIC V0.8 auf main in Colab: Laufzeit → Alle ausführen; Konformere → Cyclohexan → Molekül analysieren → Konformere berechnen.
+3. Sessel, Twist-Boat, Wanne und Halbsessel einzeln drehen; relative MMFF-Modellpotentiale und Einordnung ablesen.
+4. Drei getrennte Beobachtungen festhalten: Formen entdecken, Energien ablesen, Stabilität erkennen. Keine Winkelmessung erforderlich.
+5. Eigene Deutung formulieren, erst danach die Erklärung öffnen und ein Fazit sichern.
+6. Freiwillig [MOL_LAB mit voreingestelltem Cyclohexan](https://colab.research.google.com/github/ekerzendorfer/MOL_LAB/blob/main/MOL_LAB_MW024.ipynb) öffnen: freie Minimasuche und Geometriemessung. Keine automatische Ergebnisübernahme.
+7. Protokoll, Wiederherstellung der drei Beobachtungsfelder nach Refresh und Rücklink aus MOLLAB PRO prüfen.
 
-**Wissenschaftliche Grenze:** Relative MMFF-Energien sind Modellwerte und nicht mit experimentellen Konformations- oder Aktivierungsenergien gleichzusetzen.
+**Wissenschaftliche Grenze:** Sessel und Twist-Boat sind Minima, die Wanne ist eine Sattelgeometrie, der Halbsessel eine eingeschränkte Referenz. MMFF-Potentiale sind keine experimentellen freien Energien oder nachgewiesenen Aktivierungsbarrieren.
+
+### Praktische Abnahme am 25.11.2026
+
+- [x] Leitfrage und Vermutung verständlich
+- [x] DIDACTIC V0.8 mit vier Ringmodellen
+- [x] Alle vier Modelle unabhängig drehbar
+- [x] Energietabelle verständlich und fachlich korrekt beschriftet (ein abgeschnittener Text in Einordnung als UI-Nachtrag gemeldet)
+- [x] Drei Beobachtungsaufgaben ohne Messwerkzeuge lösbar
+- [x] Eigene Deutung vor Erklärung
+- [x] Freiwilliges MOL_LAB startet mit Cyclohexan
+- [x] Geometriemessung und Konformersuche funktionieren
+- [x] Protokoll enthält alle drei Beobachtungen
+- [x] Eingaben nach Neuladen vorhanden
+
+Nutzerfreigabe für main erteilt. Redaktioneller Nachtrag: freiwilliger digitaler und haptischer Einstieg, keine Änderung des Aufgabenablaufs oder der Speicherstruktur. Die neue Darstellung der DIDACTIC-Energietabelle benötigt noch eine kurze Sichtkontrolle.
 
 ## Übergreifende Regression vor der Freigabe
 

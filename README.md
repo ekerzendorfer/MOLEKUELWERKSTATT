@@ -92,4 +92,4 @@ Der Beobachtungsschritt ist in drei kurze Felder geteilt: **Formen entdecken**, 
 
 ### Abschlussprüfung MW-024 (25.11.2026)
 
-Der freiwillige MOL_LAB-Vertiefungslink führt nach der Freigabe des Mess- und Konformerlabors nun auf das dauerhaft verfügbare [Cyclohexan-Startnotebook auf MOL_LAB `main`](https://colab.research.google.com/github/ekerzendorfer/MOL_LAB/blob/main/MOL_LAB_MW024.ipynb). Die Werkstatt-Version selbst bleibt bis zur praktischen Veröffentlichung auf dem Entwicklungszweig `mw024-cyclohexan-v08`.
+Der freiwillige MOL_LAB-Vertiefungslink führt nach der Freigabe des Mess- und Konformerlabors nun auf das dauerhaft verfügbare [Cyclohexan-Startnotebook auf MOL_LAB `main`](https://colab.research.google.com/github/ekerzendorfer/MOL_LAB/blob/main/MOL_LAB_MW024.ipynb). Am 25.11.2026 wurden alle zehn Punkte der praktischen Abnahme durch den Anwender bestanden. Ergänzt wurden ein freiwilliger 3D-/Molekülbaukasten-Einstieg und eine aktualisierte Abnahmedokumentation. MW-024 ist damit fachlich und didaktisch zur Freigabe auf `main` abgenommen. Die Aufnahme ins übergeordnete Portal erfolgt erst nach Abschluss der übrigen Pilotwege.
