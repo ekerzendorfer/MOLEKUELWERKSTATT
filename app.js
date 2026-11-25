@@ -237,7 +237,7 @@
         html+='<div class="deep-link-panel"><strong>'+escapeHtml(p.deepTitle||"Wissenschaftliche Vertiefung")+
           '</strong><p>'+escapeHtml(p.deepDescription||"")+'</p>'+
           '<a class="btn btn-outline" target="_blank" rel="noopener noreferrer" href="'+
-          escapeHtml(toolUrl(p.optionalDeepTool))+'">Optional: MOL_LAB in Colab öffnen ↗</a></div>';
+          escapeHtml((p.optionalDeepUrl&&/^https:\/\//.test(p.optionalDeepUrl))?p.optionalDeepUrl:toolUrl(p.optionalDeepTool))+'">Optional: MOL_LAB in Colab öffnen ↗</a></div>';
       }
       html+='<label class="check-row"><input type="checkbox" id="investigated"'+(n.investigated?' checked':'')+
         '>Ich habe die Untersuchung im externen Werkzeug selbst durchgeführt.</label>'+

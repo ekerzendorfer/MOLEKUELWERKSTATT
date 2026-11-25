@@ -182,6 +182,8 @@ async function test(){
  assert(app.dom["step-body"].innerHTML.includes("Molekül analysieren"));
  assert(app.dom["step-body"].innerHTML.includes("Konformere berechnen"));
  assert(app.dom["step-body"].innerHTML.includes("Optional: MOL_LAB in Colab öffnen"));
+ assert(lessons[4].optionalDeepUrl.includes("MOL_LAB_MW024.ipynb"));
+ assert(app.dom["step-body"].innerHTML.includes("MOL_LAB_MW024.ipynb"));
  assert(app.dom["step-body"].innerHTML.includes("Ringinversion"));
  assert.equal(source.learning_paths[4].observationTasks.length,3);
  assert(app.dom["step-body"].innerHTML.includes('id="observation-part-0"'));

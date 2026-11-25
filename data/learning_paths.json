@@ -300,7 +300,7 @@
       "conclusionPlaceholder": "Am günstigsten ist …, weil … . Die anderen Formen zeigen, dass …",
       "optionalDeepTool": "MOL_LAB",
       "deepTitle": "Wissenschaftliche Vertiefung im MOL_LAB",
-      "deepDescription": "Nur freiwillig: MOL_LAB führt eine eigene Konformer-Minimasuche durch und liefert nicht automatisch alle vier DIDACTIC-Referenzformen. Die Duplikaterkennung der MOL_LAB-Konformersuche wird separat überarbeitet; identische Treffer sind kein sinnvoller Vergleich.",
+      "deepDescription": "In diesem MOL_LAB-Startnotebook sind Cyclohexan (C1CCCCC1) und der Molekülname bereits eingetragen. Die Codezelle erscheint als einklappbares Colab-Formular. MOL_LAB sucht unterschiedliche lokale Energieminima und eignet sich zur freiwilligen Vertiefung; Wanne und Halbsessel sind keine normalen Minima.",
       "caution": "Die vier Bilder sind ausgewählte Ringgeometrien, keine vier stabilen Minima. Sessel und Twist-Boat sind Minima; die Wanne ist eine Sattelgeometrie und der Halbsessel ein geometrisch eingeschränktes Übergangsmodell. Relative MMFF-Potentialwerte sind keine Messwerte oder nachgewiesenen Ringinversionsbarrieren. Torsionswinkel und Koplanarität müssen hier nicht gemessen werden.",
       "sourceReferences": [
         {
@@ -333,7 +333,8 @@
           "placeholder": "Minima: …; keine Minima: …"
         }
       ],
-      "advancedObservation": "Freiwillige Fachvertiefung: Ein Torsionswinkel beschreibt die relative Verdrehung über vier aufeinanderfolgende Atome. Welche vier Ring-C-Atome genau koplanar sind, lässt sich allein aus einem schräg betrachteten 3D-Modell nicht zuverlässig ablesen. Dafür wären Atomnummern und Mess-/Ebenenwerkzeuge nötig. DIDACTIC stellt diese derzeit nicht bereit. Solche Messungen gehören deshalb nicht zur Pflichtaufgabe."
+      "advancedObservation": "Freiwillige Fachvertiefung: Ein Torsionswinkel beschreibt die relative Verdrehung über vier aufeinanderfolgende Atome. Welche vier Ring-C-Atome genau koplanar sind, lässt sich allein aus einem schräg betrachteten 3D-Modell nicht zuverlässig ablesen. Dafür wären Atomnummern und Mess-/Ebenenwerkzeuge nötig. DIDACTIC stellt diese derzeit nicht bereit. Solche Messungen gehören deshalb nicht zur Pflichtaufgabe.",
+      "optionalDeepUrl": "https://colab.research.google.com/github/ekerzendorfer/MOL_LAB/blob/fix-konformere-postopt-rms/MOL_LAB_MW024.ipynb"
     }
   ],
   "free_examples": [
