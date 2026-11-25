@@ -262,9 +262,9 @@
       "template": "C",
       "title": "Cyclohexan: Warum ist die Sesselstruktur günstig?",
       "topic": "Konformere / räumliche Struktur",
-      "level": "Vertiefung · SEK2 / FH-Einstieg",
-      "question": "Warum ist die Sesselstruktur am günstigsten, und welche Bedeutung haben Twist-Boat, Wanne und Halbsessel für die Ringinversion?",
-      "intro": "Der Cyclohexanring ist räumlich beweglich. DIDACTIC zeigt nun vier gezielt erzeugte Ringformen und hilft dabei, stabile Minima von instabilen und geometrisch eingeschränkten Übergangsmodellen zu unterscheiden.",
+      "level": "Vertiefung · AHS SEK2 (Grundaufgaben) / FH-Einstieg (Vertiefung)",
+      "question": "Warum ist beim Cyclohexan die Sesselstruktur besonders günstig?",
+      "intro": "Vier drehbare 3D-Ringmodelle helfen dir, die Form des Cyclohexanrings zu untersuchen. Du musst dafür keine Winkel messen oder Atompositionen berechnen.",
       "molecules": [
         {
           "name": "Cyclohexan",
@@ -273,35 +273,35 @@
           "kind": "gesättigter Sechsring · nicht planar"
         }
       ],
-      "predictionHint": "Ordne vier typische Ringformen nach ihrer vermuteten Energie: Sessel, Twist-Boat, Wanne und Halbsessel. Welche Formen dürften bei einer freien Minimierung erhalten bleiben?",
+      "predictionHint": "Ein Cyclohexanring muss nicht flach sein. Vermute: Ist eine flache oder eine räumlich gefaltete Ringform günstiger? Begründe in einem Satz.",
       "primaryTool": "MOL_LAB_DIDACTIC",
       "targetModule": "Konformere",
       "targetExample": "Cyclohexan",
       "targetAction": "Konformere berechnen",
-      "investigationIntro": "In DIDACTIC V0.8 stehen vier kuratierte Cyclohexan-Ringmodelle nebeneinander: Sessel (Minimum), Twist-Boat (lokales Minimum), Wanne (Sattelgeometrie, kein drittes stabiles Minimum) und Halbsessel (hochenergetische, geometrisch fixierte Annäherung an die Übergangslage). Die Halbsessel-Referenz ist keine exakte, rechnerisch lokalisierte Übergangszustandsgeometrie.",
+      "investigationIntro": "Untersuche Sessel, Twist-Boat, Wanne und Halbsessel in DIDACTIC V0.8. Drehe die vier Modelle und lies danach die Energietabelle. Du musst weder Torsionswinkel noch Koplanarität bestimmen. Die vier Formen sind gezielte Referenzen; die Wanne und der Halbsessel sind keine stabilen Minima.",
       "notebookSteps": [
-        "Colab: DIDACTIC V0.8 auf main öffnen und Laufzeit → Alle ausführen.",
+        "Colab: DIDACTIC V0.8 auf main öffnen; Laufzeit → Alle ausführen.",
         "Modul: Konformere; Beispiel: Cyclohexan.",
-        "Aktion 1: Molekül analysieren.",
-        "Aktion 2: Konformere berechnen – Sessel, Twist-Boat und Wanne sowie Halbsessel als vier 3D-Referenzformen betrachten.",
-        "Die relativen MMFF94-Modellpotentiale und die Einordnung (Minimum, Sattelgeometrie, geometrisch restringiertes Übergangsmodell) vergleichen."
+        "Aktion 1: Molekül analysieren. Danach Konformere berechnen.",
+        "Drehe die vier 3D-Ringformen einzeln. Beginne mit Sessel und Wanne.",
+        "Lies in der Tabelle die relativen MMFF-Modellenergien und die Einordnung ab."
       ],
-      "observationPrompt": "Vergleiche die vier 3D-Ringformen: Sessel, Twist-Boat, Wanne und Halbsessel. Wie unterscheiden sich die Torsionswinkel? Welche Ring-C-Atome sind beim Halbsessel annähernd koplanar? Welche Formen sind Minima und warum liegt der Halbsessel energetisch am höchsten?",
-      "observationPlaceholder": "Sessel …; Twist-Boat …; Wanne …; Halbsessel …; die angezeigten MMFF-Modellpotentiale …",
-      "interpretationQuestion": "Warum ist der Sessel am günstigsten? Welche Spannungen erhöhen die Energie der Wanne? Wie hilft der Halbsessel, die Ringinversion zu verstehen, und weshalb ist sein MMFF-Potential keine nachgewiesene Aktivierungsbarriere?",
-      "interpretationPlaceholder": "Im Sessel …; bei Twist-Boat und Wanne …; der Halbsessel ist als Übergangsmodell hilfreich, aber …",
+      "observationPrompt": "Drei kleine Beobachtungen: Beantworte die Aufgaben der Reihe nach. Ein Satz pro Frage genügt, Winkelmessungen sind nicht erforderlich.",
+      "observationPlaceholder": "Freiwillige zusätzliche Beobachtung …",
+      "interpretationQuestion": "Warum ist der Sessel energetisch günstiger als die Wanne? Denke daran, dass benachbarte C–H-Bindungen im Sessel günstiger zueinander stehen.",
+      "interpretationPlaceholder": "Der Sessel ist günstiger, weil …; die Wanne hat dagegen …",
       "explanation": [
-        "Ein planarer Cyclohexanring hätte ungünstige Bindungswinkel und weitgehend ekliptische C–H-Stellungen. Im Sessel liegen die C–C–C-Winkel nahe dem tetraedrischen Ideal; viele Bindungen stehen gestaffelt. So werden Winkel- und Torsionsspannung deutlich reduziert.",
-        "Die Wanne zeigt ekliptische Bindungsstellungen und ungünstige Flaggenmast-Wechselwirkungen. Durch Verdrillung werden diese Wechselwirkungen vermindert; deshalb ist das Twist-Boat ein höheres lokales Energieminimum, während die symmetrische Wanne eine Sattelgeometrie darstellt.",
-        "Für die Ringinversion ist der Halbsessel besonders wichtig: Sessel → Halbsessel → Twist-Boat → Wanne → Twist-Boat → Halbsessel → Sessel. DIDACTIC stellt den Halbsessel als geometrisch eingeschränktes Modell mit vier nahezu koplanaren Ring-C-Atomen dar. Diese Struktur wurde nicht durch eine Übergangszustands-/Hesse-Analyse als Sattelpunkt lokalisiert.",
-        "Die angezeigten relativen MMFF94-Potentiale sind Modellwerte, keine gemessenen freien Energien und keine rechnerisch bestätigten Aktivierungsbarrieren. Nur Sessel und Twist-Boat sind Minima; die anderen beiden Formen müssen für die Erklärung der Energiefläche gesondert betrachtet werden."
+        "Der Sessel hat annähernd tetraedrische C–C–C-Winkel und benachbarte Bindungen stehen weitgehend gestaffelt. So werden Winkel- und Torsionsspannung deutlich reduziert.",
+        "Die Wanne hat mehr ungünstige ekliptische Bindungsstellungen und Flaggenmast-Wechselwirkungen. Das verdrehte Twist-Boat ist deshalb ein höheres lokales Energieminimum, während die Wanne eine Sattelgeometrie darstellt.",
+        "Der Halbsessel ist für die Ringinversion wichtig. DIDACTIC erzeugt ihn mit geometrischen Einschränkungen als Annäherung an eine hochenergetische Übergangslage. Eine exakte Übergangszustandssuche findet hier nicht statt.",
+        "Sessel und Twist-Boat sind Minima; Wanne und Halbsessel nicht. Die Tabelle zeigt relative MMFF-Modellpotentiale, keine gemessenen freien Energien und keine nachgewiesenen Aktivierungsbarrieren."
       ],
-      "conclusionPrompt": "Ordne Sessel, Twist-Boat, Wanne und Halbsessel nach Energie und erkläre, warum nur zwei dieser Ringformen als Minima gelten. Was lernt man aus den beiden Übergangsmodellen über die Ringinversion?",
-      "conclusionPlaceholder": "Die energetische Reihenfolge …; die Ringinversion läuft über …; die Modellgrenzen bestehen darin, dass …",
+      "conclusionPrompt": "Fasse in zwei Sätzen zusammen: Welche Ringform ist am günstigsten? Warum zeigt DIDACTIC auch die höherenergetischen Formen?",
+      "conclusionPlaceholder": "Am günstigsten ist …, weil … . Die anderen Formen zeigen, dass …",
       "optionalDeepTool": "MOL_LAB",
       "deepTitle": "Wissenschaftliche Vertiefung im MOL_LAB",
-      "deepDescription": "Optional: Für eine wissenschaftliche Untersuchung im MOL_LAB eine echte Ringinversions-Energiefläche mit geometrischen Constraints, Energiedifferenzen und gegebenenfalls Übergangszustands-/Hesse-Analyse bearbeiten. Die DIDACTIC-Referenzen sind kein vollständiges energetisches Reaktionsprofil.",
-      "caution": "Nicht vier Minima: Sessel und Twist-Boat sind Minima, die Wanne ist eine Sattelgeometrie. Der Halbsessel wurde geometrisch eingeschränkt erzeugt, nicht als exakter Übergangszustand bestätigt. MMFF-Potentialwerte sind keine experimentellen freien Energien und keine berechneten Ringinversionsbarrieren.",
+      "deepDescription": "Nur freiwillig: MOL_LAB führt eine eigene Konformer-Minimasuche durch und liefert nicht automatisch alle vier DIDACTIC-Referenzformen. Die Duplikaterkennung der MOL_LAB-Konformersuche wird separat überarbeitet; identische Treffer sind kein sinnvoller Vergleich.",
+      "caution": "Die vier Bilder sind ausgewählte Ringgeometrien, keine vier stabilen Minima. Sessel und Twist-Boat sind Minima; die Wanne ist eine Sattelgeometrie und der Halbsessel ein geometrisch eingeschränktes Übergangsmodell. Relative MMFF-Potentialwerte sind keine Messwerte oder nachgewiesenen Ringinversionsbarrieren. Torsionswinkel und Koplanarität müssen hier nicht gemessen werden.",
       "sourceReferences": [
         {
           "repo": "MOL_LAB_DIDACTIC",
@@ -312,7 +312,28 @@
       "optionalTools": [
         "MOLLAB_PRO",
         "MOL_LAB"
-      ]
+      ],
+      "observationTasks": [
+        {
+          "title": "1 · Formen entdecken",
+          "question": "Drehe Sessel und Wanne. Woran erkennst du, dass der Sechsring in beiden Fällen räumlich gefaltet und nicht flach ist?",
+          "hint": "Beschreibe die Form in eigenen Worten; du brauchst keine Atomnummern.",
+          "placeholder": "Beim Sessel …; bei der Wanne …"
+        },
+        {
+          "title": "2 · Energien ablesen",
+          "question": "Welche Form steht in der Tabelle bei 0 kcal/mol? Welche hat den größten ΔE-Wert?",
+          "hint": "Lies die Werte ab. Du musst nichts ausrechnen.",
+          "placeholder": "Bei 0 steht …; den höchsten Wert hat …"
+        },
+        {
+          "title": "3 · Stabilität erkennen",
+          "question": "Welche zwei Ringformen bezeichnet die Tabelle als Minima? Welche beiden nicht?",
+          "hint": "Nutze die Spalte „Einordnung“ der DIDACTIC-Tabelle.",
+          "placeholder": "Minima: …; keine Minima: …"
+        }
+      ],
+      "advancedObservation": "Freiwillige Fachvertiefung: Ein Torsionswinkel beschreibt die relative Verdrehung über vier aufeinanderfolgende Atome. Welche vier Ring-C-Atome genau koplanar sind, lässt sich allein aus einem schräg betrachteten 3D-Modell nicht zuverlässig ablesen. Dafür wären Atomnummern und Mess-/Ebenenwerkzeuge nötig. DIDACTIC stellt diese derzeit nicht bereit. Solche Messungen gehören deshalb nicht zur Pflichtaufgabe."
     }
   ],
   "free_examples": [
