@@ -85,3 +85,7 @@ Die umfangreiche Aufgabenbibliothek mit allen 30 katalogisierten Wegen ist damit
 ## Anpassung an DIDACTIC V0.5 – 24.11.2026
 
 Nach der Freigabe des DIDACTIC-Isomerie-Moduls auf `main` wurden die Lernanleitungen MW-001 (Ethanol ↔ Dimethylether) und MW-009 (Propanal ↔ Aceton) auf den **Paar-Dropdown mit automatischem Vergleichsstart** umgestellt. Das Werkstatt-Programm und die fünf Forschungswege bleiben unverändert; insbesondere werden bestehende Notizen und die URL-Rücklinks nicht verändert.
+
+### MW-024 – AHS-taugliche Teilaufgaben (25.11.2026)
+
+Der Beobachtungsschritt ist in drei kurze Felder geteilt: **Formen entdecken**, **Energien ablesen**, **Stabilität erkennen**. Jede Antwort wird getrennt lokal gespeichert und erscheint im kopierbaren Protokoll. Vorhandene Beobachtungsnotizen bleiben im zusätzlichen freien Feld erhalten. Torsionswinkel und Koplanarität sind nur noch ein freiwilliger ausklappbarer Fachhinweis; DIDACTIC besitzt dafür keine Winkel-/Ebenen-Messfunktion. Die optionalen MOL_LAB-Experimente sind klar von den vier kuratierten DIDACTIC-Geometrien getrennt.

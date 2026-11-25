@@ -214,3 +214,13 @@ textarea:focus,input:focus{border-color:#0f88ae}
  .info-strip{padding:15px}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* MW-024: short observation cards instead of a single lengthy question. */
+.micro-observation{margin:14px 0;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfdff}
+.micro-observation h5{font-size:1rem;margin:0 0 8px;color:#1e5670}
+.micro-observation p{margin:7px 0 10px;line-height:1.5}
+.micro-observation .example-input{margin:6px 0;color:#52687a;font-size:.85rem}
+.micro-observation textarea{min-height:77px;max-height:180px}
+.micro-advanced{margin:14px 0;padding:10px 13px;border:1px solid var(--line);border-radius:9px;background:#f7fafc}
+.micro-advanced summary{cursor:pointer;font-weight:600}
+.micro-advanced p{line-height:1.55}

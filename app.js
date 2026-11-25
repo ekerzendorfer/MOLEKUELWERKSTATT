@@ -380,9 +380,9 @@
     if(id==="MW-001"){
       Object.keys(emptyCase).forEach(function(key){state[key]=emptyCase[key];});
     }else if(id===VARIANT_ID){
-      state.cases[VARIANT_ID].variants[chosen.name]=Object.assign({},emptyCase);
+      state.cases[VARIANT_ID].variants[chosen.name]=cleanCase(null);
     }else{
-      state.cases[id]=Object.assign({},emptyCase);
+      state.cases[id]=cleanCase(null);
     }
     persist();renderStep();notice(label+" wurde zurückgesetzt; andere Arbeitsstände bleiben erhalten.");
   }

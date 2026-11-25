@@ -90,11 +90,14 @@ function simulate(initial,locationUrl="https://ekerzendorfer.github.io/MOLEKUELW
  function input(field,value){
   listeners.input({target:{dataset:{field},value,id:"field-"+field}});
  }
+ function miniObservation(i,value){
+  listeners.input({target:{dataset:{observationIndex:String(i)},value,id:"observation-part-"+i}});
+ }
  function change(id,value,checked){
   listeners.change({target:{id,value,checked}});
  }
  function current(){return JSON.parse(store[key]);}
- return {store,dom,win,click,view,input,change,current};
+ return {store,dom,win,click,view,input,miniObservation,change,current};
 }
 async function test(){
  const app=simulate({
@@ -181,6 +184,19 @@ async function test(){
  assert(app.dom["step-body"].innerHTML.includes("Konformere berechnen"));
  assert(app.dom["step-body"].innerHTML.includes("Optional: MOL_LAB in Colab öffnen"));
  assert(app.dom["step-body"].innerHTML.includes("Ringinversion"));
+ assert.equal(source.learning_paths[4].observationTasks.length,3);
+ assert(app.dom["step-body"].innerHTML.includes('id="observation-part-0"'));
+ assert(app.dom["step-body"].innerHTML.includes('id="observation-part-1"'));
+ assert(app.dom["step-body"].innerHTML.includes('id="observation-part-2"'));
+ assert(app.dom["step-body"].innerHTML.includes("Freiwillige Vertiefung"));
+ app.miniObservation(0,"Der Ring ist nicht flach.");
+ app.miniObservation(1,"Sessel: Null, Halbsessel: größter Wert.");
+ app.miniObservation(2,"Sessel und Twist sind Minima.");
+ assert.deepEqual(app.current().cases["MW-024"].observationParts,[
+   "Der Ring ist nicht flach.",
+   "Sessel: Null, Halbsessel: größter Wert.",
+   "Sessel und Twist sind Minima."
+ ]);
  app.input("observation","Ich sehe eine Sesselstruktur");
  app.click("next-step");
  assert(!app.dom["step-body"].innerHTML.includes("Winkel- und Torsionsspannung deutlich reduziert"),
@@ -190,12 +206,15 @@ async function test(){
  app.click("next-step");
  app.input("conclusion","Sessel: gestaffelte Bindungen");
  assert(app.dom["report-preview"].textContent.includes("MW-024"));
+ assert(app.dom["report-preview"].textContent.includes("Sessel und Twist sind Minima."));
+ assert(app.dom["report-preview"].textContent.includes("Der Ring ist nicht flach."));
  app.click("start-case");
  assert.equal(app.current().hypothesis,"Meine alte MW-001 Vermutung");
  app.click("select-case","MW-024");
  assert(app.dom["step-body"].innerHTML.includes("Sessel: gestaffelte Bindungen"));
  app.click("reset-case");
  assert.equal(app.current().cases["MW-024"].conclusion,"");
+ assert.deepEqual(app.current().cases["MW-024"].observationParts,[]);
  assert.equal(app.current().cases["MW-009"].hypothesis,"Aldehyd statt Keton");
  assert.equal(app.current().cases["MW-015"].variants.Wasser.hypothesis,"Wasser ist gewinkelt");
  assert.equal(app.current().cases["MW-002"].hypothesis,"Gespeicherte MW002-Hypothese");
