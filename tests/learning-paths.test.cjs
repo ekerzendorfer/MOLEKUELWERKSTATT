@@ -24,6 +24,11 @@ assert.equal(lessons[3].targetModule,"Polarität und Löslichkeit");
 assert.equal(lessons[4].targetExample,"Cyclohexan");
 assert(lessons[4].notebookSteps.some(s=>s.includes("Molekül analysieren")));
 assert(lessons[4].notebookSteps.some(s=>s.includes("Konformere berechnen")));
+assert(lessons[4].notebookSteps.some(s=>s.includes("Sessel, Twist-Boat und Wanne")));
+assert(lessons[4].investigationIntro.includes("kein drittes stabiles Minimum"));
+assert(lessons[4].caution.includes("Sattel"));
+assert(lessons[4].explanation.some(s=>s.includes("Flaggenmast")));
+assert(lessons[4].explanation.some(s=>s.includes("Halbsessel")));
 assert.equal(lessons[4].optionalDeepTool,"MOL_LAB");
 
 const tools=JSON.parse(fs.readFileSync(path.join(base,"data/tools.json"),"utf8"));

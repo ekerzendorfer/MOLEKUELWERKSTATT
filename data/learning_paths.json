@@ -278,28 +278,29 @@
       "targetModule": "Konformere",
       "targetExample": "Cyclohexan",
       "targetAction": "Konformere berechnen",
-      "investigationIntro": "DIDACTIC erzeugt 3D-Strukturen und kann mehrere MMFF-optimierte Konformere vergleichen. Die Suche findet vor allem stabile Minima, nicht zwangsläufig eine Boot- oder Übergangsstruktur.",
+      "investigationIntro": "Im DIDACTIC-V0.8-Entwicklungsstand werden drei gezielt erzeugte Cyclohexan-Referenzformen nebeneinander dargestellt: Sessel (Minimum), Twist-Boat (lokales Minimum) und Wanne (instabile Sattel-/Übergangsgeometrie). Die Wanne ist kein drittes stabiles Minimum und wird daher nicht aus einer gewöhnlichen Zufallssuche erwartet.",
       "notebookSteps": [
-        "Colab: Laufzeit → Alle ausführen.",
+        "Colab: V0.8-Entwicklungsversion öffnen, Laufzeit → Alle ausführen.",
         "Modul: Konformere; Beispiel: Cyclohexan.",
         "Aktion 1: Molekül analysieren.",
-        "Aktion 2: Konformere berechnen (relative MMFF-Energien)."
+        "Aktion 2: Konformere berechnen – Sessel, Twist-Boat und Wanne als drei kuratierte 3D-Referenzgeometrien betrachten.",
+        "Die relativen MMFF94-Potentiale vergleichen und die Wanne ausdrücklich als Sattel-/Übergangsgeometrie (kein Minimum) einordnen."
       ],
-      "observationPrompt": "Welche räumliche Form besitzen die gefundenen Konformere? Sind alle sechs C-Atome in einer Ebene? Wie viele unterschiedliche Minima und Energieunterschiede zeigt DIDACTIC tatsächlich?",
-      "observationPlaceholder": "Im 3D-Modell erkenne ich …; die Konformersuche liefert …",
-      "interpretationQuestion": "Welche Winkel- und Torsionsspannungen vermeidet die Sesselstruktur? Was zeigt die Konformersuche – und was kann sie nicht zeigen?",
-      "interpretationPlaceholder": "Die Sesselstruktur ist günstiger, weil …; die Modellgrenze ist …",
+      "observationPrompt": "Vergleiche die drei 3D-Ringformen Sessel, Twist-Boat und Wanne. Welche C–H-Bindungen sind weitgehend gestaffelt, welche ekliptisch? Was bedeutet die Energie-Reihenfolge Sessel < Twist-Boat < Wanne, und welche Form ist kein stabiles Minimum?",
+      "observationPlaceholder": "Sessel: …; Twist-Boat: …; Wanne: …; die MMFF-Modellenergien zeigen …",
+      "interpretationQuestion": "Warum ist der Sessel energetisch am günstigsten? Welche Wechselwirkungen machen die Wanne ungünstig und warum stabilisiert eine Verdrillung das Twist-Boat? Weshalb darf die Wanne nicht als drittes Energieminimum gelten?",
+      "interpretationPlaceholder": "Die Sesselstruktur minimiert …; Twist-Boat …; Wanne ist kein Minimum, weil …",
       "explanation": [
-        "Ein planarer Cyclohexanring würde ungünstige Bindungswinkel und weitgehend ekliptische C–H-Stellungen erzwingen. In der Sesselstruktur liegen die C–C–C-Winkel nahe dem tetraedrischen Ideal; benachbarte Bindungen können weitgehend gestaffelt stehen. So werden Winkel- und Torsionsspannung deutlich reduziert.",
-        "RDKit/MMFF optimiert erzeugte Konformere zu lokalen Energieminima. Deshalb ist es kein Fehler, wenn mehrere Starts auf dieselbe oder sehr ähnliche Sesselgeometrien zulaufen. Eine Bootstruktur oder die Ringinversion wird durch diese einfache Minimierung nicht automatisch systematisch untersucht.",
-        "Die Energieangaben der einfachen DIDACTIC-Konformersuche sind relative Modellwerte (kcal/mol), keine experimentellen Energien und kein Beweis für einen vollständigen Konformationsraum."
+        "Ein planarer Cyclohexanring hätte ungünstige Bindungswinkel und weitgehend ekliptische C–H-Stellungen. Im Sessel liegen die C–C–C-Winkel ungefähr beim tetraedrischen Ideal und benachbarte Bindungen stehen weitgehend gestaffelt. Dadurch werden Winkel- und Torsionsspannung reduziert.",
+        "Die Wanne besitzt ungünstige ekliptische Bindungsstellungen und Wechselwirkungen zwischen den sogenannten Flaggenmast-Wasserstoffen. Verdrillung reduziert diese Wechselwirkungen: Das Twist-Boat ist ein höheres lokales Energieminimum, die symmetrische Wanne eine höherenergetische stationäre Übergangs-/Sattelgeometrie zwischen Twist-Boat-Formen.",
+        "DIDACTIC erzeugt für Cyclohexan deshalb drei gezielte 3D-Referenzgeometrien. Die relativen MMFF94-Energien sind Potentialmodellwerte (kcal/mol), keine experimentellen freien Energien und keine Ringinversionsbarrieren. Der für die Ringinversion ebenfalls wichtige Halbsessel ist nicht abgebildet. Bei anderen Molekülen bleibt die gewöhnliche MMFF-Konformersuche aktiv."
       ],
-      "conclusionPrompt": "Erkläre in eigenen Worten, warum der Sessel energetisch günstig ist und welche Grenzen die verwendete Konformersuche besitzt.",
+      "conclusionPrompt": "Begründe die Energie-Reihenfolge Sessel < Twist-Boat < Wanne und erläutere, warum die Wanne zwar als 3D-Referenzmodell darstellbar ist, aber nicht als stabiles Energieminimum gelten darf.",
       "conclusionPlaceholder": "Die Sesselstruktur vermeidet …; das Rechenmodell zeigt …",
       "optionalDeepTool": "MOL_LAB",
       "deepTitle": "Wissenschaftliche Vertiefung im MOL_LAB",
-      "deepDescription": "Optional: eigene Konformer- und Energieuntersuchungen mit RDKit/MMFF bzw. xTB. Cyclohexan-SMILES C1CCCCC1 bei Bedarf manuell übernehmen. Kein automatischer Energietransfer zur Werkstatt.",
-      "caution": "Ein einzelnes 3D-Modell und eine MMFF-Minimierung belegen weder sämtliche Konformerenergien noch den Mechanismus der Ringinversion.",
+      "deepDescription": "Optional: die Energielandschaft und Ringinversion im MOL_LAB (RDKit/MMFF bzw. xTB) vertiefen. Für ein korrektes Minimum-/Sattelpunktprofil sind geeignete geometrische Constraints, Übergangszustands- und Frequenzprüfungen nötig; kein automatischer Transfer der Modellenergien zur Werkstatt.",
+      "caution": "Die Wanne ist keine dritte stabile Konformation, sondern eine Sattel-/Übergangsgeometrie. Die drei angezeigten MMFF-Potentialenergien sind modellabhängig und weder Gleichgewichtsanteile noch Aktivierungsbarrieren; für eine vollständige Ringinversion müsste insbesondere auch der Halbsessel betrachtet werden.",
       "sourceReferences": [
         {
           "repo": "MOL_LAB_DIDACTIC",
