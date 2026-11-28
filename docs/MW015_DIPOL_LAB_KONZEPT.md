@@ -22,3 +22,7 @@ Vier dynamische Titel; keine Form/Polarität als Karten-Metadaten; bewusstes Ums
 ## Integrationsstand – 28.11.2026
 
 V0.9a–c praktisch abgenommen; V0.9d enthält experimentellen Bezug. MW-015 führt zum V0.9d-Entwicklungsnotebook; übrige Wege unverändert. Drei Beobachtungsfelder bleiben pro Molekül getrennt. Referenzvergleich freiwillig im Fazit. Die Erklärung in Schritt 3 bezieht sich nur auf das gewählte Beispiel (kein Vorwegnehmen der anderen Fälle). Freigabe erst nach Gesamtprüfung: DIDACTIC main zuerst, dann MW-015-Testlink entfernen und Werkstatt main. Keine weiteren Sets oder allgemeine Dipolmoment-Anzeige.
+
+## Abschließende praktische Freigabeprüfung – 28.11.2026
+
+5/5 bestanden: Referenz erst im letzten Additionsschritt, verständliche Referenz/Quelle/Modellgrenze, Referenz beim Zurückschalten verborgen, verständliche MW-015-Anleitung und vollständiger Forschungsweg mit Protokoll. [Werkstatt-Regression](https://github.com/ekerzendorfer/MOLEKUELWERKSTATT/actions/runs/46148928877) erfolgreich, einschließlich Sperre der Erklärung bis zur eigenen Deutung. Diese Sperre wurde nicht separat als visueller Prüfpunkt bestätigt. DIDACTIC V0.9d wurde nach einem veralteten Colab-Speichervorgang byteidentisch wiederhergestellt; erneute Regression vor Veröffentlichung. main bleibt bis zum Abschluss der technischen Freigabe unverändert.
