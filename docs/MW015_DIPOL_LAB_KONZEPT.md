@@ -26,3 +26,7 @@ V0.9a–c praktisch abgenommen; V0.9d enthält experimentellen Bezug. MW-015 fü
 ## Abschließende praktische Freigabeprüfung – 28.11.2026
 
 5/5 bestanden: Referenz erst im letzten Additionsschritt, verständliche Referenz/Quelle/Modellgrenze, Referenz beim Zurückschalten verborgen, verständliche MW-015-Anleitung und vollständiger Forschungsweg mit Protokoll. [Werkstatt-Regression](https://github.com/ekerzendorfer/MOLEKUELWERKSTATT/actions/runs/46148928877) erfolgreich, einschließlich Sperre der Erklärung bis zur eigenen Deutung. Diese Sperre wurde nicht separat als visueller Prüfpunkt bestätigt. DIDACTIC V0.9d wurde nach einem veralteten Colab-Speichervorgang byteidentisch wiederhergestellt; erneute Regression vor Veröffentlichung. main bleibt bis zum Abschluss der technischen Freigabe unverändert.
+
+## Veröffentlichung – 28.11.2026
+
+Anwender hat abschließend alle Funktionen kontrolliert und die Veröffentlichung auf main ausdrücklich freigegeben. DIDACTIC V0.9 veröffentlicht, MW-015-Testlink entfernt; stabiler Standardlink aus tools.json gilt wieder. Regression der abgenommenen Werkstatt: https://github.com/ekerzendorfer/MOLEKUELWERKSTATT/actions/runs/46149353286. Der vorläufige Entwicklungszyklus endet hier. Weitere Molekül-Sets und allgemeine Dipolmoment-Anzeige bleiben zurückgestellt. MW-009 beginnt erst nach der vereinbarten Pause.

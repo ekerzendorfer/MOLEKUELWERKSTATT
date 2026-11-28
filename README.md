@@ -105,3 +105,7 @@ Der Entwicklungsweg öffnet ausschließlich für MW-015 das V0.9d-Testnotebook; 
 ### MW-015 – Freigabe der fachlichen Erklärung
 
 In Schritt 3 wird die Erklärung erst nach einer eigenen, nicht leeren Deutung freigeschaltet (keine automatische fachliche Bewertung). Leerzeichen zählen nicht; bereits gelesene Erklärungen bleiben erhalten. Die anderen Forschungswege bleiben unverändert. Sichtprüfung offen.
+
+## MW-015 – Freigabe auf main (28.11.2026)
+
+Gesamtfreigabe durch den Anwender nach abschließender Kontrolle aller Funktionen, einschließlich Erklärungssperre. DIDACTIC V0.9 ist auf main veröffentlicht (Commit `07d6b32911fbb0ac99cd677cc93b04333232809d`). MW-015 nutzt wieder den gemeinsamen stabilen Notebook-Link. Keine Änderung der anderen Lernwege und keine Freigabe des gesamten Werkstatt-Portals über den CHEMIE mit KI-Hub in diesem Schritt. Nächster Forschungsweg nach der Entwicklungspause: MW-009 (Propanal/Aceton).

@@ -169,7 +169,7 @@ async function test(){
  app.input("hypothesis","Wasser ist gewinkelt");
  app.click("next-step");
  assert(app.dom["step-body"].innerHTML.includes("Beispiel:</strong> Wasser"));
- assert(app.dom["step-body"].innerHTML.includes("v0.9d-experimenteller-bezug"));
+ assert(app.dom["step-body"].innerHTML.includes("MOL_LAB_DIDACTIC/blob/main/MOL_LAB_DIDACTIC_v0_4_2.ipynb"));
  assert(app.dom["step-body"].innerHTML.includes("Bindungsdipole untersuchen"));
  assert(app.dom["step-body"].innerHTML.includes("experimentellen Bezug freiwillig aufklappen"));
  assert(app.dom["step-body"].innerHTML.includes("Heben sich die beiden Vektoren vollständig auf?"));

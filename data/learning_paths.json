@@ -313,8 +313,7 @@
           ]
         }
       ],
-      "defaultSet": "basis",
-      "notebookUrl": "https://colab.research.google.com/github/ekerzendorfer/MOL_LAB_DIDACTIC/blob/v0.9d-experimenteller-bezug/MOL_LAB_DIDACTIC_v0_4_2.ipynb"
+      "defaultSet": "basis"
     },
     {
       "id": "MW-024",
