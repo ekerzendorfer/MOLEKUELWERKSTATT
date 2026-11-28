@@ -175,71 +175,67 @@
     {
       "id": "MW-015",
       "template": "B",
-      "title": "Molekülform und Dipole: Warum ist CO₂ unpolar?",
+      "title": "Molekülform und Dipole: Wie entscheidet die räumliche Anordnung?",
       "topic": "Polarität und Löslichkeit / Molekülgeometrie",
       "level": "Basis · SEK2 (mit SEK1-Vergleich)",
       "question": "Wann heben sich polare Bindungsdipole auf – und wann entsteht ein Moleküldipol?",
-      "intro": "CO₂ ist linear, Wasser gewinkelt, Ammoniak trigonal-pyramidal und Methan tetraedrisch. Erkunde eines der Beispiele und vergleiche bei Bedarf ein zweites.",
+      "intro": "Wähle ein Molekül und untersuche seine räumliche Gestalt, die Polarisation seiner Bindungen und deren Zusammenspiel. Ein Beispiel genügt. Weitere Beispiele kannst du anschließend bearbeiten.",
       "molecules": [
         {
           "name": "Kohlenstoffdioxid",
           "smiles": "O=C=O",
-          "formula": "CO₂",
-          "kind": "linear · Moleküldipol 0"
+          "formula": "CO₂"
         },
         {
           "name": "Wasser",
           "smiles": "O",
-          "formula": "H₂O",
-          "kind": "gewinkelt · polar"
+          "formula": "H₂O"
         },
         {
           "name": "Ammoniak",
           "smiles": "N",
-          "formula": "NH₃",
-          "kind": "trigonal-pyramidal · polar"
+          "formula": "NH₃"
         },
         {
           "name": "Methan",
           "smiles": "C",
-          "formula": "CH₄",
-          "kind": "tetraedrisch · unpolar"
+          "formula": "CH₄"
         }
       ],
       "defaultMolecule": "Kohlenstoffdioxid",
       "variantQuestions": {
-        "Kohlenstoffdioxid": "Warum heben sich im linearen CO₂ die Dipole der beiden polaren C=O-Bindungen auf?",
-        "Wasser": "Warum besitzt gewinkeltes Wasser trotz nur zweier O–H-Bindungen ein Dipolmoment?",
-        "Ammoniak": "Warum ist NH₃ trigonal-pyramidal und insgesamt polar?",
-        "Methan": "Warum ist tetraedrisches Methan insgesamt unpolar?"
+        "Kohlenstoffdioxid": "Erwartest du für CO₂ einen permanenten Moleküldipol? Begründe deine Vermutung.",
+        "Wasser": "Erwartest du für Wasser einen permanenten Moleküldipol? Begründe deine Vermutung.",
+        "Ammoniak": "Erwartest du für NH₃ einen permanenten Moleküldipol? Begründe deine Vermutung.",
+        "Methan": "Erwartest du für CH₄ einen permanenten Moleküldipol? Begründe deine Vermutung."
       },
-      "predictionHint": "Stelle dir die Richtung der Bindungsdipole als Pfeile vor. Welche Rolle spielt die räumliche Anordnung?",
+      "predictionHint": "Skizziere zuerst eine Lewis-Formel und vermute die räumliche Gestalt. Denke an bindende und freie Elektronenpaare sowie an die Richtung möglicher Bindungspolarisationen. Halte deine erste Idee fest; danach kannst du sie in MOLLAB PRO oder mit einem Molekülbaukasten überprüfen.",
       "primaryTool": "MOL_LAB_DIDACTIC",
       "targetModule": "Polarität und Löslichkeit",
       "targetAction": "Molekül analysieren",
-      "investigationIntro": "Wähle zunächst EIN Beispiel. Zeichne die Molekülform und sage voraus, ob sich die Bindungsdipole vektoriell aufheben. Optional untersuchst du weitere Beispiele – deine Notizen bleiben pro Beispiel getrennt.",
+      "investigationIntro": "Bearbeite die drei kurzen Beobachtungsaufgaben nacheinander. Nutze das drehbare 3D-Modell in MOLLAB PRO oder DIDACTIC; optional hilft ein Molekülbaukasten. Für die Bindungsdipole und ihre Summe wird der Dipol-Lernmodus in DIDACTIC V0.9 entwickelt. Bis zur Integration kannst du diese beiden Aufgaben mit Pauling-EN-Werten und einer eigenen Pfeilskizze bearbeiten.",
       "notebookSteps": [
         "Colab: Laufzeit → Alle ausführen.",
         "Modul: Polarität und Löslichkeit.",
         "Beispiel: {name} (eigene SMILES aus).",
-        "Aktion: Molekül analysieren."
+        "Aktion: Molekül analysieren. Nutze das 3D-Modell. Der neue Dipol-Lernmodus folgt im nächsten Entwicklungsschritt."
       ],
-      "observationPrompt": "Welche räumliche Geometrie erkennst du? Welche Bindungsdipole sind vorhanden, und welche Beiträge können sich durch Symmetrie aufheben?",
-      "observationPlaceholder": "Die Form ist …; die Bindungen …; in der räumlichen Summe …",
+      "observationPrompt": "Drei kurze Beobachtungen – ein bis zwei Sätze je Frage genügen.",
+      "observationPlaceholder": "Weitere Beobachtungen oder bisherige Notiz …",
       "interpretationQuestion": "Wie hängt die räumliche Molekülform mit dem gesamten Dipolmoment zusammen?",
       "interpretationPlaceholder": "Die Bindungsdipole heben sich (nicht) auf, weil …",
       "explanation": [
         "Kohlenstoffdioxid besitzt zwei polare C=O-Bindungen, ist aber linear und symmetrisch: Die beiden gleich großen Bindungsdipole zeigen in entgegengesetzte Richtungen und heben einander auf. Sein permanentes Moleküldipolmoment ist deshalb null.",
         "Wasser ist gewinkelt und besitzt ein deutliches Dipolmoment. Ammoniak ist trigonal-pyramidal und polar. Methan ist tetraedrisch und symmetrisch; seine C–H-Bindungen führen nicht zu einem permanenten Gesamtdipol.",
-        "Die Molekülpolarität ist eine Vektorsumme und lässt sich nicht aus der Zahl der Sauerstoff- oder Stickstoffatome allein bestimmen. Ein 3D-Modell zeigt die Geometrie, aber nicht automatisch die Dipolvektoren oder ein gemessenes Dipolmoment."
+        "Im vereinfachten Bindungsdipolmodell ergibt sich die Molekülpolarität aus der Vektorsumme der Bindungspolarisationen. Die reale Elektronendichte einschließlich freier Elektronenpaare bestimmt das physikalische Dipolmoment. Ein reines 3D-Strukturmodell zeigt keine Dipolvektoren und misst kein Dipolmoment."
       ],
       "variantExplanations": {
         "Kohlenstoffdioxid": "Prüfe beim gewählten Beispiel ausdrücklich die 180°-Anordnung der beiden C=O-Bindungen.",
         "Wasser": "Prüfe beim gewählten Beispiel den gewinkelten Bindungswinkel und die gerichteten O–H-Dipole.",
         "Ammoniak": "Beachte beim gewählten Beispiel das freie Elektronenpaar und die trigonal-pyramidale Anordnung.",
-        "Methan": "Vergleiche beim gewählten Beispiel die räumliche Symmetrie des Tetraeders mit der linearen CO₂-Struktur."
+        "Methan": "C–H-Bindungen sind im EN-Modell schwach zum C polarisiert. Ihre vier gleichwertigen Modellvektoren kompensieren sich aufgrund der tetraedrischen Symmetrie."
       },
-      "conclusionPrompt": "Formuliere eine Regel dafür, wann aus polaren Bindungen ein polares Molekül wird. Begründe sie an deinem gewählten Beispiel.",
+      "conclusionPrompt": "Formuliere eine Regel für das Zusammenspiel von Bindungspolarisation und Molekülgestalt. Begründe sie an deinem Beispiel.",
       "conclusionPlaceholder": "Die Molekülform entscheidet, weil …",
       "sourceReferences": [
         {
@@ -255,7 +251,68 @@
       ],
       "optionalTools": [
         "MOLLAB_PRO"
-      ]
+      ],
+      "variantTitles": {
+        "Kohlenstoffdioxid": "Wie beeinflusst die Anordnung der Bindungen den Dipol von CO₂?",
+        "Wasser": "Wie entsteht das Dipolmoment von Wasser?",
+        "Ammoniak": "Welche Rolle spielt die räumliche Gestalt von Ammoniak?",
+        "Methan": "Welche Rolle spielt die Symmetrie von Methan?"
+      },
+      "observationTasks": [
+        {
+          "title": "1 · Molekülgestalt entdecken",
+          "question": "Wie sind die Atome räumlich angeordnet?",
+          "hint": "Drehe das 3D-Modell in MOLLAB PRO oder DIDACTIC.",
+          "placeholder": "Die Molekülgestalt ist …"
+        },
+        {
+          "title": "2 · Bindungsdipole untersuchen",
+          "question": "Welches Element zieht die Bindungselektronen stärker an? Wohin zeigen die chemischen Dipolpfeile?",
+          "hint": "Vergleiche die Elektronegativitäten nach Pauling.",
+          "placeholder": "Die Bindungen sind …; die Pfeile zeigen …"
+        },
+        {
+          "title": "3 · Gesamtpolarität bestimmen",
+          "question": "Was ergibt die vektorielle Addition der Bindungsdipole?",
+          "hint": "Skizziere die Pfeile und verschiebe sie parallel Spitze an Anfang.",
+          "placeholder": "Die Summe …"
+        }
+      ],
+      "variantObservationQuestions": {
+        "Kohlenstoffdioxid": [
+          "Wie sind die beiden O-Atome relativ zum zentralen C-Atom angeordnet?",
+          "Welches Element hat die höhere EN? Wohin zeigen die beiden C=O-Dipolpfeile?",
+          "Was passiert beim Addieren der beiden Vektoren?"
+        ],
+        "Wasser": [
+          "Wie sind die beiden H-Atome um O angeordnet?",
+          "Welches Element hat die höhere EN? Wohin zeigen die beiden O–H-Dipolpfeile?",
+          "Heben sich die beiden Vektoren vollständig auf? Falls nicht, wohin zeigt die Resultierende?"
+        ],
+        "Ammoniak": [
+          "Wie sind die drei H-Atome um N angeordnet?",
+          "Welches Element hat die höhere EN? Wohin zeigen die drei N–H-Dipolpfeile?",
+          "Welche Vektorkomponenten kompensieren sich? Bleibt eine Resultierende?"
+        ],
+        "Methan": [
+          "Wie sind die vier H-Atome um C angeordnet?",
+          "Sind die C–H-Bindungen polarisiert? Wohin zeigen die Modellpfeile?",
+          "Was beobachtest du bei der Addition aller vier Vektoren?"
+        ]
+      },
+      "moleculeSets": [
+        {
+          "id": "basis",
+          "title": "Basisset · Geometrie und Symmetrie",
+          "molecules": [
+            "Kohlenstoffdioxid",
+            "Wasser",
+            "Ammoniak",
+            "Methan"
+          ]
+        }
+      ],
+      "defaultSet": "basis"
     },
     {
       "id": "MW-024",

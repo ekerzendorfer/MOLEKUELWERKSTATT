@@ -52,9 +52,10 @@
       result.cases[id]=cleanCase(older[id]);
     });
     var old15=older[VARIANT_ID]&&typeof older[VARIANT_ID]==="object"?older[VARIANT_ID]:{};
-    var selected=VARIANT_NAMES.includes(old15.selectedMolecule)?old15.selectedMolecule:VARIANT_NAMES[0];
+    var selected=typeof old15.selectedMolecule==="string"?old15.selectedMolecule:VARIANT_NAMES[0];
     result.cases[VARIANT_ID]={selectedMolecule:selected,variants:{}};
-    VARIANT_NAMES.forEach(function(name){
+    var savedNames=Object.keys(old15.variants||{}).filter(function(name){return name!=="__proto__"&&name!=="constructor"&&name!=="prototype";});
+    Array.from(new Set(VARIANT_NAMES.concat(savedNames))).forEach(function(name){
       result.cases[VARIANT_ID].variants[name]=cleanCase(old15.variants&&old15.variants[name]);
     });
     return result;
@@ -75,6 +76,13 @@
     if(!p)return null;
     var name=state.cases[VARIANT_ID].selectedMolecule;
     return p.template==="B"?p.molecules.find(function(m){return m.name===name;})||p.molecules[0]:p.molecules[0];
+  }
+  function observationTasks(p){
+    var chosen=selectedMolecule();
+    var questions=p.variantObservationQuestions&&chosen&&p.variantObservationQuestions[chosen.name];
+    return (p.observationTasks||[]).map(function(task,i){
+      return questions&&questions[i]?Object.assign({},task,{question:questions[i]}):task;
+    });
   }
   function activeNotes(){
     if(state.caseId==="MW-001")return state; // historical MW-001 flat fields
@@ -125,17 +133,17 @@
     var p=currentPath();if(!p)return;
     elem("case-eyebrow").textContent="Geführter Lernweg · "+p.id+
       " · "+(p.template==="A"?"Vergleichen":p.template==="B"?"Molekülgeometrie":"Konformere");
-    elem("case-title").textContent=p.title;
+    var chosen=selectedMolecule();
+    elem("case-title").textContent=p.variantTitles&&chosen&&p.variantTitles[chosen.name]?
+      "Molekülform und Dipole: "+p.variantTitles[chosen.name]:p.title;
     elem("case-intro").textContent=p.intro||p.question;
     elem("case-side-heading").textContent=p.template==="B"?
       "Wähle ein Molekül – optional weitere ansehen":"Die untersuchten Moleküle";
-    var chosen=selectedMolecule();
     elem("case-molecules").innerHTML=p.molecules.map(function(m,i){
       var formula=m.formula==="C2H6O"?"C₂H₆O":m.formula;
       var selected=p.template==="B"&&chosen&&m.name===chosen.name;
       return '<div class="'+(selected?'active-molecule':'')+'"><strong>'+escapeHtml(m.name)+
-        (selected?' · aktuell':'')+'</strong><small>'+escapeHtml(m.kind||(i===0?"Alkohol":"Ether"))+
-        ' · '+escapeHtml(formula)+'</small><code>'+escapeHtml(m.smiles)+'</code>'+
+        (selected?' · aktuell':'')+'</strong><small>'+(p.template==="B"?"":escapeHtml(m.kind||(i===0?"Alkohol":"Ether"))+' · ')+escapeHtml(formula)+'</small><code>'+escapeHtml(m.smiles)+'</code>'+
         '<button type="button" class="copy-mini" data-copy="'+escapeHtml(m.smiles)+
         '" aria-label="SMILES von '+escapeHtml(m.name)+' kopieren">SMILES kopieren</button>'+
         '<a id="case-handoff-'+i+'" class="case-handoff" href="'+escapeHtml(toolUrl("MOLLAB_PRO"))+
@@ -173,13 +181,17 @@
   function selectMolecule(name){
     var p=currentPath();
     if(!p||p.template!=="B"||!p.molecules.some(function(m){return m.name===name;}))return;
-    state.cases[VARIANT_ID].selectedMolecule=name;
+    var variants=state.cases[VARIANT_ID];
+    if(variants.selectedMolecule===name)return;
+    variants.selectedMolecule=name;
+    if(!variants.variants[name])variants.variants[name]=cleanCase(null);
+    variants.variants[name].step=0;
     persist();renderCaseHeader();renderStep();
   }
   function stepTo(n){activeNotes().step=Math.min(3,Math.max(0,n));persist();renderStep();}
   function renderStatus(){
     var n=activeNotes(),count=NOTE_FIELDS.filter(function(k){return !!n[k].trim();}).length;
-    if(state.caseId==="MW-024"&&!n.observation.trim()&&
+    if(currentPath()&&observationTasks(currentPath()).length&&!n.observation.trim()&&
        (n.observationParts||[]).some(function(v){return !!v.trim();}))count++;
     var text=count+" von 4 Notizfeldern bearbeitet";
     if(n.investigated)text+=" · Untersuchung selbst bestätigt";
@@ -195,7 +207,7 @@
         return '<option value="'+escapeHtml(m.name)+'"'+(m.name===name?' selected':'')+'>'+
           escapeHtml(m.name)+'</option>';
       }).join("")+'</select>'+
-      '<p>Ein Beispiel genügt. Beim Wechsel bleiben die Notizen für jedes Molekül getrennt gespeichert.</p></div>';
+      '<p>Ein Beispiel genügt. Bearbeite möglichst alle vier Schritte vor dem Wechsel. Beim Wechsel beginnt Schritt 1; deine bisherigen Notizen bleiben erhalten.</p></div>';
   }
   function renderStep(){
     var p=currentPath(),n=activeNotes();if(!p)return;
@@ -207,7 +219,7 @@
         (i+1)+'. '+label+'</span></button>';
     }).join("");
     var chosen=selectedMolecule(),name=chosen?chosen.name:"";
-    var html=variantSelector(p);
+    var html=variantSelector(p),tasks=observationTasks(p);
     if(step===0){
       var particular=p.variantQuestions&&p.variantQuestions[name];
       html+='<p class="eyebrow dark">Schritt 1 · eigene Idee</p><h4>Was vermutest du?</h4>'+
@@ -242,8 +254,8 @@
       html+='<label class="check-row"><input type="checkbox" id="investigated"'+(n.investigated?' checked':'')+
         '>Ich habe die Untersuchung im externen Werkzeug selbst durchgeführt.</label>'+
         '<p class="field-label">'+escapeHtml(p.observationPrompt||"Was hast du beobachtet?")+'</p>';
-      if(Array.isArray(p.observationTasks)&&p.observationTasks.length){
-        html+=p.observationTasks.map(function(task,i){
+      if(tasks.length){
+        html+=tasks.map(function(task,i){
           return '<section class="micro-observation" aria-labelledby="observation-title-'+i+'">'+
             '<h5 id="observation-title-'+i+'">'+escapeHtml(task.title)+'</h5>'+
             '<p>'+escapeHtml(task.question)+'</p>'+
@@ -304,16 +316,16 @@
   }
   function buildReport(){
     var p=currentPath(),n=activeNotes(),chosen=selectedMolecule();
-    var molecules=p.template==="B"?[chosen]:p.molecules;
+    var molecules=p.template==="B"?[chosen]:p.molecules,tasks=observationTasks(p);
     return "# MOLEKÜL-WERKSTATT – "+p.id+"\n\n"+
-      "**Leitfrage:** "+p.question+"\n"+
+      "**Leitfrage:** "+((p.variantQuestions&&chosen&&p.variantQuestions[chosen.name])||p.question)+"\n"+
       "**Molekül"+(molecules.length===1?"":"e")+":** "+
         molecules.map(function(m){return m.name+" ("+m.smiles+")";}).join("; ")+"\n"+
       (p.template==="B"?"**Untersuchtes Beispiel:** "+chosen.name+"\n":"")+
       "\n## Vermutung\n"+(n.hypothesis.trim()||"(nicht eingetragen)")+
       "\n\n## Beobachtungen\n"+
-      ((Array.isArray(p.observationTasks)&&p.observationTasks.length)?
-       p.observationTasks.map(function(task,i){
+      (tasks.length?
+       tasks.map(function(task,i){
          return "### "+task.title+"\n"+
                 (((n.observationParts||[])[i]||"").trim()||"(nicht eingetragen)");
        }).join("\n\n")+
@@ -422,10 +434,9 @@
   document.addEventListener("input",function(event){
     var input=event.target,field=input.dataset.field;
     var index=input.dataset.observationIndex;
-    if(index!==undefined&&state.caseId==="MW-024"){
+    if(index!==undefined){
       var pos=Number(index),p=currentPath(),n=activeNotes();
-      if(Number.isInteger(pos)&&pos>=0&&p&&Array.isArray(p.observationTasks)&&
-         pos<p.observationTasks.length){
+      if(Number.isInteger(pos)&&pos>=0&&p&&pos<observationTasks(p).length){
         if(!Array.isArray(n.observationParts))n.observationParts=[];
         n.observationParts[pos]=input.value.slice(0,1200);
         n.done=false;persist();renderStatus();
@@ -467,6 +478,12 @@
         return p.id===id&&p.molecules.length>=1&&p.notebookSteps.length>=4&&p.explanation.length>=2&&
           ["A","B","C"].includes(p.template);
       });}))throw Error("Lernwege unvollständig");
+    var variantPath=data.learning_paths.find(function(p){return p.id===VARIANT_ID;});
+    var variantState=state.cases[VARIANT_ID];
+    variantPath.molecules.forEach(function(m){
+      if(!Object.prototype.hasOwnProperty.call(variantState.variants,m.name))variantState.variants[m.name]=cleanCase(null);
+    });
+    if(!variantPath.molecules.some(function(m){return m.name===variantState.selectedMolecule;}))variantState.selectedMolecule=variantPath.defaultMolecule||variantPath.molecules[0].name;
     var selected=data.free_examples[state.selectedExample];
     if(state.selectedExample>=0&&(!selected||selected.smiles!==state.freeSmiles))state.selectedExample=-1;
     handleLocation();persist();
