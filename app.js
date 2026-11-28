@@ -290,7 +290,10 @@
           (p.variantExplanations&&p.variantExplanations[name]?
             '<p><strong>Bezug zu '+escapeHtml(name)+':</strong> '+escapeHtml(p.variantExplanations[name])+'</p>':'')+
           '</div>':
-          '<button type="button" class="btn btn-outline" data-action="reveal-answer">Erklärung anzeigen – erst nach eigener Überlegung</button>')+
+          '<button id="reveal-answer-btn" type="button" class="btn btn-outline" data-action="reveal-answer"'+
+          (p.id===VARIANT_ID&&!n.interpretation.trim()?' disabled':'')+
+          '>Erklärung anzeigen – erst nach eigener Überlegung</button>'+
+          (p.id===VARIANT_ID?'<p class="example-input">Notiere zunächst eine eigene kurze Deutung. Sie muss noch nicht richtig sein.</p>':''))+
         '</div>';
     }else{
       html+='<p class="eyebrow dark">Schritt 4 · Erkenntnisse sichern</p>'+
@@ -424,7 +427,9 @@
         else{activeNotes().done=true;persist();showView("start",true);
           notice(state.caseId+" ist als abgeschlossen markiert.");}
         break;
-      case "reveal-answer":activeNotes().explanation=true;persist();renderStep();break;
+      case "reveal-answer":
+        if(state.caseId===VARIANT_ID&&(activeNotes().step!==2||!activeNotes().interpretation.trim()))return;
+        activeNotes().explanation=true;persist();renderStep();break;
       case "copy-report":copyText(buildReport());break;
       case "download-report":downloadReport();break;
       case "reset-case":resetCurrentCase();break;
@@ -446,6 +451,8 @@
     if(NOTE_FIELDS.includes(field)){
       var n=activeNotes();n[field]=input.value.slice(0,4000);n.done=false;
       persist();renderStatus();
+      if(state.caseId===VARIANT_ID&&field==="interpretation"&&n.step===2&&!n.explanation&&elem("reveal-answer-btn"))
+        elem("reveal-answer-btn").disabled=!n.interpretation.trim();
       if(n.step===3&&elem("report-preview"))elem("report-preview").textContent=buildReport();
     }
     if(input.id==="free-smiles"){

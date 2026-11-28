@@ -101,3 +101,7 @@ Nur auf `mw015-dipol-labor`: dynamische Fragen und Titel, neuer Molekülwechsel 
 ## MW-015 – Integration mit DIDACTIC V0.9d (28.11.2026)
 
 Der Entwicklungsweg öffnet ausschließlich für MW-015 das V0.9d-Testnotebook; alle anderen Lernwege behalten den stabilen main-Link. Drei Beobachtungsfragen sind an die vier Darstellungsstufen angepasst. Experimentelle Referenzwerte sind optional, keine zusätzliche Pflichtaufgabe. Bei Freigabe den MW-015-Testlink entfernen, nachdem DIDACTIC auf main veröffentlicht wurde. Noch keine Gesamtfreigabe.
+
+### MW-015 – Freigabe der fachlichen Erklärung
+
+In Schritt 3 wird die Erklärung erst nach einer eigenen, nicht leeren Deutung freigeschaltet (keine automatische fachliche Bewertung). Leerzeichen zählen nicht; bereits gelesene Erklärungen bleiben erhalten. Die anderen Forschungswege bleiben unverändert. Sichtprüfung offen.
