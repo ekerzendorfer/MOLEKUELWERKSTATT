@@ -97,3 +97,7 @@ Der freiwillige MOL_LAB-Vertiefungslink führt nach der Freigabe des Mess- und K
 ## MW-015 – Entwicklungsentwurf (28.11.2026)
 
 Nur auf `mw015-dipol-labor`: dynamische Fragen und Titel, neuer Molekülwechsel beginnt bei Schritt 1, Reload setzt den gespeicherten Schritt fort. Drei getrennte, molekülspezifische Beobachtungen und Protokoll; alte Freitextnotizen bleiben erhalten. Nur das Basisset CO₂/H₂O/NH₃/CH₄ ist aktiv. Eine Set-Auswahl ist noch nicht implementiert. DIDACTIC V0.9 ist der nächste Entwicklungsschritt; der stabile Notebook-Link bleibt vorerst bestehen.
+
+## MW-015 – Integration mit DIDACTIC V0.9d (28.11.2026)
+
+Der Entwicklungsweg öffnet ausschließlich für MW-015 das V0.9d-Testnotebook; alle anderen Lernwege behalten den stabilen main-Link. Drei Beobachtungsfragen sind an die vier Darstellungsstufen angepasst. Experimentelle Referenzwerte sind optional, keine zusätzliche Pflichtaufgabe. Bei Freigabe den MW-015-Testlink entfernen, nachdem DIDACTIC auf main veröffentlicht wurde. Noch keine Gesamtfreigabe.

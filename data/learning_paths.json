@@ -213,29 +213,30 @@
       "primaryTool": "MOL_LAB_DIDACTIC",
       "targetModule": "Polarität und Löslichkeit",
       "targetAction": "Molekül analysieren",
-      "investigationIntro": "Bearbeite die drei kurzen Beobachtungsaufgaben nacheinander. Nutze das drehbare 3D-Modell in MOLLAB PRO oder DIDACTIC; optional hilft ein Molekülbaukasten. Für die Bindungsdipole und ihre Summe wird der Dipol-Lernmodus in DIDACTIC V0.9 entwickelt. Bis zur Integration kannst du diese beiden Aufgaben mit Pauling-EN-Werten und einer eigenen Pfeilskizze bearbeiten.",
+      "investigationIntro": "Bearbeite die drei kurzen Beobachtungsaufgaben nacheinander. Nutze das drehbare 3D-Modell in MOLLAB PRO oder DIDACTIC; optional hilft ein Molekülbaukasten. Im Dipol-Lernmodus kannst du die Geometrie, EN-Werte, Bindungsdipole und deren räumliche Vektoraddition schrittweise untersuchen.",
       "notebookSteps": [
         "Colab: Laufzeit → Alle ausführen.",
         "Modul: Polarität und Löslichkeit.",
         "Beispiel: {name} (eigene SMILES aus).",
-        "Aktion: Molekül analysieren. Nutze das 3D-Modell. Der neue Dipol-Lernmodus folgt im nächsten Entwicklungsschritt."
+        "Aktion: Molekül analysieren.",
+        "Dipol-Lernmodus: Bindungsdipole untersuchen. Stufen 1–3 nacheinander aufrufen.",
+        "Vektoraddition: Stufe 4 wählen, mit Weiter und Zurück die Konstruktion verfolgen. Nach dem letzten Schritt den experimentellen Bezug freiwillig aufklappen."
       ],
       "observationPrompt": "Drei kurze Beobachtungen – ein bis zwei Sätze je Frage genügen.",
       "observationPlaceholder": "Weitere Beobachtungen oder bisherige Notiz …",
       "interpretationQuestion": "Wie hängt die räumliche Molekülform mit dem gesamten Dipolmoment zusammen?",
       "interpretationPlaceholder": "Die Bindungsdipole heben sich (nicht) auf, weil …",
       "explanation": [
-        "Kohlenstoffdioxid besitzt zwei polare C=O-Bindungen, ist aber linear und symmetrisch: Die beiden gleich großen Bindungsdipole zeigen in entgegengesetzte Richtungen und heben einander auf. Sein permanentes Moleküldipolmoment ist deshalb null.",
-        "Wasser ist gewinkelt und besitzt ein deutliches Dipolmoment. Ammoniak ist trigonal-pyramidal und polar. Methan ist tetraedrisch und symmetrisch; seine C–H-Bindungen führen nicht zu einem permanenten Gesamtdipol.",
-        "Im vereinfachten Bindungsdipolmodell ergibt sich die Molekülpolarität aus der Vektorsumme der Bindungspolarisationen. Die reale Elektronendichte einschließlich freier Elektronenpaare bestimmt das physikalische Dipolmoment. Ein reines 3D-Strukturmodell zeigt keine Dipolvektoren und misst kein Dipolmoment."
+        "Bindungspolarisation und Molekülgestalt müssen gemeinsam betrachtet werden. Gleich große Bindungsdipole können sich aufgrund ihrer räumlichen Anordnung vollständig kompensieren.",
+        "Im vereinfachten Bindungsdipolmodell veranschaulichen wir das durch gleich lange Vektoren für gleichartige Bindungen. Die reale Elektronendichte einschließlich freier Elektronenpaare bestimmt das physikalische Dipolmoment. Die Modellpfeile haben keine Einheit Debye und liefern keinen quantitativen Dipolbetrag."
       ],
       "variantExplanations": {
-        "Kohlenstoffdioxid": "Prüfe beim gewählten Beispiel ausdrücklich die 180°-Anordnung der beiden C=O-Bindungen.",
-        "Wasser": "Prüfe beim gewählten Beispiel den gewinkelten Bindungswinkel und die gerichteten O–H-Dipole.",
-        "Ammoniak": "Beachte beim gewählten Beispiel das freie Elektronenpaar und die trigonal-pyramidale Anordnung.",
+        "Kohlenstoffdioxid": "Zwei gleich große C=O-Modellvektoren sind um 180° entgegengesetzt ausgerichtet. Ihre Summe ist null; das permanente Dipolmoment verschwindet aufgrund der linearen Symmetrie.",
+        "Wasser": "Die beiden O–H-Modellvektoren zeigen zu O und bilden einen Winkel. Ihre seitlichen Komponenten kompensieren sich, entlang der Winkelhalbierenden bleibt eine Resultierende. Wasser besitzt ein permanentes Dipolmoment.",
+        "Ammoniak": "Die drei N–H-Modellvektoren sind trigonal-pyramidal angeordnet. Die Komponenten senkrecht zur dreizähligen Achse kompensieren sich, die axialen addieren sich. Das freie Elektronenpaar trägt zur tatsächlichen Elektronendichte bei.",
         "Methan": "C–H-Bindungen sind im EN-Modell schwach zum C polarisiert. Ihre vier gleichwertigen Modellvektoren kompensieren sich aufgrund der tetraedrischen Symmetrie."
       },
-      "conclusionPrompt": "Formuliere eine Regel für das Zusammenspiel von Bindungspolarisation und Molekülgestalt. Begründe sie an deinem Beispiel.",
+      "conclusionPrompt": "Formuliere eine Regel für das Zusammenspiel von Bindungspolarisation und Molekülgestalt. Begründe sie an deinem Beispiel. Optional: Vergleiche deine qualitative Aussage mit dem Referenzwert in Debye und erkläre, warum die Modellpfeile keinen Messwert liefern.",
       "conclusionPlaceholder": "Die Molekülform entscheidet, weil …",
       "sourceReferences": [
         {
@@ -262,19 +263,19 @@
         {
           "title": "1 · Molekülgestalt entdecken",
           "question": "Wie sind die Atome räumlich angeordnet?",
-          "hint": "Drehe das 3D-Modell in MOLLAB PRO oder DIDACTIC.",
+          "hint": "Drehe das 3D-Modell in MOLLAB PRO oder in Stufe 1 des Dipol-Lernmodus.",
           "placeholder": "Die Molekülgestalt ist …"
         },
         {
           "title": "2 · Bindungsdipole untersuchen",
           "question": "Welches Element zieht die Bindungselektronen stärker an? Wohin zeigen die chemischen Dipolpfeile?",
-          "hint": "Vergleiche die Elektronegativitäten nach Pauling.",
+          "hint": "Stufe 2 zeigt die EN-Werte nach Pauling; prüfe deine Vermutung mit den Pfeilen in Stufe 3.",
           "placeholder": "Die Bindungen sind …; die Pfeile zeigen …"
         },
         {
           "title": "3 · Gesamtpolarität bestimmen",
           "question": "Was ergibt die vektorielle Addition der Bindungsdipole?",
-          "hint": "Skizziere die Pfeile und verschiebe sie parallel Spitze an Anfang.",
+          "hint": "Stufe 4: Addiere die freien Vektoren schrittweise Spitze an Anfang. Drehe das Modell. Optional: Vergleiche nach dem letzten Schritt mit dem Referenzwert.",
           "placeholder": "Die Summe …"
         }
       ],
@@ -312,7 +313,8 @@
           ]
         }
       ],
-      "defaultSet": "basis"
+      "defaultSet": "basis",
+      "notebookUrl": "https://colab.research.google.com/github/ekerzendorfer/MOL_LAB_DIDACTIC/blob/v0.9d-experimenteller-bezug/MOL_LAB_DIDACTIC_v0_4_2.ipynb"
     },
     {
       "id": "MW-024",

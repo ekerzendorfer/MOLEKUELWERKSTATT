@@ -243,7 +243,7 @@
         '<div class="callout"><strong>Im DIDACTIC-Notebook:</strong><ol class="notebook-steps">'+
         steps+'</ol></div>'+
         '<div class="lab-launch"><a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="'+
-        escapeHtml(toolUrl("MOL_LAB_DIDACTIC"))+'">MOL_LAB DIDACTIC öffnen ↗</a>'+
+        escapeHtml((p.notebookUrl&&/^https:\/\//.test(p.notebookUrl))?p.notebookUrl:toolUrl("MOL_LAB_DIDACTIC"))+'">MOL_LAB DIDACTIC öffnen ↗</a>'+
         '<span class="tool-note">Öffnet in einem neuen Tab. Die Colab-Laufzeit muss gestartet werden; es erfolgt keine automatische Auswahl.</span></div>';
       if(p.optionalDeepTool){
         html+='<div class="deep-link-panel"><strong>'+escapeHtml(p.deepTitle||"Wissenschaftliche Vertiefung")+

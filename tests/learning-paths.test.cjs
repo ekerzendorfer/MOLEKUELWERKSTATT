@@ -169,6 +169,9 @@ async function test(){
  app.input("hypothesis","Wasser ist gewinkelt");
  app.click("next-step");
  assert(app.dom["step-body"].innerHTML.includes("Beispiel:</strong> Wasser"));
+ assert(app.dom["step-body"].innerHTML.includes("v0.9d-experimenteller-bezug"));
+ assert(app.dom["step-body"].innerHTML.includes("Bindungsdipole untersuchen"));
+ assert(app.dom["step-body"].innerHTML.includes("experimentellen Bezug freiwillig aufklappen"));
  assert(app.dom["step-body"].innerHTML.includes("Heben sich die beiden Vektoren vollständig auf?"));
  app.miniObservation(0,"gewinkelt");app.miniObservation(1,"zum O");app.miniObservation(2,"Resultierende");
  app.input("observation","Alte Zusatznotiz");

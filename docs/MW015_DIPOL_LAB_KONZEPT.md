@@ -18,3 +18,7 @@ Optionaler Gesamtvektor im Einzelmolekül-Viewer, ohne Einzeldipole. Nur für ei
  
 ## Abnahme Schritt 1
 Vier dynamische Titel; keine Form/Polarität als Karten-Metadaten; bewusstes Umschalten beginnt bei Schritt 1; Reload stellt Schritt wieder her. Drei getrennte Beobachtungen mit individuellen Fragen je Molekül, Bericht und Reset ohne Datenverlust. Keine Änderung an main oder den Colab-Links bis zur Integration.
+
+## Integrationsstand – 28.11.2026
+
+V0.9a–c praktisch abgenommen; V0.9d enthält experimentellen Bezug. MW-015 führt zum V0.9d-Entwicklungsnotebook; übrige Wege unverändert. Drei Beobachtungsfelder bleiben pro Molekül getrennt. Referenzvergleich freiwillig im Fazit. Die Erklärung in Schritt 3 bezieht sich nur auf das gewählte Beispiel (kein Vorwegnehmen der anderen Fälle). Freigabe erst nach Gesamtprüfung: DIDACTIC main zuerst, dann MW-015-Testlink entfernen und Werkstatt main. Keine weiteren Sets oder allgemeine Dipolmoment-Anzeige.
